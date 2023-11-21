@@ -2,7 +2,7 @@ User/modbus_rtu_server/modbus_server.o: \
  ../User/modbus_rtu_server/modbus_server.c \
  ../User/modbus_rtu_server/modbus_server.h \
  ../User/modbus_rtu_server/nanomodbus.h \
- C:/Users/vypa0/STM32CubeIDE/do_an_wp/last_try/User/board/board.h \
+ C:/Users/vypa0/Desktop/lkv_github/Project_bms_elevator_control/User/board/board.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h \
  ../Core/Inc/stm32f4xx_hal_conf.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h \
@@ -32,7 +32,7 @@ User/modbus_rtu_server/modbus_server.o: \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
 ../User/modbus_rtu_server/modbus_server.h:
 ../User/modbus_rtu_server/nanomodbus.h:
-C:/Users/vypa0/STM32CubeIDE/do_an_wp/last_try/User/board/board.h:
+C:/Users/vypa0/Desktop/lkv_github/Project_bms_elevator_control/User/board/board.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:
 ../Core/Inc/stm32f4xx_hal_conf.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h:

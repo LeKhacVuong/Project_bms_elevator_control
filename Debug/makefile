@@ -42,34 +42,34 @@ $(wildcard ../makefile.init) \
 $(wildcard ../makefile.targets) \
 
 
-BUILD_ARTIFACT_NAME := last_try
+BUILD_ARTIFACT_NAME := Project_bms_elevator_control
 BUILD_ARTIFACT_EXTENSION := elf
 BUILD_ARTIFACT_PREFIX :=
 BUILD_ARTIFACT := $(BUILD_ARTIFACT_PREFIX)$(BUILD_ARTIFACT_NAME)$(if $(BUILD_ARTIFACT_EXTENSION),.$(BUILD_ARTIFACT_EXTENSION),)
 
 # Add inputs and outputs from these tool invocations to the build variables 
 EXECUTABLES += \
-last_try.elf \
+Project_bms_elevator_control.elf \
 
 MAP_FILES += \
-last_try.map \
+Project_bms_elevator_control.map \
 
 SIZE_OUTPUT += \
 default.size.stdout \
 
 OBJDUMP_LIST += \
-last_try.list \
+Project_bms_elevator_control.list \
 
 
 # All Target
 all: main-build
 
 # Main-build Target
-main-build: last_try.elf secondary-outputs
+main-build: Project_bms_elevator_control.elf secondary-outputs
 
 # Tool invocations
-last_try.elf last_try.map: $(OBJS) $(USER_OBJS) C:\Users\vypa0\STM32CubeIDE\do_an_wp\last_try\STM32F407VETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "last_try.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\vypa0\STM32CubeIDE\do_an_wp\last_try\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="last_try.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Project_bms_elevator_control.elf Project_bms_elevator_control.map: $(OBJS) $(USER_OBJS) C:\Users\vypa0\Desktop\lkv_github\Project_bms_elevator_control\STM32F407VETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "Project_bms_elevator_control.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\vypa0\Desktop\lkv_github\Project_bms_elevator_control\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Project_bms_elevator_control.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
@@ -78,14 +78,14 @@ default.size.stdout: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
 	@echo 'Finished building: $@'
 	@echo ' '
 
-last_try.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "last_try.list"
+Project_bms_elevator_control.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "Project_bms_elevator_control.list"
 	@echo 'Finished building: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) default.size.stdout last_try.elf last_try.list last_try.map
+	-$(RM) Project_bms_elevator_control.elf Project_bms_elevator_control.list Project_bms_elevator_control.map default.size.stdout
 	-@echo ' '
 
 secondary-outputs: $(SIZE_OUTPUT) $(OBJDUMP_LIST)

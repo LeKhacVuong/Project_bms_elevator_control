@@ -91,8 +91,7 @@ int main(void)
   while (1)
   {
 	  nmbs_server_poll(&nmbs);
-
-
+	  lkv_lcd_process(CLEAR_DIS, 1, 1, "LE KHAC VUONG");
   }
 }
 

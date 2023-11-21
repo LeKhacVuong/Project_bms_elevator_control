@@ -1,0 +1,4 @@
+../User/logger/sm_logger.c:33:9:sm_logger_init	1
+../User/logger/sm_logger.c:40:9:sm_logger_set_level	1
+../User/logger/sm_logger.c:45:11:sm_logger_get_level	1
+../User/logger/sm_logger.c:49:6:sm_logger_show	4

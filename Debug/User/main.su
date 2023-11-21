@@ -1,0 +1,5 @@
+../User/main.c:52:6:sm_bsp_log_output	16	static
+../User/main.c:59:5:main	72	static
+../User/main.c:100:6:SysTick_Handler	8	static
+../User/main.c:107:6:EXTI0_IRQHandler	8	static
+../User/main.c:113:6:USART3_IRQHandler	8	static

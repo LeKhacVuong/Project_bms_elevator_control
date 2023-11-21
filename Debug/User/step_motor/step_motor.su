@@ -1,0 +1,5 @@
+../User/step_motor/step_motor.c:23:6:lkv_stepmotor_coil_setval	24	static
+../User/step_motor/step_motor.c:31:6:lkv_stepmotor_run_up	16	static
+../User/step_motor/step_motor.c:50:6:lkv_stepmotor_run_down	16	static
+../User/step_motor/step_motor.c:71:6:lkv_stepmotor_gpio_init	40	static
+../User/step_motor/step_motor.c:103:6:lkv_stepmotor_process	32	static

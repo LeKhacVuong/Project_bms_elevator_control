@@ -32,8 +32,10 @@ User/main.o: ../User/main.c \
  C:/Users/vypa0/Desktop/lkv_github/Project_bms_elevator_control/User/board/board.h \
  C:/Users/vypa0/Desktop/lkv_github/Project_bms_elevator_control/User/modbus_rtu_server/modbus_server.h \
  C:/Users/vypa0/Desktop/lkv_github/Project_bms_elevator_control/User/modbus_rtu_server/nanomodbus.h \
- C:/Users/vypa0/Desktop/lkv_github/Project_bms_elevator_control/User/logger/sm_logger.h \
- C:/Users/vypa0/Desktop/lkv_github/Project_bms_elevator_control/User/step_motor/step_motor.h
+ C:/Users/vypa0/Desktop/lkv_github/Project_bms_elevator_control/User/logger/lkv_logger.h \
+ C:/Users/vypa0/Desktop/lkv_github/Project_bms_elevator_control/User/step_motor/step_motor.h \
+ C:/Users/vypa0/Desktop/lkv_github/Project_bms_elevator_control/User/scheduler/lkv_sch_task.h \
+ C:/Users/vypa0/Desktop/lkv_github/Project_bms_elevator_control/User/scheduler/lkv_elapsed_timer.h
 C:/Users/vypa0/Desktop/lkv_github/Project_bms_elevator_control/User/LCD/lkv_lcd.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:
 ../Core/Inc/stm32f4xx_hal_conf.h:
@@ -67,5 +69,7 @@ C:/Users/vypa0/Desktop/lkv_github/Project_bms_elevator_control/User/matric_butto
 C:/Users/vypa0/Desktop/lkv_github/Project_bms_elevator_control/User/board/board.h:
 C:/Users/vypa0/Desktop/lkv_github/Project_bms_elevator_control/User/modbus_rtu_server/modbus_server.h:
 C:/Users/vypa0/Desktop/lkv_github/Project_bms_elevator_control/User/modbus_rtu_server/nanomodbus.h:
-C:/Users/vypa0/Desktop/lkv_github/Project_bms_elevator_control/User/logger/sm_logger.h:
+C:/Users/vypa0/Desktop/lkv_github/Project_bms_elevator_control/User/logger/lkv_logger.h:
 C:/Users/vypa0/Desktop/lkv_github/Project_bms_elevator_control/User/step_motor/step_motor.h:
+C:/Users/vypa0/Desktop/lkv_github/Project_bms_elevator_control/User/scheduler/lkv_sch_task.h:
+C:/Users/vypa0/Desktop/lkv_github/Project_bms_elevator_control/User/scheduler/lkv_elapsed_timer.h:

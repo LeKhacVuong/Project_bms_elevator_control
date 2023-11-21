@@ -5818,7 +5818,7 @@ typedef struct
   * @note   This macro must be used only when the PLLI2S is disabled.
   * @note   PLLI2S clock source is common with the main PLL (configured in 
   *         HAL_RCC_ClockConfig() API).
-  * @param  __PLLI2SM__ specifies the division factor for PLLI2S VCO input clock
+  * @param  __PLLI2lkv__ specifies the division factor for PLLI2S VCO input clock
   *         This parameter must be a number between Min_Data = 2 and Max_Data = 63.
   * @note   You have to set the PLLI2SM parameter correctly to ensure that the VCO input
   *         frequency ranges from 1 to 2 MHz. It is recommended to select a frequency
@@ -5841,8 +5841,8 @@ typedef struct
   * @param  __PLLI2SQ__ specifies the division factor for SAI clock
   *         This parameter must be a number between Min_Data = 2 and Max_Data = 15.
   */
-#define __HAL_RCC_PLLI2S_CONFIG(__PLLI2SM__, __PLLI2SN__, __PLLI2SP__, __PLLI2SQ__, __PLLI2SR__)    \
-                               (RCC->PLLI2SCFGR = ((__PLLI2SM__)                                   |\
+#define __HAL_RCC_PLLI2S_CONFIG(__PLLI2lkv__, __PLLI2SN__, __PLLI2SP__, __PLLI2SQ__, __PLLI2SR__)    \
+                               (RCC->PLLI2SCFGR = ((__PLLI2lkv__)                                   |\
                                ((__PLLI2SN__) << RCC_PLLI2SCFGR_PLLI2SN_Pos)             |\
                                ((((__PLLI2SP__) >> 1U) -1U) << RCC_PLLI2SCFGR_PLLI2SP_Pos) |\
                                ((__PLLI2SQ__) << RCC_PLLI2SCFGR_PLLI2SQ_Pos)             |\
@@ -5853,7 +5853,7 @@ typedef struct
   * @note   This macro must be used only when the PLLI2S is disabled.
   * @note   PLLI2S clock source is common with the main PLL (configured in 
   *         HAL_RCC_ClockConfig() API).
-  * @param  __PLLI2SM__ specifies the division factor for PLLI2S VCO input clock
+  * @param  __PLLI2lkv__ specifies the division factor for PLLI2S VCO input clock
   *         This parameter must be a number between Min_Data = 2 and Max_Data = 63.
   * @note   You have to set the PLLI2SM parameter correctly to ensure that the VCO input
   *         frequency ranges from 1 to 2 MHz. It is recommended to select a frequency
@@ -5872,8 +5872,8 @@ typedef struct
   * @param  __PLLI2SQ__ specifies the division factor for SAI clock
   *         This parameter must be a number between Min_Data = 2 and Max_Data = 15.
   */
-#define __HAL_RCC_PLLI2S_CONFIG(__PLLI2SM__, __PLLI2SN__, __PLLI2SQ__, __PLLI2SR__)    \
-                               (RCC->PLLI2SCFGR = ((__PLLI2SM__)                                   |\
+#define __HAL_RCC_PLLI2S_CONFIG(__PLLI2lkv__, __PLLI2SN__, __PLLI2SQ__, __PLLI2SR__)    \
+                               (RCC->PLLI2SCFGR = ((__PLLI2lkv__)                                   |\
                                ((__PLLI2SN__) << RCC_PLLI2SCFGR_PLLI2SN_Pos)             |\
                                ((__PLLI2SQ__) << RCC_PLLI2SCFGR_PLLI2SQ_Pos)             |\
                                ((__PLLI2SR__) << RCC_PLLI2SCFGR_PLLI2SR_Pos)))
@@ -5904,7 +5904,7 @@ typedef struct
   * @note   This macro must be used only when the PLLI2S is disabled.
   * @note   PLLI2S clock source is common with the main PLL (configured in 
   *         HAL_RCC_ClockConfig() API).
-  * @param  __PLLI2SM__ specifies the division factor for PLLI2S VCO input clock
+  * @param  __PLLI2lkv__ specifies the division factor for PLLI2S VCO input clock
   *         This parameter must be a number between Min_Data = 2 and Max_Data = 63.
   * @note   The PLLI2SM parameter is only used with STM32F411xE/STM32F410xx Devices
   * @note   You have to set the PLLI2SM parameter correctly to ensure that the VCO input
@@ -5919,7 +5919,7 @@ typedef struct
   * @note   You have to set the PLLI2SR parameter correctly to not exceed 192 MHz
   *         on the I2S clock frequency.
   */
-#define __HAL_RCC_PLLI2S_I2SCLK_CONFIG(__PLLI2SM__, __PLLI2SN__, __PLLI2SR__) (RCC->PLLI2SCFGR = ((__PLLI2SM__)                                                       |\
+#define __HAL_RCC_PLLI2S_I2SCLK_CONFIG(__PLLI2lkv__, __PLLI2SN__, __PLLI2SR__) (RCC->PLLI2SCFGR = ((__PLLI2lkv__)                                                       |\
                                                                                                   ((__PLLI2SN__) << RCC_PLLI2SCFGR_PLLI2SN_Pos)             |\
                                                                                                   ((__PLLI2SR__) << RCC_PLLI2SCFGR_PLLI2SR_Pos)))
 #endif /* STM32F411xE */
@@ -6908,7 +6908,7 @@ HAL_StatusTypeDef HAL_RCCEx_DisablePLLSAI(void);
 
 #if defined(STM32F411xE) || defined(STM32F446xx) || defined(STM32F412Zx) || defined(STM32F412Vx) || \
     defined(STM32F412Rx) || defined(STM32F412Cx) || defined(STM32F413xx) || defined(STM32F423xx)
-#define IS_RCC_PLLI2SM_VALUE(VALUE)   ((2U <= (VALUE)) && ((VALUE) <= 63U))
+#define IS_RCC_PLLI2lkv_VALUE(VALUE)   ((2U <= (VALUE)) && ((VALUE) <= 63U))
  
 #define IS_RCC_LSE_MODE(MODE)           (((MODE) == RCC_LSE_LOWPOWER_MODE) ||\
                                          ((MODE) == RCC_LSE_HIGHDRIVE_MODE))

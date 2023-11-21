@@ -10,6 +10,7 @@ RM := rm -rf
 # All of the sources participating in the build are defined here
 -include sources.mk
 -include User/step_motor/subdir.mk
+-include User/scheduler/subdir.mk
 -include User/modbus_rtu_server/subdir.mk
 -include User/matric_button/subdir.mk
 -include User/logger/subdir.mk

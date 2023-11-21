@@ -8,10 +8,9 @@
 #include <lkv_matrix_button.h>
 #include "board.h"
 #include "modbus_server.h"
-#include "sm_logger.h"
+#include "lkv_logger.h"
 #include "step_motor.h"
-
-
+#include "lkv_sch_task.h"
 
 uint8_t user_char = 0;
 nmbs_t nmbs;
@@ -49,7 +48,7 @@ nmbs_t nmbs;
 
  */
 
-void sm_bsp_log_output(const char* data){
+void lkv_bsp_log_output(const char* data){
 
 
 
@@ -84,7 +83,7 @@ int main(void)
 	  nmbs_set_read_timeout(&nmbs, 1000);
 	  nmbs_set_byte_timeout(&nmbs, 100);
 
-	  sm_logger_init(sm_bsp_log_output, LOG_LEVEL_DEBUG);
+	  lkv_logger_init(lkv_bsp_log_output, LOG_LEVEL_DEBUG);
 
 
 

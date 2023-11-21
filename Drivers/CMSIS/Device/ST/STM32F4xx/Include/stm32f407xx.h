@@ -11474,9 +11474,9 @@ typedef struct
 #define SPI_CR1_SSI_Pos             (8U)                                       
 #define SPI_CR1_SSI_Msk             (0x1UL << SPI_CR1_SSI_Pos)                  /*!< 0x00000100 */
 #define SPI_CR1_SSI                 SPI_CR1_SSI_Msk                            /*!<Internal slave select               */
-#define SPI_CR1_SSM_Pos             (9U)                                       
-#define SPI_CR1_SSM_Msk             (0x1UL << SPI_CR1_SSM_Pos)                  /*!< 0x00000200 */
-#define SPI_CR1_SSM                 SPI_CR1_SSM_Msk                            /*!<Software slave management           */
+#define SPI_CR1_Slkv_Pos             (9U)                                       
+#define SPI_CR1_Slkv_Msk             (0x1UL << SPI_CR1_Slkv_Pos)                  /*!< 0x00000200 */
+#define SPI_CR1_SSM                 SPI_CR1_Slkv_Msk                            /*!<Software slave management           */
 #define SPI_CR1_RXONLY_Pos          (10U)                                      
 #define SPI_CR1_RXONLY_Msk          (0x1UL << SPI_CR1_RXONLY_Pos)               /*!< 0x00000400 */
 #define SPI_CR1_RXONLY              SPI_CR1_RXONLY_Msk                         /*!<Receive only                        */
@@ -11998,9 +11998,9 @@ typedef struct
 #define TIM_SMCR_TS_1             (0x2UL << TIM_SMCR_TS_Pos)                    /*!< 0x0020 */
 #define TIM_SMCR_TS_2             (0x4UL << TIM_SMCR_TS_Pos)                    /*!< 0x0040 */
 
-#define TIM_SMCR_MSM_Pos          (7U)                                         
-#define TIM_SMCR_MSM_Msk          (0x1UL << TIM_SMCR_MSM_Pos)                   /*!< 0x00000080 */
-#define TIM_SMCR_MSM              TIM_SMCR_MSM_Msk                             /*!<Master/slave mode                       */
+#define TIM_SMCR_Mlkv_Pos          (7U)                                         
+#define TIM_SMCR_Mlkv_Msk          (0x1UL << TIM_SMCR_Mlkv_Pos)                   /*!< 0x00000080 */
+#define TIM_SMCR_MSM              TIM_SMCR_Mlkv_Msk                             /*!<Master/slave mode                       */
 
 #define TIM_SMCR_ETF_Pos          (8U)                                         
 #define TIM_SMCR_ETF_Msk          (0xFUL << TIM_SMCR_ETF_Pos)                   /*!< 0x00000F00 */
@@ -14019,9 +14019,9 @@ typedef struct
 #define USB_OTG_GUSBCFG_ULPIAR_Pos               (18U)                         
 #define USB_OTG_GUSBCFG_ULPIAR_Msk               (0x1UL << USB_OTG_GUSBCFG_ULPIAR_Pos) /*!< 0x00040000 */
 #define USB_OTG_GUSBCFG_ULPIAR                   USB_OTG_GUSBCFG_ULPIAR_Msk    /*!< ULPI Auto-resume                */
-#define USB_OTG_GUSBCFG_ULPICSM_Pos              (19U)                         
-#define USB_OTG_GUSBCFG_ULPICSM_Msk              (0x1UL << USB_OTG_GUSBCFG_ULPICSM_Pos) /*!< 0x00080000 */
-#define USB_OTG_GUSBCFG_ULPICSM                  USB_OTG_GUSBCFG_ULPICSM_Msk   /*!< ULPI Clock SuspendM             */
+#define USB_OTG_GUSBCFG_ULPIClkv_Pos              (19U)                         
+#define USB_OTG_GUSBCFG_ULPIClkv_Msk              (0x1UL << USB_OTG_GUSBCFG_ULPIClkv_Pos) /*!< 0x00080000 */
+#define USB_OTG_GUSBCFG_ULPICSM                  USB_OTG_GUSBCFG_ULPIClkv_Msk   /*!< ULPI Clock SuspendM             */
 #define USB_OTG_GUSBCFG_ULPIEVBUSD_Pos           (20U)                         
 #define USB_OTG_GUSBCFG_ULPIEVBUSD_Msk           (0x1UL << USB_OTG_GUSBCFG_ULPIEVBUSD_Pos) /*!< 0x00100000 */
 #define USB_OTG_GUSBCFG_ULPIEVBUSD               USB_OTG_GUSBCFG_ULPIEVBUSD_Msk /*!< ULPI External VBUS Drive        */
@@ -14260,9 +14260,9 @@ typedef struct
 #define USB_OTG_GINTSTS_WKUINT                   USB_OTG_GINTSTS_WKUINT_Msk    /*!< Resume/remote wakeup detected interrupt        */
 
 /********************  Bit definition for USB_OTG_GINTMSK register  ********************/
-#define USB_OTG_GINTMSK_MMISM_Pos                (1U)                          
-#define USB_OTG_GINTMSK_MMISM_Msk                (0x1UL << USB_OTG_GINTMSK_MMISM_Pos) /*!< 0x00000002 */
-#define USB_OTG_GINTMSK_MMISM                    USB_OTG_GINTMSK_MMISM_Msk     /*!< Mode mismatch interrupt mask                        */
+#define USB_OTG_GINTMSK_MMIlkv_Pos                (1U)                          
+#define USB_OTG_GINTMSK_MMIlkv_Msk                (0x1UL << USB_OTG_GINTMSK_MMIlkv_Pos) /*!< 0x00000002 */
+#define USB_OTG_GINTMSK_MMISM                    USB_OTG_GINTMSK_MMIlkv_Msk     /*!< Mode mismatch interrupt mask                        */
 #define USB_OTG_GINTMSK_OTGINT_Pos               (2U)                          
 #define USB_OTG_GINTMSK_OTGINT_Msk               (0x1UL << USB_OTG_GINTMSK_OTGINT_Pos) /*!< 0x00000004 */
 #define USB_OTG_GINTMSK_OTGINT                   USB_OTG_GINTMSK_OTGINT_Msk    /*!< OTG interrupt mask                                  */
@@ -14299,9 +14299,9 @@ typedef struct
 #define USB_OTG_GINTMSK_EOPFM_Pos                (15U)                         
 #define USB_OTG_GINTMSK_EOPFM_Msk                (0x1UL << USB_OTG_GINTMSK_EOPFM_Pos) /*!< 0x00008000 */
 #define USB_OTG_GINTMSK_EOPFM                    USB_OTG_GINTMSK_EOPFM_Msk     /*!< End of periodic frame interrupt mask                */
-#define USB_OTG_GINTMSK_EPMISM_Pos               (17U)                         
-#define USB_OTG_GINTMSK_EPMISM_Msk               (0x1UL << USB_OTG_GINTMSK_EPMISM_Pos) /*!< 0x00020000 */
-#define USB_OTG_GINTMSK_EPMISM                   USB_OTG_GINTMSK_EPMISM_Msk    /*!< Endpoint mismatch interrupt mask                    */
+#define USB_OTG_GINTMSK_EPMIlkv_Pos               (17U)                         
+#define USB_OTG_GINTMSK_EPMIlkv_Msk               (0x1UL << USB_OTG_GINTMSK_EPMIlkv_Pos) /*!< 0x00020000 */
+#define USB_OTG_GINTMSK_EPMISM                   USB_OTG_GINTMSK_EPMIlkv_Msk    /*!< Endpoint mismatch interrupt mask                    */
 #define USB_OTG_GINTMSK_IEPINT_Pos               (18U)                         
 #define USB_OTG_GINTMSK_IEPINT_Msk               (0x1UL << USB_OTG_GINTMSK_IEPINT_Pos) /*!< 0x00040000 */
 #define USB_OTG_GINTMSK_IEPINT                   USB_OTG_GINTMSK_IEPINT_Msk    /*!< IN endpoints interrupt mask                         */

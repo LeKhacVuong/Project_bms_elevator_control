@@ -54,6 +54,7 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Project_bms_elevator_control/User/matric_button}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Project_bms_elevator_control/User/board}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Project_bms_elevator_control/User/modbus_rtu_server}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Project_bms_elevator_control/User/scheduler}&quot;"/>
 								</option>
 								<inputType id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.input.c.2111099959" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.input.c"/>
 							</tool>

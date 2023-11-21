@@ -32,5 +32,6 @@ User/logger \
 User \
 User/matric_button \
 User/modbus_rtu_server \
+User/scheduler \
 User/step_motor \
 

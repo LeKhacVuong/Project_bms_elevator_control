@@ -959,131 +959,131 @@ typedef struct
   * @{
   */
 #if defined(RCC_PLLI2SCFGR_PLLI2SM)
-#define LL_RCC_PLLI2SM_DIV_2             (RCC_PLLI2SCFGR_PLLI2SM_1) /*!< PLLI2S division factor for PLLI2SM output by 2 */
-#define LL_RCC_PLLI2SM_DIV_3             (RCC_PLLI2SCFGR_PLLI2SM_1 | RCC_PLLI2SCFGR_PLLI2SM_0) /*!< PLLI2S division factor for PLLI2SM output by 3 */
-#define LL_RCC_PLLI2SM_DIV_4             (RCC_PLLI2SCFGR_PLLI2SM_2) /*!< PLLI2S division factor for PLLI2SM output by 4 */
-#define LL_RCC_PLLI2SM_DIV_5             (RCC_PLLI2SCFGR_PLLI2SM_2 | RCC_PLLI2SCFGR_PLLI2SM_0) /*!< PLLI2S division factor for PLLI2SM output by 5 */
-#define LL_RCC_PLLI2SM_DIV_6             (RCC_PLLI2SCFGR_PLLI2SM_2 | RCC_PLLI2SCFGR_PLLI2SM_1) /*!< PLLI2S division factor for PLLI2SM output by 6 */
-#define LL_RCC_PLLI2SM_DIV_7             (RCC_PLLI2SCFGR_PLLI2SM_2 | RCC_PLLI2SCFGR_PLLI2SM_1 | RCC_PLLI2SCFGR_PLLI2SM_0) /*!< PLLI2S division factor for PLLI2SM output by 7 */
-#define LL_RCC_PLLI2SM_DIV_8             (RCC_PLLI2SCFGR_PLLI2SM_3) /*!< PLLI2S division factor for PLLI2SM output by 8 */
-#define LL_RCC_PLLI2SM_DIV_9             (RCC_PLLI2SCFGR_PLLI2SM_3 | RCC_PLLI2SCFGR_PLLI2SM_0) /*!< PLLI2S division factor for PLLI2SM output by 9 */
-#define LL_RCC_PLLI2SM_DIV_10            (RCC_PLLI2SCFGR_PLLI2SM_3 | RCC_PLLI2SCFGR_PLLI2SM_1) /*!< PLLI2S division factor for PLLI2SM output by 10 */
-#define LL_RCC_PLLI2SM_DIV_11            (RCC_PLLI2SCFGR_PLLI2SM_3 | RCC_PLLI2SCFGR_PLLI2SM_1 | RCC_PLLI2SCFGR_PLLI2SM_0) /*!< PLLI2S division factor for PLLI2SM output by 11 */
-#define LL_RCC_PLLI2SM_DIV_12            (RCC_PLLI2SCFGR_PLLI2SM_3 | RCC_PLLI2SCFGR_PLLI2SM_2) /*!< PLLI2S division factor for PLLI2SM output by 12 */
-#define LL_RCC_PLLI2SM_DIV_13            (RCC_PLLI2SCFGR_PLLI2SM_3 | RCC_PLLI2SCFGR_PLLI2SM_2 | RCC_PLLI2SCFGR_PLLI2SM_0) /*!< PLLI2S division factor for PLLI2SM output by 13 */
-#define LL_RCC_PLLI2SM_DIV_14            (RCC_PLLI2SCFGR_PLLI2SM_3 | RCC_PLLI2SCFGR_PLLI2SM_2 | RCC_PLLI2SCFGR_PLLI2SM_1) /*!< PLLI2S division factor for PLLI2SM output by 14 */
-#define LL_RCC_PLLI2SM_DIV_15            (RCC_PLLI2SCFGR_PLLI2SM_3 | RCC_PLLI2SCFGR_PLLI2SM_2 | RCC_PLLI2SCFGR_PLLI2SM_1 | RCC_PLLI2SCFGR_PLLI2SM_0) /*!< PLLI2S division factor for PLLI2SM output by 15 */
-#define LL_RCC_PLLI2SM_DIV_16            (RCC_PLLI2SCFGR_PLLI2SM_4) /*!< PLLI2S division factor for PLLI2SM output by 16 */
-#define LL_RCC_PLLI2SM_DIV_17            (RCC_PLLI2SCFGR_PLLI2SM_4 | RCC_PLLI2SCFGR_PLLI2SM_0) /*!< PLLI2S division factor for PLLI2SM output by 17 */
-#define LL_RCC_PLLI2SM_DIV_18            (RCC_PLLI2SCFGR_PLLI2SM_4 | RCC_PLLI2SCFGR_PLLI2SM_1) /*!< PLLI2S division factor for PLLI2SM output by 18 */
-#define LL_RCC_PLLI2SM_DIV_19            (RCC_PLLI2SCFGR_PLLI2SM_4 | RCC_PLLI2SCFGR_PLLI2SM_1 | RCC_PLLI2SCFGR_PLLI2SM_0) /*!< PLLI2S division factor for PLLI2SM output by 19 */
-#define LL_RCC_PLLI2SM_DIV_20            (RCC_PLLI2SCFGR_PLLI2SM_4 | RCC_PLLI2SCFGR_PLLI2SM_2) /*!< PLLI2S division factor for PLLI2SM output by 20 */
-#define LL_RCC_PLLI2SM_DIV_21            (RCC_PLLI2SCFGR_PLLI2SM_4 | RCC_PLLI2SCFGR_PLLI2SM_2 | RCC_PLLI2SCFGR_PLLI2SM_0) /*!< PLLI2S division factor for PLLI2SM output by 21 */
-#define LL_RCC_PLLI2SM_DIV_22            (RCC_PLLI2SCFGR_PLLI2SM_4 | RCC_PLLI2SCFGR_PLLI2SM_2 | RCC_PLLI2SCFGR_PLLI2SM_1) /*!< PLLI2S division factor for PLLI2SM output by 22 */
-#define LL_RCC_PLLI2SM_DIV_23            (RCC_PLLI2SCFGR_PLLI2SM_4 | RCC_PLLI2SCFGR_PLLI2SM_2 | RCC_PLLI2SCFGR_PLLI2SM_1 | RCC_PLLI2SCFGR_PLLI2SM_0) /*!< PLLI2S division factor for PLLI2SM output by 23 */
-#define LL_RCC_PLLI2SM_DIV_24            (RCC_PLLI2SCFGR_PLLI2SM_4 | RCC_PLLI2SCFGR_PLLI2SM_3) /*!< PLLI2S division factor for PLLI2SM output by 24 */
-#define LL_RCC_PLLI2SM_DIV_25            (RCC_PLLI2SCFGR_PLLI2SM_4 | RCC_PLLI2SCFGR_PLLI2SM_3 | RCC_PLLI2SCFGR_PLLI2SM_0) /*!< PLLI2S division factor for PLLI2SM output by 25 */
-#define LL_RCC_PLLI2SM_DIV_26            (RCC_PLLI2SCFGR_PLLI2SM_4 | RCC_PLLI2SCFGR_PLLI2SM_3 | RCC_PLLI2SCFGR_PLLI2SM_1) /*!< PLLI2S division factor for PLLI2SM output by 26 */
-#define LL_RCC_PLLI2SM_DIV_27            (RCC_PLLI2SCFGR_PLLI2SM_4 | RCC_PLLI2SCFGR_PLLI2SM_3 | RCC_PLLI2SCFGR_PLLI2SM_1 | RCC_PLLI2SCFGR_PLLI2SM_0) /*!< PLLI2S division factor for PLLI2SM output by 27 */
-#define LL_RCC_PLLI2SM_DIV_28            (RCC_PLLI2SCFGR_PLLI2SM_4 | RCC_PLLI2SCFGR_PLLI2SM_3 | RCC_PLLI2SCFGR_PLLI2SM_2) /*!< PLLI2S division factor for PLLI2SM output by 28 */
-#define LL_RCC_PLLI2SM_DIV_29            (RCC_PLLI2SCFGR_PLLI2SM_4 | RCC_PLLI2SCFGR_PLLI2SM_3 | RCC_PLLI2SCFGR_PLLI2SM_2 | RCC_PLLI2SCFGR_PLLI2SM_0) /*!< PLLI2S division factor for PLLI2SM output by 29 */
-#define LL_RCC_PLLI2SM_DIV_30            (RCC_PLLI2SCFGR_PLLI2SM_4 | RCC_PLLI2SCFGR_PLLI2SM_3 | RCC_PLLI2SCFGR_PLLI2SM_2 | RCC_PLLI2SCFGR_PLLI2SM_1) /*!< PLLI2S division factor for PLLI2SM output by 30 */
-#define LL_RCC_PLLI2SM_DIV_31            (RCC_PLLI2SCFGR_PLLI2SM_4 | RCC_PLLI2SCFGR_PLLI2SM_3 | RCC_PLLI2SCFGR_PLLI2SM_2 | RCC_PLLI2SCFGR_PLLI2SM_1 | RCC_PLLI2SCFGR_PLLI2SM_0) /*!< PLLI2S division factor for PLLI2SM output by 31 */
-#define LL_RCC_PLLI2SM_DIV_32            (RCC_PLLI2SCFGR_PLLI2SM_5) /*!< PLLI2S division factor for PLLI2SM output by 32 */
-#define LL_RCC_PLLI2SM_DIV_33            (RCC_PLLI2SCFGR_PLLI2SM_5 | RCC_PLLI2SCFGR_PLLI2SM_0) /*!< PLLI2S division factor for PLLI2SM output by 33 */
-#define LL_RCC_PLLI2SM_DIV_34            (RCC_PLLI2SCFGR_PLLI2SM_5 | RCC_PLLI2SCFGR_PLLI2SM_1) /*!< PLLI2S division factor for PLLI2SM output by 34 */
-#define LL_RCC_PLLI2SM_DIV_35            (RCC_PLLI2SCFGR_PLLI2SM_5 | RCC_PLLI2SCFGR_PLLI2SM_1 | RCC_PLLI2SCFGR_PLLI2SM_0) /*!< PLLI2S division factor for PLLI2SM output by 35 */
-#define LL_RCC_PLLI2SM_DIV_36            (RCC_PLLI2SCFGR_PLLI2SM_5 | RCC_PLLI2SCFGR_PLLI2SM_2) /*!< PLLI2S division factor for PLLI2SM output by 36 */
-#define LL_RCC_PLLI2SM_DIV_37            (RCC_PLLI2SCFGR_PLLI2SM_5 | RCC_PLLI2SCFGR_PLLI2SM_2 | RCC_PLLI2SCFGR_PLLI2SM_0) /*!< PLLI2S division factor for PLLI2SM output by 37 */
-#define LL_RCC_PLLI2SM_DIV_38            (RCC_PLLI2SCFGR_PLLI2SM_5 | RCC_PLLI2SCFGR_PLLI2SM_2 | RCC_PLLI2SCFGR_PLLI2SM_1) /*!< PLLI2S division factor for PLLI2SM output by 38 */
-#define LL_RCC_PLLI2SM_DIV_39            (RCC_PLLI2SCFGR_PLLI2SM_5 | RCC_PLLI2SCFGR_PLLI2SM_2 | RCC_PLLI2SCFGR_PLLI2SM_1 | RCC_PLLI2SCFGR_PLLI2SM_0) /*!< PLLI2S division factor for PLLI2SM output by 39 */
-#define LL_RCC_PLLI2SM_DIV_40            (RCC_PLLI2SCFGR_PLLI2SM_5 | RCC_PLLI2SCFGR_PLLI2SM_3) /*!< PLLI2S division factor for PLLI2SM output by 40 */
-#define LL_RCC_PLLI2SM_DIV_41            (RCC_PLLI2SCFGR_PLLI2SM_5 | RCC_PLLI2SCFGR_PLLI2SM_3 | RCC_PLLI2SCFGR_PLLI2SM_0) /*!< PLLI2S division factor for PLLI2SM output by 41 */
-#define LL_RCC_PLLI2SM_DIV_42            (RCC_PLLI2SCFGR_PLLI2SM_5 | RCC_PLLI2SCFGR_PLLI2SM_3 | RCC_PLLI2SCFGR_PLLI2SM_1) /*!< PLLI2S division factor for PLLI2SM output by 42 */
-#define LL_RCC_PLLI2SM_DIV_43            (RCC_PLLI2SCFGR_PLLI2SM_5 | RCC_PLLI2SCFGR_PLLI2SM_3 | RCC_PLLI2SCFGR_PLLI2SM_1 | RCC_PLLI2SCFGR_PLLI2SM_0) /*!< PLLI2S division factor for PLLI2SM output by 43 */
-#define LL_RCC_PLLI2SM_DIV_44            (RCC_PLLI2SCFGR_PLLI2SM_5 | RCC_PLLI2SCFGR_PLLI2SM_3 | RCC_PLLI2SCFGR_PLLI2SM_2) /*!< PLLI2S division factor for PLLI2SM output by 44 */
-#define LL_RCC_PLLI2SM_DIV_45            (RCC_PLLI2SCFGR_PLLI2SM_5 | RCC_PLLI2SCFGR_PLLI2SM_3 | RCC_PLLI2SCFGR_PLLI2SM_2 | RCC_PLLI2SCFGR_PLLI2SM_0) /*!< PLLI2S division factor for PLLI2SM output by 45 */
-#define LL_RCC_PLLI2SM_DIV_46            (RCC_PLLI2SCFGR_PLLI2SM_5 | RCC_PLLI2SCFGR_PLLI2SM_3 | RCC_PLLI2SCFGR_PLLI2SM_2 | RCC_PLLI2SCFGR_PLLI2SM_1) /*!< PLLI2S division factor for PLLI2SM output by 46 */
-#define LL_RCC_PLLI2SM_DIV_47            (RCC_PLLI2SCFGR_PLLI2SM_5 | RCC_PLLI2SCFGR_PLLI2SM_3 | RCC_PLLI2SCFGR_PLLI2SM_2 | RCC_PLLI2SCFGR_PLLI2SM_1 | RCC_PLLI2SCFGR_PLLI2SM_0) /*!< PLLI2S division factor for PLLI2SM output by 47 */
-#define LL_RCC_PLLI2SM_DIV_48            (RCC_PLLI2SCFGR_PLLI2SM_5 | RCC_PLLI2SCFGR_PLLI2SM_4) /*!< PLLI2S division factor for PLLI2SM output by 48 */
-#define LL_RCC_PLLI2SM_DIV_49            (RCC_PLLI2SCFGR_PLLI2SM_5 | RCC_PLLI2SCFGR_PLLI2SM_4 | RCC_PLLI2SCFGR_PLLI2SM_0) /*!< PLLI2S division factor for PLLI2SM output by 49 */
-#define LL_RCC_PLLI2SM_DIV_50            (RCC_PLLI2SCFGR_PLLI2SM_5 | RCC_PLLI2SCFGR_PLLI2SM_4 | RCC_PLLI2SCFGR_PLLI2SM_1) /*!< PLLI2S division factor for PLLI2SM output by 50 */
-#define LL_RCC_PLLI2SM_DIV_51            (RCC_PLLI2SCFGR_PLLI2SM_5 | RCC_PLLI2SCFGR_PLLI2SM_4 | RCC_PLLI2SCFGR_PLLI2SM_1 | RCC_PLLI2SCFGR_PLLI2SM_0) /*!< PLLI2S division factor for PLLI2SM output by 51 */
-#define LL_RCC_PLLI2SM_DIV_52            (RCC_PLLI2SCFGR_PLLI2SM_5 | RCC_PLLI2SCFGR_PLLI2SM_4 | RCC_PLLI2SCFGR_PLLI2SM_2) /*!< PLLI2S division factor for PLLI2SM output by 52 */
-#define LL_RCC_PLLI2SM_DIV_53            (RCC_PLLI2SCFGR_PLLI2SM_5 | RCC_PLLI2SCFGR_PLLI2SM_4 | RCC_PLLI2SCFGR_PLLI2SM_2 | RCC_PLLI2SCFGR_PLLI2SM_0) /*!< PLLI2S division factor for PLLI2SM output by 53 */
-#define LL_RCC_PLLI2SM_DIV_54            (RCC_PLLI2SCFGR_PLLI2SM_5 | RCC_PLLI2SCFGR_PLLI2SM_4 | RCC_PLLI2SCFGR_PLLI2SM_2 | RCC_PLLI2SCFGR_PLLI2SM_1) /*!< PLLI2S division factor for PLLI2SM output by 54 */
-#define LL_RCC_PLLI2SM_DIV_55            (RCC_PLLI2SCFGR_PLLI2SM_5 | RCC_PLLI2SCFGR_PLLI2SM_4 | RCC_PLLI2SCFGR_PLLI2SM_2 | RCC_PLLI2SCFGR_PLLI2SM_1 | RCC_PLLI2SCFGR_PLLI2SM_0) /*!< PLLI2S division factor for PLLI2SM output by 55 */
-#define LL_RCC_PLLI2SM_DIV_56            (RCC_PLLI2SCFGR_PLLI2SM_5 | RCC_PLLI2SCFGR_PLLI2SM_4 | RCC_PLLI2SCFGR_PLLI2SM_3) /*!< PLLI2S division factor for PLLI2SM output by 56 */
-#define LL_RCC_PLLI2SM_DIV_57            (RCC_PLLI2SCFGR_PLLI2SM_5 | RCC_PLLI2SCFGR_PLLI2SM_4 | RCC_PLLI2SCFGR_PLLI2SM_3 | RCC_PLLI2SCFGR_PLLI2SM_0) /*!< PLLI2S division factor for PLLI2SM output by 57 */
-#define LL_RCC_PLLI2SM_DIV_58            (RCC_PLLI2SCFGR_PLLI2SM_5 | RCC_PLLI2SCFGR_PLLI2SM_4 | RCC_PLLI2SCFGR_PLLI2SM_3 | RCC_PLLI2SCFGR_PLLI2SM_1) /*!< PLLI2S division factor for PLLI2SM output by 58 */
-#define LL_RCC_PLLI2SM_DIV_59            (RCC_PLLI2SCFGR_PLLI2SM_5 | RCC_PLLI2SCFGR_PLLI2SM_4 | RCC_PLLI2SCFGR_PLLI2SM_3 | RCC_PLLI2SCFGR_PLLI2SM_1 | RCC_PLLI2SCFGR_PLLI2SM_0) /*!< PLLI2S division factor for PLLI2SM output by 59 */
-#define LL_RCC_PLLI2SM_DIV_60            (RCC_PLLI2SCFGR_PLLI2SM_5 | RCC_PLLI2SCFGR_PLLI2SM_4 | RCC_PLLI2SCFGR_PLLI2SM_3 | RCC_PLLI2SCFGR_PLLI2SM_2) /*!< PLLI2S division factor for PLLI2SM output by 60 */
-#define LL_RCC_PLLI2SM_DIV_61            (RCC_PLLI2SCFGR_PLLI2SM_5 | RCC_PLLI2SCFGR_PLLI2SM_4 | RCC_PLLI2SCFGR_PLLI2SM_3 | RCC_PLLI2SCFGR_PLLI2SM_2 | RCC_PLLI2SCFGR_PLLI2SM_0) /*!< PLLI2S division factor for PLLI2SM output by 61 */
-#define LL_RCC_PLLI2SM_DIV_62            (RCC_PLLI2SCFGR_PLLI2SM_5 | RCC_PLLI2SCFGR_PLLI2SM_4 | RCC_PLLI2SCFGR_PLLI2SM_3 | RCC_PLLI2SCFGR_PLLI2SM_2 | RCC_PLLI2SCFGR_PLLI2SM_1) /*!< PLLI2S division factor for PLLI2SM output by 62 */
-#define LL_RCC_PLLI2SM_DIV_63            (RCC_PLLI2SCFGR_PLLI2SM_5 | RCC_PLLI2SCFGR_PLLI2SM_4 | RCC_PLLI2SCFGR_PLLI2SM_3 | RCC_PLLI2SCFGR_PLLI2SM_2 | RCC_PLLI2SCFGR_PLLI2SM_1 | RCC_PLLI2SCFGR_PLLI2SM_0) /*!< PLLI2S division factor for PLLI2SM output by 63 */
+#define LL_RCC_PLLI2lkv_DIV_2             (RCC_PLLI2SCFGR_PLLI2lkv_1) /*!< PLLI2S division factor for PLLI2SM output by 2 */
+#define LL_RCC_PLLI2lkv_DIV_3             (RCC_PLLI2SCFGR_PLLI2lkv_1 | RCC_PLLI2SCFGR_PLLI2lkv_0) /*!< PLLI2S division factor for PLLI2SM output by 3 */
+#define LL_RCC_PLLI2lkv_DIV_4             (RCC_PLLI2SCFGR_PLLI2lkv_2) /*!< PLLI2S division factor for PLLI2SM output by 4 */
+#define LL_RCC_PLLI2lkv_DIV_5             (RCC_PLLI2SCFGR_PLLI2lkv_2 | RCC_PLLI2SCFGR_PLLI2lkv_0) /*!< PLLI2S division factor for PLLI2SM output by 5 */
+#define LL_RCC_PLLI2lkv_DIV_6             (RCC_PLLI2SCFGR_PLLI2lkv_2 | RCC_PLLI2SCFGR_PLLI2lkv_1) /*!< PLLI2S division factor for PLLI2SM output by 6 */
+#define LL_RCC_PLLI2lkv_DIV_7             (RCC_PLLI2SCFGR_PLLI2lkv_2 | RCC_PLLI2SCFGR_PLLI2lkv_1 | RCC_PLLI2SCFGR_PLLI2lkv_0) /*!< PLLI2S division factor for PLLI2SM output by 7 */
+#define LL_RCC_PLLI2lkv_DIV_8             (RCC_PLLI2SCFGR_PLLI2lkv_3) /*!< PLLI2S division factor for PLLI2SM output by 8 */
+#define LL_RCC_PLLI2lkv_DIV_9             (RCC_PLLI2SCFGR_PLLI2lkv_3 | RCC_PLLI2SCFGR_PLLI2lkv_0) /*!< PLLI2S division factor for PLLI2SM output by 9 */
+#define LL_RCC_PLLI2lkv_DIV_10            (RCC_PLLI2SCFGR_PLLI2lkv_3 | RCC_PLLI2SCFGR_PLLI2lkv_1) /*!< PLLI2S division factor for PLLI2SM output by 10 */
+#define LL_RCC_PLLI2lkv_DIV_11            (RCC_PLLI2SCFGR_PLLI2lkv_3 | RCC_PLLI2SCFGR_PLLI2lkv_1 | RCC_PLLI2SCFGR_PLLI2lkv_0) /*!< PLLI2S division factor for PLLI2SM output by 11 */
+#define LL_RCC_PLLI2lkv_DIV_12            (RCC_PLLI2SCFGR_PLLI2lkv_3 | RCC_PLLI2SCFGR_PLLI2lkv_2) /*!< PLLI2S division factor for PLLI2SM output by 12 */
+#define LL_RCC_PLLI2lkv_DIV_13            (RCC_PLLI2SCFGR_PLLI2lkv_3 | RCC_PLLI2SCFGR_PLLI2lkv_2 | RCC_PLLI2SCFGR_PLLI2lkv_0) /*!< PLLI2S division factor for PLLI2SM output by 13 */
+#define LL_RCC_PLLI2lkv_DIV_14            (RCC_PLLI2SCFGR_PLLI2lkv_3 | RCC_PLLI2SCFGR_PLLI2lkv_2 | RCC_PLLI2SCFGR_PLLI2lkv_1) /*!< PLLI2S division factor for PLLI2SM output by 14 */
+#define LL_RCC_PLLI2lkv_DIV_15            (RCC_PLLI2SCFGR_PLLI2lkv_3 | RCC_PLLI2SCFGR_PLLI2lkv_2 | RCC_PLLI2SCFGR_PLLI2lkv_1 | RCC_PLLI2SCFGR_PLLI2lkv_0) /*!< PLLI2S division factor for PLLI2SM output by 15 */
+#define LL_RCC_PLLI2lkv_DIV_16            (RCC_PLLI2SCFGR_PLLI2lkv_4) /*!< PLLI2S division factor for PLLI2SM output by 16 */
+#define LL_RCC_PLLI2lkv_DIV_17            (RCC_PLLI2SCFGR_PLLI2lkv_4 | RCC_PLLI2SCFGR_PLLI2lkv_0) /*!< PLLI2S division factor for PLLI2SM output by 17 */
+#define LL_RCC_PLLI2lkv_DIV_18            (RCC_PLLI2SCFGR_PLLI2lkv_4 | RCC_PLLI2SCFGR_PLLI2lkv_1) /*!< PLLI2S division factor for PLLI2SM output by 18 */
+#define LL_RCC_PLLI2lkv_DIV_19            (RCC_PLLI2SCFGR_PLLI2lkv_4 | RCC_PLLI2SCFGR_PLLI2lkv_1 | RCC_PLLI2SCFGR_PLLI2lkv_0) /*!< PLLI2S division factor for PLLI2SM output by 19 */
+#define LL_RCC_PLLI2lkv_DIV_20            (RCC_PLLI2SCFGR_PLLI2lkv_4 | RCC_PLLI2SCFGR_PLLI2lkv_2) /*!< PLLI2S division factor for PLLI2SM output by 20 */
+#define LL_RCC_PLLI2lkv_DIV_21            (RCC_PLLI2SCFGR_PLLI2lkv_4 | RCC_PLLI2SCFGR_PLLI2lkv_2 | RCC_PLLI2SCFGR_PLLI2lkv_0) /*!< PLLI2S division factor for PLLI2SM output by 21 */
+#define LL_RCC_PLLI2lkv_DIV_22            (RCC_PLLI2SCFGR_PLLI2lkv_4 | RCC_PLLI2SCFGR_PLLI2lkv_2 | RCC_PLLI2SCFGR_PLLI2lkv_1) /*!< PLLI2S division factor for PLLI2SM output by 22 */
+#define LL_RCC_PLLI2lkv_DIV_23            (RCC_PLLI2SCFGR_PLLI2lkv_4 | RCC_PLLI2SCFGR_PLLI2lkv_2 | RCC_PLLI2SCFGR_PLLI2lkv_1 | RCC_PLLI2SCFGR_PLLI2lkv_0) /*!< PLLI2S division factor for PLLI2SM output by 23 */
+#define LL_RCC_PLLI2lkv_DIV_24            (RCC_PLLI2SCFGR_PLLI2lkv_4 | RCC_PLLI2SCFGR_PLLI2lkv_3) /*!< PLLI2S division factor for PLLI2SM output by 24 */
+#define LL_RCC_PLLI2lkv_DIV_25            (RCC_PLLI2SCFGR_PLLI2lkv_4 | RCC_PLLI2SCFGR_PLLI2lkv_3 | RCC_PLLI2SCFGR_PLLI2lkv_0) /*!< PLLI2S division factor for PLLI2SM output by 25 */
+#define LL_RCC_PLLI2lkv_DIV_26            (RCC_PLLI2SCFGR_PLLI2lkv_4 | RCC_PLLI2SCFGR_PLLI2lkv_3 | RCC_PLLI2SCFGR_PLLI2lkv_1) /*!< PLLI2S division factor for PLLI2SM output by 26 */
+#define LL_RCC_PLLI2lkv_DIV_27            (RCC_PLLI2SCFGR_PLLI2lkv_4 | RCC_PLLI2SCFGR_PLLI2lkv_3 | RCC_PLLI2SCFGR_PLLI2lkv_1 | RCC_PLLI2SCFGR_PLLI2lkv_0) /*!< PLLI2S division factor for PLLI2SM output by 27 */
+#define LL_RCC_PLLI2lkv_DIV_28            (RCC_PLLI2SCFGR_PLLI2lkv_4 | RCC_PLLI2SCFGR_PLLI2lkv_3 | RCC_PLLI2SCFGR_PLLI2lkv_2) /*!< PLLI2S division factor for PLLI2SM output by 28 */
+#define LL_RCC_PLLI2lkv_DIV_29            (RCC_PLLI2SCFGR_PLLI2lkv_4 | RCC_PLLI2SCFGR_PLLI2lkv_3 | RCC_PLLI2SCFGR_PLLI2lkv_2 | RCC_PLLI2SCFGR_PLLI2lkv_0) /*!< PLLI2S division factor for PLLI2SM output by 29 */
+#define LL_RCC_PLLI2lkv_DIV_30            (RCC_PLLI2SCFGR_PLLI2lkv_4 | RCC_PLLI2SCFGR_PLLI2lkv_3 | RCC_PLLI2SCFGR_PLLI2lkv_2 | RCC_PLLI2SCFGR_PLLI2lkv_1) /*!< PLLI2S division factor for PLLI2SM output by 30 */
+#define LL_RCC_PLLI2lkv_DIV_31            (RCC_PLLI2SCFGR_PLLI2lkv_4 | RCC_PLLI2SCFGR_PLLI2lkv_3 | RCC_PLLI2SCFGR_PLLI2lkv_2 | RCC_PLLI2SCFGR_PLLI2lkv_1 | RCC_PLLI2SCFGR_PLLI2lkv_0) /*!< PLLI2S division factor for PLLI2SM output by 31 */
+#define LL_RCC_PLLI2lkv_DIV_32            (RCC_PLLI2SCFGR_PLLI2lkv_5) /*!< PLLI2S division factor for PLLI2SM output by 32 */
+#define LL_RCC_PLLI2lkv_DIV_33            (RCC_PLLI2SCFGR_PLLI2lkv_5 | RCC_PLLI2SCFGR_PLLI2lkv_0) /*!< PLLI2S division factor for PLLI2SM output by 33 */
+#define LL_RCC_PLLI2lkv_DIV_34            (RCC_PLLI2SCFGR_PLLI2lkv_5 | RCC_PLLI2SCFGR_PLLI2lkv_1) /*!< PLLI2S division factor for PLLI2SM output by 34 */
+#define LL_RCC_PLLI2lkv_DIV_35            (RCC_PLLI2SCFGR_PLLI2lkv_5 | RCC_PLLI2SCFGR_PLLI2lkv_1 | RCC_PLLI2SCFGR_PLLI2lkv_0) /*!< PLLI2S division factor for PLLI2SM output by 35 */
+#define LL_RCC_PLLI2lkv_DIV_36            (RCC_PLLI2SCFGR_PLLI2lkv_5 | RCC_PLLI2SCFGR_PLLI2lkv_2) /*!< PLLI2S division factor for PLLI2SM output by 36 */
+#define LL_RCC_PLLI2lkv_DIV_37            (RCC_PLLI2SCFGR_PLLI2lkv_5 | RCC_PLLI2SCFGR_PLLI2lkv_2 | RCC_PLLI2SCFGR_PLLI2lkv_0) /*!< PLLI2S division factor for PLLI2SM output by 37 */
+#define LL_RCC_PLLI2lkv_DIV_38            (RCC_PLLI2SCFGR_PLLI2lkv_5 | RCC_PLLI2SCFGR_PLLI2lkv_2 | RCC_PLLI2SCFGR_PLLI2lkv_1) /*!< PLLI2S division factor for PLLI2SM output by 38 */
+#define LL_RCC_PLLI2lkv_DIV_39            (RCC_PLLI2SCFGR_PLLI2lkv_5 | RCC_PLLI2SCFGR_PLLI2lkv_2 | RCC_PLLI2SCFGR_PLLI2lkv_1 | RCC_PLLI2SCFGR_PLLI2lkv_0) /*!< PLLI2S division factor for PLLI2SM output by 39 */
+#define LL_RCC_PLLI2lkv_DIV_40            (RCC_PLLI2SCFGR_PLLI2lkv_5 | RCC_PLLI2SCFGR_PLLI2lkv_3) /*!< PLLI2S division factor for PLLI2SM output by 40 */
+#define LL_RCC_PLLI2lkv_DIV_41            (RCC_PLLI2SCFGR_PLLI2lkv_5 | RCC_PLLI2SCFGR_PLLI2lkv_3 | RCC_PLLI2SCFGR_PLLI2lkv_0) /*!< PLLI2S division factor for PLLI2SM output by 41 */
+#define LL_RCC_PLLI2lkv_DIV_42            (RCC_PLLI2SCFGR_PLLI2lkv_5 | RCC_PLLI2SCFGR_PLLI2lkv_3 | RCC_PLLI2SCFGR_PLLI2lkv_1) /*!< PLLI2S division factor for PLLI2SM output by 42 */
+#define LL_RCC_PLLI2lkv_DIV_43            (RCC_PLLI2SCFGR_PLLI2lkv_5 | RCC_PLLI2SCFGR_PLLI2lkv_3 | RCC_PLLI2SCFGR_PLLI2lkv_1 | RCC_PLLI2SCFGR_PLLI2lkv_0) /*!< PLLI2S division factor for PLLI2SM output by 43 */
+#define LL_RCC_PLLI2lkv_DIV_44            (RCC_PLLI2SCFGR_PLLI2lkv_5 | RCC_PLLI2SCFGR_PLLI2lkv_3 | RCC_PLLI2SCFGR_PLLI2lkv_2) /*!< PLLI2S division factor for PLLI2SM output by 44 */
+#define LL_RCC_PLLI2lkv_DIV_45            (RCC_PLLI2SCFGR_PLLI2lkv_5 | RCC_PLLI2SCFGR_PLLI2lkv_3 | RCC_PLLI2SCFGR_PLLI2lkv_2 | RCC_PLLI2SCFGR_PLLI2lkv_0) /*!< PLLI2S division factor for PLLI2SM output by 45 */
+#define LL_RCC_PLLI2lkv_DIV_46            (RCC_PLLI2SCFGR_PLLI2lkv_5 | RCC_PLLI2SCFGR_PLLI2lkv_3 | RCC_PLLI2SCFGR_PLLI2lkv_2 | RCC_PLLI2SCFGR_PLLI2lkv_1) /*!< PLLI2S division factor for PLLI2SM output by 46 */
+#define LL_RCC_PLLI2lkv_DIV_47            (RCC_PLLI2SCFGR_PLLI2lkv_5 | RCC_PLLI2SCFGR_PLLI2lkv_3 | RCC_PLLI2SCFGR_PLLI2lkv_2 | RCC_PLLI2SCFGR_PLLI2lkv_1 | RCC_PLLI2SCFGR_PLLI2lkv_0) /*!< PLLI2S division factor for PLLI2SM output by 47 */
+#define LL_RCC_PLLI2lkv_DIV_48            (RCC_PLLI2SCFGR_PLLI2lkv_5 | RCC_PLLI2SCFGR_PLLI2lkv_4) /*!< PLLI2S division factor for PLLI2SM output by 48 */
+#define LL_RCC_PLLI2lkv_DIV_49            (RCC_PLLI2SCFGR_PLLI2lkv_5 | RCC_PLLI2SCFGR_PLLI2lkv_4 | RCC_PLLI2SCFGR_PLLI2lkv_0) /*!< PLLI2S division factor for PLLI2SM output by 49 */
+#define LL_RCC_PLLI2lkv_DIV_50            (RCC_PLLI2SCFGR_PLLI2lkv_5 | RCC_PLLI2SCFGR_PLLI2lkv_4 | RCC_PLLI2SCFGR_PLLI2lkv_1) /*!< PLLI2S division factor for PLLI2SM output by 50 */
+#define LL_RCC_PLLI2lkv_DIV_51            (RCC_PLLI2SCFGR_PLLI2lkv_5 | RCC_PLLI2SCFGR_PLLI2lkv_4 | RCC_PLLI2SCFGR_PLLI2lkv_1 | RCC_PLLI2SCFGR_PLLI2lkv_0) /*!< PLLI2S division factor for PLLI2SM output by 51 */
+#define LL_RCC_PLLI2lkv_DIV_52            (RCC_PLLI2SCFGR_PLLI2lkv_5 | RCC_PLLI2SCFGR_PLLI2lkv_4 | RCC_PLLI2SCFGR_PLLI2lkv_2) /*!< PLLI2S division factor for PLLI2SM output by 52 */
+#define LL_RCC_PLLI2lkv_DIV_53            (RCC_PLLI2SCFGR_PLLI2lkv_5 | RCC_PLLI2SCFGR_PLLI2lkv_4 | RCC_PLLI2SCFGR_PLLI2lkv_2 | RCC_PLLI2SCFGR_PLLI2lkv_0) /*!< PLLI2S division factor for PLLI2SM output by 53 */
+#define LL_RCC_PLLI2lkv_DIV_54            (RCC_PLLI2SCFGR_PLLI2lkv_5 | RCC_PLLI2SCFGR_PLLI2lkv_4 | RCC_PLLI2SCFGR_PLLI2lkv_2 | RCC_PLLI2SCFGR_PLLI2lkv_1) /*!< PLLI2S division factor for PLLI2SM output by 54 */
+#define LL_RCC_PLLI2lkv_DIV_55            (RCC_PLLI2SCFGR_PLLI2lkv_5 | RCC_PLLI2SCFGR_PLLI2lkv_4 | RCC_PLLI2SCFGR_PLLI2lkv_2 | RCC_PLLI2SCFGR_PLLI2lkv_1 | RCC_PLLI2SCFGR_PLLI2lkv_0) /*!< PLLI2S division factor for PLLI2SM output by 55 */
+#define LL_RCC_PLLI2lkv_DIV_56            (RCC_PLLI2SCFGR_PLLI2lkv_5 | RCC_PLLI2SCFGR_PLLI2lkv_4 | RCC_PLLI2SCFGR_PLLI2lkv_3) /*!< PLLI2S division factor for PLLI2SM output by 56 */
+#define LL_RCC_PLLI2lkv_DIV_57            (RCC_PLLI2SCFGR_PLLI2lkv_5 | RCC_PLLI2SCFGR_PLLI2lkv_4 | RCC_PLLI2SCFGR_PLLI2lkv_3 | RCC_PLLI2SCFGR_PLLI2lkv_0) /*!< PLLI2S division factor for PLLI2SM output by 57 */
+#define LL_RCC_PLLI2lkv_DIV_58            (RCC_PLLI2SCFGR_PLLI2lkv_5 | RCC_PLLI2SCFGR_PLLI2lkv_4 | RCC_PLLI2SCFGR_PLLI2lkv_3 | RCC_PLLI2SCFGR_PLLI2lkv_1) /*!< PLLI2S division factor for PLLI2SM output by 58 */
+#define LL_RCC_PLLI2lkv_DIV_59            (RCC_PLLI2SCFGR_PLLI2lkv_5 | RCC_PLLI2SCFGR_PLLI2lkv_4 | RCC_PLLI2SCFGR_PLLI2lkv_3 | RCC_PLLI2SCFGR_PLLI2lkv_1 | RCC_PLLI2SCFGR_PLLI2lkv_0) /*!< PLLI2S division factor for PLLI2SM output by 59 */
+#define LL_RCC_PLLI2lkv_DIV_60            (RCC_PLLI2SCFGR_PLLI2lkv_5 | RCC_PLLI2SCFGR_PLLI2lkv_4 | RCC_PLLI2SCFGR_PLLI2lkv_3 | RCC_PLLI2SCFGR_PLLI2lkv_2) /*!< PLLI2S division factor for PLLI2SM output by 60 */
+#define LL_RCC_PLLI2lkv_DIV_61            (RCC_PLLI2SCFGR_PLLI2lkv_5 | RCC_PLLI2SCFGR_PLLI2lkv_4 | RCC_PLLI2SCFGR_PLLI2lkv_3 | RCC_PLLI2SCFGR_PLLI2lkv_2 | RCC_PLLI2SCFGR_PLLI2lkv_0) /*!< PLLI2S division factor for PLLI2SM output by 61 */
+#define LL_RCC_PLLI2lkv_DIV_62            (RCC_PLLI2SCFGR_PLLI2lkv_5 | RCC_PLLI2SCFGR_PLLI2lkv_4 | RCC_PLLI2SCFGR_PLLI2lkv_3 | RCC_PLLI2SCFGR_PLLI2lkv_2 | RCC_PLLI2SCFGR_PLLI2lkv_1) /*!< PLLI2S division factor for PLLI2SM output by 62 */
+#define LL_RCC_PLLI2lkv_DIV_63            (RCC_PLLI2SCFGR_PLLI2lkv_5 | RCC_PLLI2SCFGR_PLLI2lkv_4 | RCC_PLLI2SCFGR_PLLI2lkv_3 | RCC_PLLI2SCFGR_PLLI2lkv_2 | RCC_PLLI2SCFGR_PLLI2lkv_1 | RCC_PLLI2SCFGR_PLLI2lkv_0) /*!< PLLI2S division factor for PLLI2SM output by 63 */
 #else
-#define LL_RCC_PLLI2SM_DIV_2              LL_RCC_PLLM_DIV_2      /*!< PLLI2S division factor for PLLI2SM output by 2 */
-#define LL_RCC_PLLI2SM_DIV_3              LL_RCC_PLLM_DIV_3      /*!< PLLI2S division factor for PLLI2SM output by 3 */
-#define LL_RCC_PLLI2SM_DIV_4              LL_RCC_PLLM_DIV_4      /*!< PLLI2S division factor for PLLI2SM output by 4 */
-#define LL_RCC_PLLI2SM_DIV_5              LL_RCC_PLLM_DIV_5      /*!< PLLI2S division factor for PLLI2SM output by 5 */
-#define LL_RCC_PLLI2SM_DIV_6              LL_RCC_PLLM_DIV_6      /*!< PLLI2S division factor for PLLI2SM output by 6 */
-#define LL_RCC_PLLI2SM_DIV_7              LL_RCC_PLLM_DIV_7      /*!< PLLI2S division factor for PLLI2SM output by 7 */
-#define LL_RCC_PLLI2SM_DIV_8              LL_RCC_PLLM_DIV_8      /*!< PLLI2S division factor for PLLI2SM output by 8 */
-#define LL_RCC_PLLI2SM_DIV_9              LL_RCC_PLLM_DIV_9      /*!< PLLI2S division factor for PLLI2SM output by 9 */
-#define LL_RCC_PLLI2SM_DIV_10             LL_RCC_PLLM_DIV_10     /*!< PLLI2S division factor for PLLI2SM output by 10 */
-#define LL_RCC_PLLI2SM_DIV_11             LL_RCC_PLLM_DIV_11     /*!< PLLI2S division factor for PLLI2SM output by 11 */
-#define LL_RCC_PLLI2SM_DIV_12             LL_RCC_PLLM_DIV_12     /*!< PLLI2S division factor for PLLI2SM output by 12 */
-#define LL_RCC_PLLI2SM_DIV_13             LL_RCC_PLLM_DIV_13     /*!< PLLI2S division factor for PLLI2SM output by 13 */
-#define LL_RCC_PLLI2SM_DIV_14             LL_RCC_PLLM_DIV_14     /*!< PLLI2S division factor for PLLI2SM output by 14 */
-#define LL_RCC_PLLI2SM_DIV_15             LL_RCC_PLLM_DIV_15     /*!< PLLI2S division factor for PLLI2SM output by 15 */
-#define LL_RCC_PLLI2SM_DIV_16             LL_RCC_PLLM_DIV_16     /*!< PLLI2S division factor for PLLI2SM output by 16 */
-#define LL_RCC_PLLI2SM_DIV_17             LL_RCC_PLLM_DIV_17     /*!< PLLI2S division factor for PLLI2SM output by 17 */
-#define LL_RCC_PLLI2SM_DIV_18             LL_RCC_PLLM_DIV_18     /*!< PLLI2S division factor for PLLI2SM output by 18 */
-#define LL_RCC_PLLI2SM_DIV_19             LL_RCC_PLLM_DIV_19     /*!< PLLI2S division factor for PLLI2SM output by 19 */
-#define LL_RCC_PLLI2SM_DIV_20             LL_RCC_PLLM_DIV_20     /*!< PLLI2S division factor for PLLI2SM output by 20 */
-#define LL_RCC_PLLI2SM_DIV_21             LL_RCC_PLLM_DIV_21     /*!< PLLI2S division factor for PLLI2SM output by 21 */
-#define LL_RCC_PLLI2SM_DIV_22             LL_RCC_PLLM_DIV_22     /*!< PLLI2S division factor for PLLI2SM output by 22 */
-#define LL_RCC_PLLI2SM_DIV_23             LL_RCC_PLLM_DIV_23     /*!< PLLI2S division factor for PLLI2SM output by 23 */
-#define LL_RCC_PLLI2SM_DIV_24             LL_RCC_PLLM_DIV_24     /*!< PLLI2S division factor for PLLI2SM output by 24 */
-#define LL_RCC_PLLI2SM_DIV_25             LL_RCC_PLLM_DIV_25     /*!< PLLI2S division factor for PLLI2SM output by 25 */
-#define LL_RCC_PLLI2SM_DIV_26             LL_RCC_PLLM_DIV_26     /*!< PLLI2S division factor for PLLI2SM output by 26 */
-#define LL_RCC_PLLI2SM_DIV_27             LL_RCC_PLLM_DIV_27     /*!< PLLI2S division factor for PLLI2SM output by 27 */
-#define LL_RCC_PLLI2SM_DIV_28             LL_RCC_PLLM_DIV_28     /*!< PLLI2S division factor for PLLI2SM output by 28 */
-#define LL_RCC_PLLI2SM_DIV_29             LL_RCC_PLLM_DIV_29     /*!< PLLI2S division factor for PLLI2SM output by 29 */
-#define LL_RCC_PLLI2SM_DIV_30             LL_RCC_PLLM_DIV_30     /*!< PLLI2S division factor for PLLI2SM output by 30 */
-#define LL_RCC_PLLI2SM_DIV_31             LL_RCC_PLLM_DIV_31     /*!< PLLI2S division factor for PLLI2SM output by 31 */
-#define LL_RCC_PLLI2SM_DIV_32             LL_RCC_PLLM_DIV_32     /*!< PLLI2S division factor for PLLI2SM output by 32 */
-#define LL_RCC_PLLI2SM_DIV_33             LL_RCC_PLLM_DIV_33     /*!< PLLI2S division factor for PLLI2SM output by 33 */
-#define LL_RCC_PLLI2SM_DIV_34             LL_RCC_PLLM_DIV_34     /*!< PLLI2S division factor for PLLI2SM output by 34 */
-#define LL_RCC_PLLI2SM_DIV_35             LL_RCC_PLLM_DIV_35     /*!< PLLI2S division factor for PLLI2SM output by 35 */
-#define LL_RCC_PLLI2SM_DIV_36             LL_RCC_PLLM_DIV_36     /*!< PLLI2S division factor for PLLI2SM output by 36 */
-#define LL_RCC_PLLI2SM_DIV_37             LL_RCC_PLLM_DIV_37     /*!< PLLI2S division factor for PLLI2SM output by 37 */
-#define LL_RCC_PLLI2SM_DIV_38             LL_RCC_PLLM_DIV_38     /*!< PLLI2S division factor for PLLI2SM output by 38 */
-#define LL_RCC_PLLI2SM_DIV_39             LL_RCC_PLLM_DIV_39     /*!< PLLI2S division factor for PLLI2SM output by 39 */
-#define LL_RCC_PLLI2SM_DIV_40             LL_RCC_PLLM_DIV_40     /*!< PLLI2S division factor for PLLI2SM output by 40 */
-#define LL_RCC_PLLI2SM_DIV_41             LL_RCC_PLLM_DIV_41     /*!< PLLI2S division factor for PLLI2SM output by 41 */
-#define LL_RCC_PLLI2SM_DIV_42             LL_RCC_PLLM_DIV_42     /*!< PLLI2S division factor for PLLI2SM output by 42 */
-#define LL_RCC_PLLI2SM_DIV_43             LL_RCC_PLLM_DIV_43     /*!< PLLI2S division factor for PLLI2SM output by 43 */
-#define LL_RCC_PLLI2SM_DIV_44             LL_RCC_PLLM_DIV_44     /*!< PLLI2S division factor for PLLI2SM output by 44 */
-#define LL_RCC_PLLI2SM_DIV_45             LL_RCC_PLLM_DIV_45     /*!< PLLI2S division factor for PLLI2SM output by 45 */
-#define LL_RCC_PLLI2SM_DIV_46             LL_RCC_PLLM_DIV_46     /*!< PLLI2S division factor for PLLI2SM output by 46 */
-#define LL_RCC_PLLI2SM_DIV_47             LL_RCC_PLLM_DIV_47     /*!< PLLI2S division factor for PLLI2SM output by 47 */
-#define LL_RCC_PLLI2SM_DIV_48             LL_RCC_PLLM_DIV_48     /*!< PLLI2S division factor for PLLI2SM output by 48 */
-#define LL_RCC_PLLI2SM_DIV_49             LL_RCC_PLLM_DIV_49     /*!< PLLI2S division factor for PLLI2SM output by 49 */
-#define LL_RCC_PLLI2SM_DIV_50             LL_RCC_PLLM_DIV_50     /*!< PLLI2S division factor for PLLI2SM output by 50 */
-#define LL_RCC_PLLI2SM_DIV_51             LL_RCC_PLLM_DIV_51     /*!< PLLI2S division factor for PLLI2SM output by 51 */
-#define LL_RCC_PLLI2SM_DIV_52             LL_RCC_PLLM_DIV_52     /*!< PLLI2S division factor for PLLI2SM output by 52 */
-#define LL_RCC_PLLI2SM_DIV_53             LL_RCC_PLLM_DIV_53     /*!< PLLI2S division factor for PLLI2SM output by 53 */
-#define LL_RCC_PLLI2SM_DIV_54             LL_RCC_PLLM_DIV_54     /*!< PLLI2S division factor for PLLI2SM output by 54 */
-#define LL_RCC_PLLI2SM_DIV_55             LL_RCC_PLLM_DIV_55     /*!< PLLI2S division factor for PLLI2SM output by 55 */
-#define LL_RCC_PLLI2SM_DIV_56             LL_RCC_PLLM_DIV_56     /*!< PLLI2S division factor for PLLI2SM output by 56 */
-#define LL_RCC_PLLI2SM_DIV_57             LL_RCC_PLLM_DIV_57     /*!< PLLI2S division factor for PLLI2SM output by 57 */
-#define LL_RCC_PLLI2SM_DIV_58             LL_RCC_PLLM_DIV_58     /*!< PLLI2S division factor for PLLI2SM output by 58 */
-#define LL_RCC_PLLI2SM_DIV_59             LL_RCC_PLLM_DIV_59     /*!< PLLI2S division factor for PLLI2SM output by 59 */
-#define LL_RCC_PLLI2SM_DIV_60             LL_RCC_PLLM_DIV_60     /*!< PLLI2S division factor for PLLI2SM output by 60 */
-#define LL_RCC_PLLI2SM_DIV_61             LL_RCC_PLLM_DIV_61     /*!< PLLI2S division factor for PLLI2SM output by 61 */
-#define LL_RCC_PLLI2SM_DIV_62             LL_RCC_PLLM_DIV_62     /*!< PLLI2S division factor for PLLI2SM output by 62 */
-#define LL_RCC_PLLI2SM_DIV_63             LL_RCC_PLLM_DIV_63     /*!< PLLI2S division factor for PLLI2SM output by 63 */
+#define LL_RCC_PLLI2lkv_DIV_2              LL_RCC_PLLM_DIV_2      /*!< PLLI2S division factor for PLLI2SM output by 2 */
+#define LL_RCC_PLLI2lkv_DIV_3              LL_RCC_PLLM_DIV_3      /*!< PLLI2S division factor for PLLI2SM output by 3 */
+#define LL_RCC_PLLI2lkv_DIV_4              LL_RCC_PLLM_DIV_4      /*!< PLLI2S division factor for PLLI2SM output by 4 */
+#define LL_RCC_PLLI2lkv_DIV_5              LL_RCC_PLLM_DIV_5      /*!< PLLI2S division factor for PLLI2SM output by 5 */
+#define LL_RCC_PLLI2lkv_DIV_6              LL_RCC_PLLM_DIV_6      /*!< PLLI2S division factor for PLLI2SM output by 6 */
+#define LL_RCC_PLLI2lkv_DIV_7              LL_RCC_PLLM_DIV_7      /*!< PLLI2S division factor for PLLI2SM output by 7 */
+#define LL_RCC_PLLI2lkv_DIV_8              LL_RCC_PLLM_DIV_8      /*!< PLLI2S division factor for PLLI2SM output by 8 */
+#define LL_RCC_PLLI2lkv_DIV_9              LL_RCC_PLLM_DIV_9      /*!< PLLI2S division factor for PLLI2SM output by 9 */
+#define LL_RCC_PLLI2lkv_DIV_10             LL_RCC_PLLM_DIV_10     /*!< PLLI2S division factor for PLLI2SM output by 10 */
+#define LL_RCC_PLLI2lkv_DIV_11             LL_RCC_PLLM_DIV_11     /*!< PLLI2S division factor for PLLI2SM output by 11 */
+#define LL_RCC_PLLI2lkv_DIV_12             LL_RCC_PLLM_DIV_12     /*!< PLLI2S division factor for PLLI2SM output by 12 */
+#define LL_RCC_PLLI2lkv_DIV_13             LL_RCC_PLLM_DIV_13     /*!< PLLI2S division factor for PLLI2SM output by 13 */
+#define LL_RCC_PLLI2lkv_DIV_14             LL_RCC_PLLM_DIV_14     /*!< PLLI2S division factor for PLLI2SM output by 14 */
+#define LL_RCC_PLLI2lkv_DIV_15             LL_RCC_PLLM_DIV_15     /*!< PLLI2S division factor for PLLI2SM output by 15 */
+#define LL_RCC_PLLI2lkv_DIV_16             LL_RCC_PLLM_DIV_16     /*!< PLLI2S division factor for PLLI2SM output by 16 */
+#define LL_RCC_PLLI2lkv_DIV_17             LL_RCC_PLLM_DIV_17     /*!< PLLI2S division factor for PLLI2SM output by 17 */
+#define LL_RCC_PLLI2lkv_DIV_18             LL_RCC_PLLM_DIV_18     /*!< PLLI2S division factor for PLLI2SM output by 18 */
+#define LL_RCC_PLLI2lkv_DIV_19             LL_RCC_PLLM_DIV_19     /*!< PLLI2S division factor for PLLI2SM output by 19 */
+#define LL_RCC_PLLI2lkv_DIV_20             LL_RCC_PLLM_DIV_20     /*!< PLLI2S division factor for PLLI2SM output by 20 */
+#define LL_RCC_PLLI2lkv_DIV_21             LL_RCC_PLLM_DIV_21     /*!< PLLI2S division factor for PLLI2SM output by 21 */
+#define LL_RCC_PLLI2lkv_DIV_22             LL_RCC_PLLM_DIV_22     /*!< PLLI2S division factor for PLLI2SM output by 22 */
+#define LL_RCC_PLLI2lkv_DIV_23             LL_RCC_PLLM_DIV_23     /*!< PLLI2S division factor for PLLI2SM output by 23 */
+#define LL_RCC_PLLI2lkv_DIV_24             LL_RCC_PLLM_DIV_24     /*!< PLLI2S division factor for PLLI2SM output by 24 */
+#define LL_RCC_PLLI2lkv_DIV_25             LL_RCC_PLLM_DIV_25     /*!< PLLI2S division factor for PLLI2SM output by 25 */
+#define LL_RCC_PLLI2lkv_DIV_26             LL_RCC_PLLM_DIV_26     /*!< PLLI2S division factor for PLLI2SM output by 26 */
+#define LL_RCC_PLLI2lkv_DIV_27             LL_RCC_PLLM_DIV_27     /*!< PLLI2S division factor for PLLI2SM output by 27 */
+#define LL_RCC_PLLI2lkv_DIV_28             LL_RCC_PLLM_DIV_28     /*!< PLLI2S division factor for PLLI2SM output by 28 */
+#define LL_RCC_PLLI2lkv_DIV_29             LL_RCC_PLLM_DIV_29     /*!< PLLI2S division factor for PLLI2SM output by 29 */
+#define LL_RCC_PLLI2lkv_DIV_30             LL_RCC_PLLM_DIV_30     /*!< PLLI2S division factor for PLLI2SM output by 30 */
+#define LL_RCC_PLLI2lkv_DIV_31             LL_RCC_PLLM_DIV_31     /*!< PLLI2S division factor for PLLI2SM output by 31 */
+#define LL_RCC_PLLI2lkv_DIV_32             LL_RCC_PLLM_DIV_32     /*!< PLLI2S division factor for PLLI2SM output by 32 */
+#define LL_RCC_PLLI2lkv_DIV_33             LL_RCC_PLLM_DIV_33     /*!< PLLI2S division factor for PLLI2SM output by 33 */
+#define LL_RCC_PLLI2lkv_DIV_34             LL_RCC_PLLM_DIV_34     /*!< PLLI2S division factor for PLLI2SM output by 34 */
+#define LL_RCC_PLLI2lkv_DIV_35             LL_RCC_PLLM_DIV_35     /*!< PLLI2S division factor for PLLI2SM output by 35 */
+#define LL_RCC_PLLI2lkv_DIV_36             LL_RCC_PLLM_DIV_36     /*!< PLLI2S division factor for PLLI2SM output by 36 */
+#define LL_RCC_PLLI2lkv_DIV_37             LL_RCC_PLLM_DIV_37     /*!< PLLI2S division factor for PLLI2SM output by 37 */
+#define LL_RCC_PLLI2lkv_DIV_38             LL_RCC_PLLM_DIV_38     /*!< PLLI2S division factor for PLLI2SM output by 38 */
+#define LL_RCC_PLLI2lkv_DIV_39             LL_RCC_PLLM_DIV_39     /*!< PLLI2S division factor for PLLI2SM output by 39 */
+#define LL_RCC_PLLI2lkv_DIV_40             LL_RCC_PLLM_DIV_40     /*!< PLLI2S division factor for PLLI2SM output by 40 */
+#define LL_RCC_PLLI2lkv_DIV_41             LL_RCC_PLLM_DIV_41     /*!< PLLI2S division factor for PLLI2SM output by 41 */
+#define LL_RCC_PLLI2lkv_DIV_42             LL_RCC_PLLM_DIV_42     /*!< PLLI2S division factor for PLLI2SM output by 42 */
+#define LL_RCC_PLLI2lkv_DIV_43             LL_RCC_PLLM_DIV_43     /*!< PLLI2S division factor for PLLI2SM output by 43 */
+#define LL_RCC_PLLI2lkv_DIV_44             LL_RCC_PLLM_DIV_44     /*!< PLLI2S division factor for PLLI2SM output by 44 */
+#define LL_RCC_PLLI2lkv_DIV_45             LL_RCC_PLLM_DIV_45     /*!< PLLI2S division factor for PLLI2SM output by 45 */
+#define LL_RCC_PLLI2lkv_DIV_46             LL_RCC_PLLM_DIV_46     /*!< PLLI2S division factor for PLLI2SM output by 46 */
+#define LL_RCC_PLLI2lkv_DIV_47             LL_RCC_PLLM_DIV_47     /*!< PLLI2S division factor for PLLI2SM output by 47 */
+#define LL_RCC_PLLI2lkv_DIV_48             LL_RCC_PLLM_DIV_48     /*!< PLLI2S division factor for PLLI2SM output by 48 */
+#define LL_RCC_PLLI2lkv_DIV_49             LL_RCC_PLLM_DIV_49     /*!< PLLI2S division factor for PLLI2SM output by 49 */
+#define LL_RCC_PLLI2lkv_DIV_50             LL_RCC_PLLM_DIV_50     /*!< PLLI2S division factor for PLLI2SM output by 50 */
+#define LL_RCC_PLLI2lkv_DIV_51             LL_RCC_PLLM_DIV_51     /*!< PLLI2S division factor for PLLI2SM output by 51 */
+#define LL_RCC_PLLI2lkv_DIV_52             LL_RCC_PLLM_DIV_52     /*!< PLLI2S division factor for PLLI2SM output by 52 */
+#define LL_RCC_PLLI2lkv_DIV_53             LL_RCC_PLLM_DIV_53     /*!< PLLI2S division factor for PLLI2SM output by 53 */
+#define LL_RCC_PLLI2lkv_DIV_54             LL_RCC_PLLM_DIV_54     /*!< PLLI2S division factor for PLLI2SM output by 54 */
+#define LL_RCC_PLLI2lkv_DIV_55             LL_RCC_PLLM_DIV_55     /*!< PLLI2S division factor for PLLI2SM output by 55 */
+#define LL_RCC_PLLI2lkv_DIV_56             LL_RCC_PLLM_DIV_56     /*!< PLLI2S division factor for PLLI2SM output by 56 */
+#define LL_RCC_PLLI2lkv_DIV_57             LL_RCC_PLLM_DIV_57     /*!< PLLI2S division factor for PLLI2SM output by 57 */
+#define LL_RCC_PLLI2lkv_DIV_58             LL_RCC_PLLM_DIV_58     /*!< PLLI2S division factor for PLLI2SM output by 58 */
+#define LL_RCC_PLLI2lkv_DIV_59             LL_RCC_PLLM_DIV_59     /*!< PLLI2S division factor for PLLI2SM output by 59 */
+#define LL_RCC_PLLI2lkv_DIV_60             LL_RCC_PLLM_DIV_60     /*!< PLLI2S division factor for PLLI2SM output by 60 */
+#define LL_RCC_PLLI2lkv_DIV_61             LL_RCC_PLLM_DIV_61     /*!< PLLI2S division factor for PLLI2SM output by 61 */
+#define LL_RCC_PLLI2lkv_DIV_62             LL_RCC_PLLM_DIV_62     /*!< PLLI2S division factor for PLLI2SM output by 62 */
+#define LL_RCC_PLLI2lkv_DIV_63             LL_RCC_PLLM_DIV_63     /*!< PLLI2S division factor for PLLI2SM output by 63 */
 #endif /* RCC_PLLI2SCFGR_PLLI2SM */
 /**
   * @}
@@ -2427,68 +2427,68 @@ typedef struct
   *             @ref LL_RCC_PLLI2S_GetN (), @ref LL_RCC_PLLI2S_GetQ (), @ref LL_RCC_PLLI2S_GetDIVQ ());
   * @param  __INPUTFREQ__ PLL Input frequency (based on HSE/HSI)
   * @param  __PLLM__ This parameter can be one of the following values:
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_2
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_3
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_4
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_5
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_6
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_7
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_8
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_9
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_10
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_11
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_12
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_13
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_14
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_15
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_16
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_17
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_18
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_19
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_20
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_21
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_22
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_23
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_24
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_25
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_26
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_27
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_28
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_29
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_30
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_31
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_32
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_33
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_34
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_35
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_36
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_37
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_38
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_39
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_40
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_41
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_42
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_43
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_44
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_45
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_46
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_47
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_48
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_49
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_50
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_51
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_52
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_53
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_54
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_55
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_56
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_57
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_58
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_59
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_60
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_61
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_62
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_63
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_2
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_3
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_4
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_5
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_6
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_7
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_8
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_9
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_10
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_11
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_12
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_13
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_14
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_15
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_16
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_17
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_18
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_19
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_20
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_21
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_22
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_23
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_24
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_25
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_26
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_27
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_28
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_29
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_30
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_31
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_32
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_33
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_34
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_35
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_36
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_37
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_38
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_39
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_40
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_41
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_42
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_43
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_44
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_45
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_46
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_47
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_48
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_49
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_50
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_51
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_52
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_53
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_54
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_55
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_56
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_57
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_58
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_59
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_60
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_61
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_62
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_63
   * @param  __PLLI2SN__ Between 50/192(*) and 432
   *
   *         (*) value not defined in all devices.
@@ -2600,68 +2600,68 @@ typedef struct
   *             @ref LL_RCC_PLLI2S_GetN (), @ref LL_RCC_PLLI2S_GetP ());
   * @param  __INPUTFREQ__ PLL Input frequency (based on HSE/HSI)
   * @param  __PLLM__ This parameter can be one of the following values:
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_2
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_3
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_4
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_5
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_6
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_7
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_8
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_9
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_10
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_11
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_12
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_13
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_14
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_15
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_16
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_17
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_18
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_19
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_20
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_21
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_22
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_23
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_24
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_25
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_26
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_27
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_28
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_29
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_30
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_31
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_32
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_33
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_34
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_35
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_36
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_37
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_38
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_39
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_40
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_41
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_42
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_43
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_44
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_45
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_46
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_47
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_48
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_49
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_50
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_51
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_52
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_53
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_54
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_55
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_56
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_57
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_58
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_59
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_60
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_61
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_62
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_63
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_2
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_3
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_4
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_5
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_6
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_7
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_8
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_9
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_10
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_11
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_12
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_13
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_14
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_15
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_16
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_17
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_18
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_19
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_20
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_21
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_22
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_23
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_24
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_25
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_26
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_27
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_28
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_29
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_30
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_31
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_32
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_33
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_34
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_35
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_36
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_37
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_38
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_39
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_40
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_41
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_42
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_43
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_44
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_45
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_46
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_47
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_48
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_49
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_50
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_51
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_52
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_53
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_54
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_55
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_56
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_57
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_58
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_59
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_60
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_61
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_62
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_63
   * @param  __PLLI2SN__ Between 50 and 432
   * @param  __PLLI2SP__ This parameter can be one of the following values:
   *         @arg @ref LL_RCC_PLLI2SP_DIV_2
@@ -2681,68 +2681,68 @@ typedef struct
   *             @ref LL_RCC_PLLI2S_GetN (), @ref LL_RCC_PLLI2S_GetR ());
   * @param  __INPUTFREQ__ PLL Input frequency (based on HSE/HSI)
   * @param  __PLLM__ This parameter can be one of the following values:
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_2
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_3
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_4
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_5
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_6
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_7
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_8
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_9
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_10
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_11
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_12
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_13
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_14
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_15
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_16
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_17
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_18
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_19
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_20
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_21
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_22
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_23
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_24
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_25
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_26
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_27
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_28
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_29
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_30
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_31
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_32
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_33
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_34
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_35
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_36
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_37
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_38
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_39
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_40
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_41
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_42
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_43
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_44
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_45
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_46
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_47
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_48
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_49
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_50
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_51
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_52
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_53
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_54
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_55
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_56
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_57
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_58
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_59
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_60
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_61
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_62
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_63
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_2
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_3
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_4
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_5
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_6
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_7
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_8
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_9
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_10
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_11
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_12
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_13
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_14
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_15
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_16
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_17
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_18
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_19
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_20
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_21
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_22
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_23
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_24
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_25
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_26
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_27
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_28
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_29
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_30
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_31
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_32
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_33
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_34
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_35
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_36
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_37
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_38
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_39
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_40
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_41
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_42
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_43
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_44
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_45
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_46
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_47
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_48
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_49
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_50
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_51
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_52
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_53
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_54
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_55
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_56
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_57
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_58
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_59
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_60
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_61
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_62
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_63
   * @param  __PLLI2SN__ Between 50/192(*) and 432
   *
   *         (*) value not defined in all devices.
@@ -2765,68 +2765,68 @@ typedef struct
   *             @ref LL_RCC_PLLI2S_GetN (), @ref LL_RCC_PLLI2S_GetQ ());
   * @param  __INPUTFREQ__ PLL Input frequency (based on HSE/HSI)
   * @param  __PLLM__ This parameter can be one of the following values:
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_2
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_3
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_4
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_5
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_6
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_7
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_8
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_9
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_10
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_11
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_12
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_13
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_14
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_15
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_16
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_17
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_18
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_19
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_20
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_21
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_22
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_23
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_24
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_25
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_26
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_27
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_28
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_29
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_30
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_31
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_32
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_33
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_34
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_35
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_36
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_37
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_38
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_39
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_40
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_41
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_42
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_43
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_44
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_45
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_46
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_47
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_48
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_49
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_50
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_51
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_52
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_53
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_54
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_55
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_56
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_57
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_58
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_59
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_60
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_61
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_62
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_63
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_2
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_3
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_4
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_5
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_6
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_7
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_8
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_9
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_10
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_11
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_12
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_13
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_14
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_15
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_16
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_17
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_18
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_19
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_20
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_21
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_22
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_23
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_24
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_25
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_26
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_27
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_28
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_29
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_30
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_31
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_32
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_33
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_34
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_35
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_36
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_37
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_38
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_39
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_40
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_41
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_42
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_43
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_44
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_45
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_46
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_47
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_48
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_49
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_50
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_51
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_52
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_53
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_54
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_55
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_56
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_57
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_58
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_59
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_60
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_61
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_62
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_63
   * @param  __PLLI2SN__ Between 50 and 432
   * @param  __PLLI2SQ__ This parameter can be one of the following values:
   *         @arg @ref LL_RCC_PLLI2SQ_DIV_2
@@ -5178,68 +5178,68 @@ __STATIC_INLINE uint32_t LL_RCC_PLLI2S_IsReady(void)
   *
   *         (*) value not defined in all devices.
   * @param  PLLM This parameter can be one of the following values:
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_2
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_3
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_4
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_5
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_6
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_7
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_8
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_9
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_10
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_11
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_12
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_13
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_14
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_15
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_16
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_17
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_18
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_19
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_20
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_21
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_22
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_23
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_24
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_25
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_26
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_27
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_28
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_29
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_30
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_31
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_32
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_33
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_34
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_35
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_36
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_37
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_38
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_39
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_40
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_41
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_42
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_43
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_44
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_45
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_46
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_47
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_48
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_49
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_50
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_51
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_52
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_53
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_54
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_55
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_56
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_57
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_58
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_59
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_60
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_61
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_62
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_63
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_2
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_3
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_4
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_5
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_6
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_7
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_8
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_9
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_10
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_11
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_12
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_13
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_14
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_15
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_16
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_17
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_18
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_19
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_20
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_21
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_22
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_23
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_24
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_25
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_26
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_27
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_28
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_29
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_30
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_31
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_32
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_33
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_34
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_35
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_36
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_37
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_38
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_39
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_40
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_41
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_42
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_43
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_44
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_45
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_46
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_47
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_48
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_49
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_50
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_51
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_52
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_53
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_54
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_55
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_56
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_57
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_58
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_59
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_60
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_61
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_62
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_63
   * @param  PLLN Between 50/192(*) and 432
   *
   *         (*) value not defined in all devices.
@@ -5374,68 +5374,68 @@ __STATIC_INLINE void LL_RCC_PLLI2S_ConfigDomain_SAI(uint32_t Source, uint32_t PL
   *
   *         (*) value not defined in all devices.
   * @param  PLLM This parameter can be one of the following values:
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_2
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_3
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_4
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_5
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_6
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_7
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_8
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_9
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_10
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_11
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_12
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_13
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_14
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_15
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_16
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_17
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_18
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_19
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_20
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_21
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_22
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_23
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_24
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_25
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_26
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_27
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_28
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_29
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_30
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_31
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_32
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_33
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_34
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_35
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_36
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_37
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_38
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_39
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_40
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_41
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_42
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_43
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_44
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_45
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_46
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_47
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_48
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_49
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_50
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_51
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_52
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_53
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_54
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_55
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_56
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_57
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_58
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_59
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_60
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_61
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_62
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_63
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_2
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_3
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_4
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_5
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_6
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_7
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_8
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_9
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_10
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_11
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_12
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_13
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_14
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_15
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_16
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_17
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_18
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_19
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_20
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_21
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_22
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_23
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_24
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_25
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_26
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_27
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_28
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_29
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_30
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_31
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_32
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_33
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_34
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_35
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_36
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_37
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_38
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_39
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_40
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_41
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_42
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_43
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_44
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_45
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_46
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_47
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_48
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_49
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_50
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_51
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_52
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_53
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_54
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_55
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_56
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_57
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_58
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_59
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_60
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_61
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_62
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_63
   * @param  PLLN Between 50 and 432
   * @param  PLLQ This parameter can be one of the following values:
   *         @arg @ref LL_RCC_PLLI2SQ_DIV_2
@@ -5483,68 +5483,68 @@ __STATIC_INLINE void LL_RCC_PLLI2S_ConfigDomain_48M(uint32_t Source, uint32_t PL
   *         @arg @ref LL_RCC_PLLSOURCE_HSI
   *         @arg @ref LL_RCC_PLLSOURCE_HSE
   * @param  PLLM This parameter can be one of the following values:
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_2
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_3
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_4
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_5
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_6
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_7
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_8
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_9
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_10
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_11
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_12
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_13
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_14
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_15
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_16
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_17
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_18
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_19
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_20
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_21
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_22
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_23
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_24
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_25
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_26
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_27
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_28
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_29
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_30
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_31
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_32
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_33
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_34
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_35
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_36
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_37
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_38
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_39
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_40
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_41
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_42
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_43
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_44
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_45
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_46
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_47
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_48
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_49
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_50
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_51
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_52
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_53
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_54
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_55
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_56
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_57
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_58
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_59
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_60
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_61
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_62
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_63
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_2
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_3
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_4
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_5
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_6
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_7
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_8
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_9
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_10
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_11
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_12
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_13
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_14
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_15
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_16
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_17
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_18
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_19
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_20
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_21
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_22
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_23
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_24
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_25
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_26
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_27
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_28
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_29
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_30
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_31
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_32
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_33
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_34
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_35
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_36
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_37
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_38
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_39
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_40
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_41
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_42
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_43
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_44
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_45
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_46
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_47
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_48
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_49
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_50
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_51
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_52
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_53
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_54
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_55
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_56
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_57
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_58
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_59
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_60
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_61
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_62
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_63
   * @param  PLLN Between 50 and 432
   * @param  PLLP This parameter can be one of the following values:
   *         @arg @ref LL_RCC_PLLI2SP_DIV_2
@@ -5584,68 +5584,68 @@ __STATIC_INLINE void LL_RCC_PLLI2S_ConfigDomain_SPDIFRX(uint32_t Source, uint32_
   *
   *         (*) value not defined in all devices.
   * @param  PLLM This parameter can be one of the following values:
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_2
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_3
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_4
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_5
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_6
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_7
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_8
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_9
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_10
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_11
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_12
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_13
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_14
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_15
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_16
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_17
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_18
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_19
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_20
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_21
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_22
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_23
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_24
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_25
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_26
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_27
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_28
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_29
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_30
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_31
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_32
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_33
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_34
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_35
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_36
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_37
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_38
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_39
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_40
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_41
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_42
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_43
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_44
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_45
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_46
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_47
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_48
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_49
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_50
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_51
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_52
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_53
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_54
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_55
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_56
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_57
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_58
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_59
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_60
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_61
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_62
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_63
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_2
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_3
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_4
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_5
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_6
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_7
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_8
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_9
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_10
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_11
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_12
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_13
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_14
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_15
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_16
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_17
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_18
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_19
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_20
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_21
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_22
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_23
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_24
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_25
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_26
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_27
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_28
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_29
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_30
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_31
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_32
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_33
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_34
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_35
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_36
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_37
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_38
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_39
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_40
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_41
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_42
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_43
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_44
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_45
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_46
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_47
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_48
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_49
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_50
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_51
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_52
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_53
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_54
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_55
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_56
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_57
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_58
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_59
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_60
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_61
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_62
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_63
   * @param  PLLN Between 50/192(*) and 432
   *
   *         (*) value not defined in all devices.
@@ -5836,68 +5836,68 @@ __STATIC_INLINE uint32_t LL_RCC_PLLI2S_GetDIVR(void)
   * @rmtoll PLLCFGR      PLLM          LL_RCC_PLLI2S_GetDivider\n
   *         PLLI2SCFGR   PLLI2SM       LL_RCC_PLLI2S_GetDivider
   * @retval Returned value can be one of the following values:
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_2
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_3
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_4
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_5
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_6
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_7
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_8
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_9
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_10
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_11
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_12
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_13
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_14
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_15
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_16
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_17
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_18
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_19
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_20
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_21
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_22
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_23
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_24
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_25
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_26
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_27
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_28
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_29
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_30
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_31
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_32
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_33
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_34
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_35
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_36
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_37
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_38
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_39
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_40
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_41
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_42
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_43
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_44
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_45
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_46
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_47
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_48
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_49
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_50
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_51
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_52
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_53
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_54
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_55
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_56
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_57
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_58
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_59
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_60
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_61
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_62
-  *         @arg @ref LL_RCC_PLLI2SM_DIV_63
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_2
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_3
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_4
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_5
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_6
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_7
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_8
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_9
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_10
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_11
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_12
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_13
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_14
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_15
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_16
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_17
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_18
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_19
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_20
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_21
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_22
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_23
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_24
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_25
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_26
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_27
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_28
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_29
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_30
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_31
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_32
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_33
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_34
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_35
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_36
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_37
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_38
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_39
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_40
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_41
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_42
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_43
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_44
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_45
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_46
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_47
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_48
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_49
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_50
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_51
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_52
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_53
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_54
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_55
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_56
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_57
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_58
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_59
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_60
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_61
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_62
+  *         @arg @ref LL_RCC_PLLI2lkv_DIV_63
   */
 __STATIC_INLINE uint32_t LL_RCC_PLLI2S_GetDivider(void)
 {

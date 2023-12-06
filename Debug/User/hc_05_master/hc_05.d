@@ -1,6 +1,6 @@
 User/hc_05_master/hc_05.o: ../User/hc_05_master/hc_05.c \
  ../User/hc_05_master/hc_05.h \
- C:/Users/vypa0/Desktop/lkv_github/Project_bms_elevator_control/User/board/board.h \
+ /home/lekhacvuong/Desktop/Project_bms_elevator_control/User/board/board.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h \
  ../Core/Inc/stm32f4xx_hal_conf.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h \
@@ -29,7 +29,7 @@ User/hc_05_master/hc_05.o: ../User/hc_05_master/hc_05.c \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
 ../User/hc_05_master/hc_05.h:
-C:/Users/vypa0/Desktop/lkv_github/Project_bms_elevator_control/User/board/board.h:
+/home/lekhacvuong/Desktop/Project_bms_elevator_control/User/board/board.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:
 ../Core/Inc/stm32f4xx_hal_conf.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h:

@@ -11,17 +11,20 @@
 #include "stm32f4xx_hal.h"
 #include <string.h>
 
-void SystemClock_Config(void);
- void MX_GPIO_Init(void);
- void MX_USART3_UART_Init(void);
- void MX_SPI1_Init(void);
+
 void Error_Handler(void);
 void board_init(void);
 
 extern SPI_HandleTypeDef hspi1;
 extern UART_HandleTypeDef huart3;
+extern UART_HandleTypeDef huart1;
 extern volatile uint32_t g_sys_time;
 extern uint8_t buff_rx;
+
+extern uint8_t buff_mqtt_slave[32];
+extern uint8_t mqtt_index;
+extern uint8_t buff_rx_mqtt;
+extern uint8_t is_new_linux_msg;
 
 
 extern uint8_t ring_buffer[1024];

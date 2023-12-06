@@ -1,5 +1,5 @@
 User/LCD/lkv_lcd.o: ../User/LCD/lkv_lcd.c \
- C:/Users/vypa0/Desktop/lkv_github/Project_bms_elevator_control/User/LCD/lkv_lcd.h \
+ /home/lekhacvuong/Desktop/Project_bms_elevator_control/User/LCD/lkv_lcd.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h \
  ../Core/Inc/stm32f4xx_hal_conf.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h \
@@ -27,7 +27,7 @@ User/LCD/lkv_lcd.o: ../User/LCD/lkv_lcd.c \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
-C:/Users/vypa0/Desktop/lkv_github/Project_bms_elevator_control/User/LCD/lkv_lcd.h:
+/home/lekhacvuong/Desktop/Project_bms_elevator_control/User/LCD/lkv_lcd.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:
 ../Core/Inc/stm32f4xx_hal_conf.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h:

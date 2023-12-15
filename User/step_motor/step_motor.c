@@ -5,18 +5,18 @@
  *
  */
 
-#include "step_motor.h"
+#include "../../User/step_motor/step_motor.h"
 
-#define DRIVER_PIN_1_PORT    GPIOH
-#define DRIVER_PIN_1         GPIO_PIN_0
+#define DRIVER_PIN_1_PORT    GPIOA
+#define DRIVER_PIN_1         GPIO_PIN_10
 
-#define DRIVER_PIN_2_PORT    GPIOC
-#define DRIVER_PIN_2         GPIO_PIN_14
+#define DRIVER_PIN_2_PORT    GPIOB
+#define DRIVER_PIN_2         GPIO_PIN_3
 
-#define DRIVER_PIN_3_PORT    GPIOE
-#define DRIVER_PIN_3         GPIO_PIN_6
+#define DRIVER_PIN_3_PORT    GPIOB
+#define DRIVER_PIN_3         GPIO_PIN_5
 
-#define DRIVER_PIN_4_PORT    GPIOE
+#define DRIVER_PIN_4_PORT    GPIOB
 #define DRIVER_PIN_4         GPIO_PIN_4
 
 
@@ -30,38 +30,38 @@ void lkv_stepmotor_coil_setval(uint8_t _valin1, uint8_t _valin2, uint8_t _valin3
 
 void lkv_stepmotor_run_up(uint32_t _speed){
 	lkv_stepmotor_coil_setval(1,0,0,0);
-	HAL_Delay(_speed);
+	for(int i = 0; i < _speed; i ++);
 	lkv_stepmotor_coil_setval(1,1,0,0);
-	HAL_Delay(_speed);
+	for(int i = 0; i < _speed; i ++);
 	lkv_stepmotor_coil_setval(0,1,0,0);
-	HAL_Delay(_speed);
+	for(int i = 0; i < _speed; i ++);
 	lkv_stepmotor_coil_setval(0,1,1,0);
-	HAL_Delay(_speed);
+	for(int i = 0; i < _speed; i ++);
 	lkv_stepmotor_coil_setval(0,0,1,0);
-	HAL_Delay(_speed);
+	for(int i = 0; i < _speed; i ++);
 	lkv_stepmotor_coil_setval(0,0,1,1);
-	HAL_Delay(_speed);
+	for(int i = 0; i < _speed; i ++);
 	lkv_stepmotor_coil_setval(0,0,0,1);
-	HAL_Delay(_speed);
+	for(int i = 0; i < _speed; i ++);
 	lkv_stepmotor_coil_setval(1,0,0,1);
 }
 
 
 void lkv_stepmotor_run_down(uint32_t _speed){
 	lkv_stepmotor_coil_setval(0,0,0,1);
-	HAL_Delay(_speed);
+	for(int i = 0; i < _speed; i ++);
 	lkv_stepmotor_coil_setval(0,0,1,1);
-	HAL_Delay(_speed);
+	for(int i = 0; i < _speed; i ++);
 	lkv_stepmotor_coil_setval(0,0,1,0);
-	HAL_Delay(_speed);
+	for(int i = 0; i < _speed; i ++);
 	lkv_stepmotor_coil_setval(0,1,1,0);
-	HAL_Delay(_speed);
+	for(int i = 0; i < _speed; i ++);
 	lkv_stepmotor_coil_setval(0,1,0,0);
-	HAL_Delay(_speed);
+	for(int i = 0; i < _speed; i ++);
 	lkv_stepmotor_coil_setval(1,1,0,0);
-	HAL_Delay(_speed);
+	for(int i = 0; i < _speed; i ++);
 	lkv_stepmotor_coil_setval(1,0,0,0);
-	HAL_Delay(_speed);
+	for(int i = 0; i < _speed; i ++);
 	lkv_stepmotor_coil_setval(1,0,0,1);
 }
 
@@ -72,9 +72,8 @@ void lkv_stepmotor_gpio_init(void){
 
 	/* enable GPIO LCD PORTs clock */
 
-	 __HAL_RCC_GPIOC_CLK_ENABLE();
-	 __HAL_RCC_GPIOH_CLK_ENABLE();
-	 __HAL_RCC_GPIOE_CLK_ENABLE();
+	 __HAL_RCC_GPIOA_CLK_ENABLE();
+	 __HAL_RCC_GPIOB_CLK_ENABLE();
 
 	/* enable GPIO LCD PINs */
 
@@ -117,6 +116,11 @@ void lkv_stepmotor_process(uint8_t _direction, uint32_t _speed, uint32_t _number
 		}
 		return;
 	}
+
+	if(_direction == STEP_STOP){
+		lkv_stepmotor_coil_setval(0,0,0,0);
+	}
+
 
 return;
 }

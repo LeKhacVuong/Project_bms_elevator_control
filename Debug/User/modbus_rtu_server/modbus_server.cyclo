@@ -1,0 +1,9 @@
+../User/modbus_rtu_server/modbus_server.c:17:9:read_serial	7
+../User/modbus_rtu_server/modbus_server.c:42:9:write_serial	1
+../User/modbus_rtu_server/modbus_server.c:48:6:onError	1
+../User/modbus_rtu_server/modbus_server.c:54:12:handle_read_coils	8
+../User/modbus_rtu_server/modbus_server.c:68:12:handle_write_multiple_coils	8
+../User/modbus_rtu_server/modbus_server.c:81:12:handler_read_holding_registers	3
+../User/modbus_rtu_server/modbus_server.c:93:12:handle_write_multiple_registers	3
+../User/modbus_rtu_server/modbus_server.c:104:12:handle_write_single_registers	2
+../User/modbus_rtu_server/modbus_server.c:116:12:handler_read_input_registers	3

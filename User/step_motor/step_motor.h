@@ -8,8 +8,10 @@
 #ifndef STEP_MOTOR_STEP_MOTOR_H_
 #define STEP_MOTOR_STEP_MOTOR_H_
 #include "stm32l1xx_hal.h"
+
 #define STEP_DIR_UP     0
 #define STEP_DIR_DOWN   1
+#define STEP_STOP       3
 #define FULL_CYCLE_STEP 512
 
 

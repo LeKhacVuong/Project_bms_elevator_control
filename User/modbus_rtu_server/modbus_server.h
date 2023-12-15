@@ -8,8 +8,10 @@
 #ifndef MODBUS_RTU_SERVER_MODBUS_SERVER_H_
 #define MODBUS_RTU_SERVER_MODBUS_SERVER_H_
 
-#include "nanomodbus.h"
-#include "board.h"
+#include "stm32l1xx_hal.h"
+#include "main.h"
+#include "../../User/modbus_rtu_server/nanomodbus.h"
+
 
 #define COILS_ADDR_MAX       15
 #define HOLD_REGS_ADDR_MAX   10

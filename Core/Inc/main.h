@@ -22,48 +22,33 @@
 #ifndef __MAIN_H
 #define __MAIN_H
 
-#ifdef __cplusplus
-extern "C" {
-#endif
 
-/* Includes ------------------------------------------------------------------*/
 #include "stm32l1xx_hal.h"
+#include "../../User/matric_button/lkv_matrix_button.h"
 
-/* Private includes ----------------------------------------------------------*/
-/* USER CODE BEGIN Includes */
 
-/* USER CODE END Includes */
+typedef enum{
+	PROCESS,
+	STOP,
+	WAIT_USER,
+	ERROR_SST
+}STATUC_T;
 
-/* Exported types ------------------------------------------------------------*/
-/* USER CODE BEGIN ET */
+extern volatile uint32_t g_sys_time;
 
-/* USER CODE END ET */
+extern uint8_t buff_rx ;
 
-/* Exported constants --------------------------------------------------------*/
-/* USER CODE BEGIN EC */
+extern uint8_t ring_buffer[1024] ;
+extern volatile uint16_t front_index;
+extern volatile uint16_t rear_index;
+extern uint8_t process_buffer[64];
+extern uint16_t volatile process_index;
+extern uint8_t buff_tx[32];
 
-/* USER CODE END EC */
+extern UART_HandleTypeDef huart4;
+extern UART_HandleTypeDef huart2;
 
-/* Exported macro ------------------------------------------------------------*/
-/* USER CODE BEGIN EM */
 
-/* USER CODE END EM */
 
-/* Exported functions prototypes ---------------------------------------------*/
-void Error_Handler(void);
-
-/* USER CODE BEGIN EFP */
-
-/* USER CODE END EFP */
-
-/* Private defines -----------------------------------------------------------*/
-
-/* USER CODE BEGIN Private defines */
-
-/* USER CODE END Private defines */
-
-#ifdef __cplusplus
-}
-#endif
 
 #endif /* __MAIN_H */

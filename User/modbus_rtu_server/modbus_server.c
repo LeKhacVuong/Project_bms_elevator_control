@@ -5,7 +5,7 @@
  *      Author: vypa0
  */
 
-#include "modbus_server.h"
+#include "../../User/modbus_rtu_server/modbus_server.h"
 
 
 nmbs_bitfield server_coils = {0};
@@ -40,7 +40,7 @@ int32_t read_serial(uint8_t* buf, uint16_t count, int32_t byte_timeout_ms, void*
 
 
 int32_t write_serial(const uint8_t* buf, uint16_t count, int32_t byte_timeout_ms, void* arg) {
-	HAL_UART_Transmit(&huart3, buf, count, byte_timeout_ms);
+	HAL_UART_Transmit(&huart2, buf, count, byte_timeout_ms);
   return count;
 }
 

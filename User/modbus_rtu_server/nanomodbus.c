@@ -24,7 +24,7 @@
     SOFTWARE.
 */
 
-#include "nanomodbus.h"
+#include "../../User/modbus_rtu_server/nanomodbus.h"
 
 #include <stdbool.h>
 #include <string.h>

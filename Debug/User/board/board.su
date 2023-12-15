@@ -1,0 +1,8 @@
+../User/board/board.c:58:6:GPIO_sensor_init	40	static
+../User/board/board.c:90:9:get_current_level	8	static
+../User/board/board.c:136:6:board_init	8	static
+../User/board/board.c:146:6:SystemClock_Config	80	static
+../User/board/board.c:180:13:MX_UART4_Init	8	static
+../User/board/board.c:201:13:MX_USART2_UART_Init	8	static
+../User/board/board.c:222:13:MX_GPIO_Init	16	static
+../User/board/board.c:230:6:Error_Handler	4	static,ignoring_inline_asm

@@ -25,4 +25,9 @@ SUBDIRS := \
 Core/Src \
 Core/Startup \
 Drivers/STM32L1xx_HAL_Driver/Src \
+User/board \
+User \
+User/matric_button \
+User/modbus_rtu_server \
+User/step_motor \
 

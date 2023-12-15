@@ -36,20 +36,55 @@ void MX_GPIO_Init(void);
 static void MX_USART3_UART_Init(void);
 static void MX_USART1_UART_Init(void);
 void MX_SPI1_Init(void);
+static void GPIO_sensor(void);
 
 
 void board_init(void){
 	  HAL_Init();
 	  SystemClock_Config();
 	  MX_GPIO_Init();
+	  GPIO_sensor();
 	  MX_USART3_UART_Init();
 	  MX_SPI1_Init();
 	  MX_USART1_UART_Init();
 	  HAL_UART_Receive_IT(&huart3, &buff_rx, 1);
 	  HAL_UART_Receive_IT(&huart1, &buff_rx, 1);
-
+	  GPIO_sensor();
 }
 
+void GPIO_sensor(void){
+
+	/* enable GPIO LCD PORTs clock */
+
+	 __HAL_RCC_GPIOF_CLK_ENABLE();
+
+
+	/* enable GPIO LCD PINs */
+
+	  GPIO_InitTypeDef GPIO_InitStruct = {0};
+	  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+	  GPIO_InitStruct.Pull = GPIO_NOPULL;
+	  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
+
+	  GPIO_InitStruct.Pin = SENSOR_1_PIN;
+	  HAL_GPIO_Init(SENSOR_1_PORT, &GPIO_InitStruct);
+
+	  GPIO_InitStruct.Pin = SENSOR_2_PIN;
+	  HAL_GPIO_Init(SENSOR_2_PORT, &GPIO_InitStruct);
+
+	  GPIO_InitStruct.Pin = SENSOR_3_PIN;
+	  HAL_GPIO_Init(SENSOR_3_PORT, &GPIO_InitStruct);
+
+	  GPIO_InitStruct.Pin = SENSOR_4_PIN;
+	  HAL_GPIO_Init(SENSOR_4_PORT, &GPIO_InitStruct);
+
+	  GPIO_InitStruct.Pin = SENSOR_5_PIN;
+	  HAL_GPIO_Init(SENSOR_5_PORT, &GPIO_InitStruct);
+
+	  GPIO_InitStruct.Pin = SENSOR_6_PIN;
+	  HAL_GPIO_Init(SENSOR_6_PORT, &GPIO_InitStruct);
+
+}
 
 void SystemClock_Config(void)
 {

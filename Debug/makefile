@@ -9,16 +9,7 @@ RM := rm -rf
 
 # All of the sources participating in the build are defined here
 -include sources.mk
--include User/step_motor/subdir.mk
--include User/scheduler/subdir.mk
--include User/modbus_rtu_server/subdir.mk
--include User/matric_button/subdir.mk
--include User/logger/subdir.mk
--include User/hc_05_master/subdir.mk
--include User/board/subdir.mk
--include User/LCD/subdir.mk
--include User/subdir.mk
--include Drivers/STM32F4xx_HAL_Driver/Src/subdir.mk
+-include Drivers/STM32L1xx_HAL_Driver/Src/subdir.mk
 -include Core/Startup/subdir.mk
 -include Core/Src/subdir.mk
 -include objects.mk
@@ -69,8 +60,8 @@ all: main-build
 main-build: Project_bms_elevator_control.elf secondary-outputs
 
 # Tool invocations
-Project_bms_elevator_control.elf Project_bms_elevator_control.map: $(OBJS) $(USER_OBJS) /home/lekhacvuong/Desktop/Project_bms_elevator_control/STM32F407VETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "Project_bms_elevator_control.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"/home/lekhacvuong/Desktop/Project_bms_elevator_control/STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Project_bms_elevator_control.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Project_bms_elevator_control.elf Project_bms_elevator_control.map: $(OBJS) $(USER_OBJS) /home/lekhacvuong/Desktop/Project_bms_elevator_control/STM32L152RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "Project_bms_elevator_control.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"/home/lekhacvuong/Desktop/Project_bms_elevator_control/STM32L152RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Project_bms_elevator_control.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

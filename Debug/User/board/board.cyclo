@@ -1,7 +1,0 @@
-../User/board/board.c:41:6:board_init	1
-../User/board/board.c:54:6:SystemClock_Config	3
-../User/board/board.c:101:7:MX_SPI1_Init	2
-../User/board/board.c:139:14:MX_USART1_UART_Init	2
-../User/board/board.c:172:14:MX_USART3_UART_Init	2
-../User/board/board.c:205:7:MX_GPIO_Init	1
-../User/board/board.c:305:6:Error_Handler	1

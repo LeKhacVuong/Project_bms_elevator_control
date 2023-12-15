@@ -24,14 +24,5 @@ C_DEPS :=
 SUBDIRS := \
 Core/Src \
 Core/Startup \
-Drivers/STM32F4xx_HAL_Driver/Src \
-User/LCD \
-User/board \
-User/hc_05_master \
-User/logger \
-User \
-User/matric_button \
-User/modbus_rtu_server \
-User/scheduler \
-User/step_motor \
+Drivers/STM32L1xx_HAL_Driver/Src \
 

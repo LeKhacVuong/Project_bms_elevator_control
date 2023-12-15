@@ -3,8 +3,6 @@
  *  by Le Khac Vuong
  *
  */
-
-#include <lkv_lcd.h>
 #include <lkv_matrix_button.h>
 #include "board.h"
 #include "modbus_server.h"
@@ -16,43 +14,14 @@
 
 uint8_t user_char = 0;
 nmbs_t nmbs;
+STATUC_T status_cabin = 0;
 
-/*
-    Module Rs485:
+uint8_t current_level = LEVEL_2;
+uint8_t target_level = LEVEL_2;
 
-    PB10     -> USART3_TX
-    PB11     -> USART3_RX
-    5V consum
+LEVEL_T get_current_level(void);
 
-
-    Module LCD:
-
-    PC0      -> RS
-    PC2      -> RW
-    PA0      -> EN
-    PC1      -> DATA_4
-    PC2      -> DATA_5
-    PA1      -> DATA_6
-    PA3      -> DATA_7
-    GND      -> BLK, VO, GND
-    3.3V     -> BLA
-    5V       -> VDD
-
-    Module StepMotor:
-
-    PH0      -> IN_1
-    PC14     -> IN_2
-    PE6      -> IN_3
-    PE4      -> IN_4
-    5V consum
-
-
-    MQTT_Clien/debug com
-    PB6       -> USART1_TX
-    PB7       -> USART1_RX
-
-
- */
+uint8_t ss_arr[6];
 
 void lkv_bsp_log_output(const char* data){
 //	HAL_UART_Transmit(&huart1, (uint8_t*)data, strlen(data), 100);
@@ -60,13 +29,40 @@ void lkv_bsp_log_output(const char* data){
 }
 
 
+void GPIO_sensor(void){
+
+	 __HAL_RCC_GPIOF_CLK_ENABLE();
+
+	  GPIO_InitTypeDef GPIO_InitStruct = {0};
+	  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+	  GPIO_InitStruct.Pull = GPIO_NOPULL;
+	  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
+
+	  GPIO_InitStruct.Pin = SENSOR_1_PIN;
+	  HAL_GPIO_Init(SENSOR_1_PORT, &GPIO_InitStruct);
+
+	  GPIO_InitStruct.Pin = SENSOR_2_PIN;
+	  HAL_GPIO_Init(SENSOR_2_PORT, &GPIO_InitStruct);
+
+	  GPIO_InitStruct.Pin = SENSOR_3_PIN;
+	  HAL_GPIO_Init(SENSOR_3_PORT, &GPIO_InitStruct);
+
+	  GPIO_InitStruct.Pin = SENSOR_4_PIN;
+	  HAL_GPIO_Init(SENSOR_4_PORT, &GPIO_InitStruct);
+
+	  GPIO_InitStruct.Pin = SENSOR_5_PIN;
+	  HAL_GPIO_Init(SENSOR_5_PORT, &GPIO_InitStruct);
+
+	  GPIO_InitStruct.Pin = SENSOR_6_PIN;
+	  HAL_GPIO_Init(SENSOR_6_PORT, &GPIO_InitStruct);
+
+}
+
 int main(void)
 {
 
 	  board_init();
 	  lkv_stepmotor_gpio_init();
-	  lkv_lcd_init();
-
 	  mqtt_index = 0;
 
 	  nmbs_platform_conf platform_conf;
@@ -82,7 +78,6 @@ int main(void)
 	  callbacks.write_multiple_registers = handle_write_multiple_registers;
 	  callbacks.write_single_register = handle_write_single_registers;
 	  callbacks.read_input_registers = handler_read_input_registers;
-	  // Create the modbus server
 	  nmbs_error err = nmbs_server_create(&nmbs, RTU_SERVER_ADDRESS, &platform_conf, &callbacks);
 	  if (err != NMBS_ERROR_NONE) {
 	    onError();
@@ -93,27 +88,34 @@ int main(void)
 	  lkv_logger_init(lkv_bsp_log_output, LOG_LEVEL_DEBUG);
 
 	  LOG_INF(TAG, "Start run");
-
-
-
-
-
-
+	  is_new_linux_msg =  1;
 
   while (1)
   {
 	  nmbs_server_poll(&nmbs);
 	  if(is_new_linux_msg){
-
 		  if(buff_mqtt_slave[0] == 'T'){
 			  HAL_UART_Transmit(&huart1, (uint8_t*)"OK\n", strlen("OK\n"), 100);
 			  lkv_lcd_process(CLEAR_DIS, 1, 1,(char*)(buff_mqtt_slave+1));
 		  }
-
+		  if(buff_mqtt_slave[0] == 'C'){
+			  target_level = buff_mqtt_slave[1];
+		  }
+		  if(buff_mqtt_slave[0] == 'S'){
+			  status_cabin = buff_mqtt_slave[1];
+		  }
 		  is_new_linux_msg = 0;
-
+		  memset(buff_mqtt_slave,0,32);
 	  }
 
+	  while(target_level != current_level){
+		  while(target_level > current_level){
+			  lkv_stepmotor_process(STEP_DIR_UP, 5, 1);
+		  }
+		  while(target_level < current_level){
+			  lkv_stepmotor_process(STEP_DIR_DOWN, 5, 1);
+		  }
+	  }
   }
 }
 
@@ -122,11 +124,7 @@ void SysTick_Handler(void)
 {
 	g_sys_time++;
   HAL_IncTick();
-//  if(g_sys_time % 5000 == 0){
-//	  HAL_UART_Transmit(&huart1, (uint8_t*)"*D2L6C2;\n", strlen("*D2L6C2;\n"), 100);
-//  }
-
-
+  current_level = get_current_level();
 }
 
 
@@ -168,6 +166,52 @@ void USART1_IRQHandler(void)
 	}
 }
 
+
+LEVEL_T get_current_level(void){
+
+	ss_arr[0] = SS0;
+	ss_arr[1] = SS1_2;
+	ss_arr[2] = SS2_3;
+	ss_arr[3] = SS3_4;
+	ss_arr[4] = SS4_A;
+	ss_arr[5] = SS4_B;
+
+
+	if((SS4_B == ON) || (SS4_A == ON)){
+		return LEVEL_4;
+	}
+
+	if(SS0 == ON){
+		return LEVEL_1;
+	}
+
+	if((SS1_2 == ON) && (SS2_3 == OFF) ){
+		return LEVEL_1_2;
+	}
+
+	if((SS1_2 == ON) && (SS2_3 == ON) ){
+		return LEVEL_2;
+	}
+
+	if((SS2_3 == ON) && (SS3_4 == OFF) ){
+		return LEVEL_2_3;
+	}
+
+	if((SS2_3 == ON) && (SS3_4 == ON) ){
+		return LEVEL_3;
+	}
+
+	if((SS3_4 == ON) && (SS4_A == OFF) ){
+		return LEVEL_4;
+	}
+
+	if((SS3_4 == ON) && (SS4_B == OFF)){
+		return LEVEL_4;
+	}
+
+	return LEVEL_ERROR;
+
+}
 
 
 

@@ -26,17 +26,20 @@
 #include "stm32l1xx_hal.h"
 #include "../../User/matric_button/lkv_matrix_button.h"
 
+#define ENABLE			1
+#define	DISABLE			2
 
-typedef enum{
-	PROCESS,
-	STOP,
-	WAIT_USER,
-	ERROR_SST
-}STATUC_T;
+#define DATA_Pin       GPIO_PIN_2
+#define DATA_GPIO_Port GPIOC
+#define CLK_Pin        GPIO_PIN_3
+#define CLK_GPIO_Port  GPIOC
+
 
 extern volatile uint32_t g_sys_time;
 
 extern uint8_t buff_rx ;
+extern uint8_t buff_rx_mqtt ;
+
 
 extern uint8_t ring_buffer[1024] ;
 extern volatile uint16_t front_index;

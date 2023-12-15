@@ -17,6 +17,7 @@
 "./Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_rcc.o"
 "./Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_rcc_ex.o"
 "./Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_uart.o"
+"./User/TM1637/TM1637.o"
 "./User/board/board.o"
 "./User/main.o"
 "./User/matric_button/lkv_matrix_button.o"

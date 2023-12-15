@@ -49,7 +49,7 @@
 #define  HAL_TICK_FREQ_10HZ         100U
 #define  HAL_TICK_FREQ_100HZ        10U
 #define  HAL_TICK_FREQ_1KHZ         1U
-#define  HAL_TICK_FREQ_DEFAULT      HAL_TICK_FREQ_1KHZ
+#define  HAL_TICK_FREQ_DEFAULT      HAL_TICK_FREQ_10HZ
 
 #define IS_TICKFREQ(__FREQ__) (((__FREQ__) == HAL_TICK_FREQ_10HZ)  || \
                                ((__FREQ__) == HAL_TICK_FREQ_100HZ) || \

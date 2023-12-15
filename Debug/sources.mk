@@ -25,6 +25,7 @@ SUBDIRS := \
 Core/Src \
 Core/Startup \
 Drivers/STM32L1xx_HAL_Driver/Src \
+User/TM1637 \
 User/board \
 User \
 User/matric_button \

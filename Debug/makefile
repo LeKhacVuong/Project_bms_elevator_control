@@ -13,6 +13,7 @@ RM := rm -rf
 -include User/modbus_rtu_server/subdir.mk
 -include User/matric_button/subdir.mk
 -include User/board/subdir.mk
+-include User/TM1637/subdir.mk
 -include User/subdir.mk
 -include Drivers/STM32L1xx_HAL_Driver/Src/subdir.mk
 -include Core/Startup/subdir.mk
@@ -65,8 +66,8 @@ all: main-build
 main-build: bms_l152.elf secondary-outputs
 
 # Tool invocations
-bms_l152.elf bms_l152.map: $(OBJS) $(USER_OBJS) /home/lekhacvuong/Project_bms_elevator_control/STM32L152RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "bms_l152.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"/home/lekhacvuong/Project_bms_elevator_control/STM32L152RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="bms_l152.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+bms_l152.elf bms_l152.map: $(OBJS) $(USER_OBJS) /home/lekhacvuong/Desktop/Project_bms_elevator_control/STM32L152RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "bms_l152.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"/home/lekhacvuong/Desktop/Project_bms_elevator_control/STM32L152RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="bms_l152.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

@@ -1,4 +1,4 @@
-User/main.o: ../User/main.c ../Core/Inc/main.h \
+User/TM1637/TM1637.o: ../User/TM1637/TM1637.c ../User/TM1637/TM1637.h \
  ../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal.h \
  ../Core/Inc/stm32l1xx_hal_conf.h \
  ../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_rcc.h \
@@ -24,13 +24,9 @@ User/main.o: ../User/main.c ../Core/Inc/main.h \
  ../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_pwr_ex.h \
  ../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_uart.h \
  ../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_exti.h \
- ../Core/Inc/../../User/matric_button/lkv_matrix_button.h \
- ../User/../User/modbus_rtu_server/modbus_server.h \
- ../User/../User/modbus_rtu_server/../../User/modbus_rtu_server/nanomodbus.h \
- ../User/../User/step_motor/step_motor.h \
- /home/lekhacvuong/Desktop/Project_bms_elevator_control/User/board/board.h \
- /home/lekhacvuong/Desktop/Project_bms_elevator_control/User/TM1637/TM1637.h
-../Core/Inc/main.h:
+ ../Core/Inc/main.h \
+ ../Core/Inc/../../User/matric_button/lkv_matrix_button.h
+../User/TM1637/TM1637.h:
 ../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal.h:
 ../Core/Inc/stm32l1xx_hal_conf.h:
 ../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_rcc.h:
@@ -56,9 +52,5 @@ User/main.o: ../User/main.c ../Core/Inc/main.h \
 ../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_pwr_ex.h:
 ../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_uart.h:
 ../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_exti.h:
+../Core/Inc/main.h:
 ../Core/Inc/../../User/matric_button/lkv_matrix_button.h:
-../User/../User/modbus_rtu_server/modbus_server.h:
-../User/../User/modbus_rtu_server/../../User/modbus_rtu_server/nanomodbus.h:
-../User/../User/step_motor/step_motor.h:
-/home/lekhacvuong/Desktop/Project_bms_elevator_control/User/board/board.h:
-/home/lekhacvuong/Desktop/Project_bms_elevator_control/User/TM1637/TM1637.h:

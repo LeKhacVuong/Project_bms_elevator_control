@@ -14,7 +14,7 @@ void matrix_init(void){
 
 	  GPIO_InitTypeDef GPIO_InitStruct = {0};
 	  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
-	  GPIO_InitStruct.Pull = GPIO_NOPULL;
+	  GPIO_InitStruct.Pull = GPIO_PULLDOWN;
 	  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
 
 	  GPIO_InitStruct.Pin = GPIO_PIN_6;
@@ -44,25 +44,20 @@ void matrix_init(void){
 	  GPIO_InitStruct.Pin = GPIO_PIN_10;
 	  HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
-
 }
 
 
 uint8_t get_row(void){
 	if(HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_6) == 1 ){
-		HAL_Delay(10);
 		if(HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_6) == 1) return 1;
 	}
 	else if(HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_7) == 1 ){
-		HAL_Delay(10);
 		if(HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_7) == 1) return 2;
 	}
 	else if(HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_6) == 1 ){
-		HAL_Delay(10);
 		if(HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_6) == 1) return 3;
 	}
 	else if(HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_7) == 1 ){
-		HAL_Delay(10);
 		if(HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_7) == 1) return 4;
 	}
 
@@ -74,27 +69,27 @@ uint8_t get_row(void){
 void set_colum(uint8_t id){
 	switch(id){
 	case 1:
-		HAL_Delay(2);
+		for(int i = 0; i < 50; i++);
 		HAL_GPIO_WritePin(GPIOA, GPIO_PIN_9,  1);
 		HAL_GPIO_WritePin(GPIOA, GPIO_PIN_8,  0);
 		HAL_GPIO_WritePin(GPIOB, GPIO_PIN_10, 0);
-		HAL_Delay(2);
+		for(int i = 0; i < 50; i++);
 		break;
 
 	case 2:
-		HAL_Delay(2);
+		for(int i = 0; i < 50; i++);
 		HAL_GPIO_WritePin(GPIOA, GPIO_PIN_9,  0);
 		HAL_GPIO_WritePin(GPIOA, GPIO_PIN_8,  1);
 		HAL_GPIO_WritePin(GPIOB, GPIO_PIN_10, 0);
-		HAL_Delay(2);
+		for(int i = 0; i < 50; i++);
 		break;
 
 	case 3:
-		HAL_Delay(2);
+		for(int i = 0; i < 50; i++);
 		HAL_GPIO_WritePin(GPIOA, GPIO_PIN_9,  0);
 		HAL_GPIO_WritePin(GPIOA, GPIO_PIN_8,  0);
 		HAL_GPIO_WritePin(GPIOB, GPIO_PIN_10, 1);
-		HAL_Delay(2);
+		for(int i = 0; i < 50; i++);
 		break;
 
 	default:

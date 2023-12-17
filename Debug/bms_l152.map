@@ -1724,6 +1724,8 @@ Discarded input sections
                 0x0000000000000000       0x12 ./Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_uart.o
  .text.HAL_UART_MspDeInit
                 0x0000000000000000       0x12 ./Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_uart.o
+ .text.HAL_UART_Transmit
+                0x0000000000000000      0x106 ./Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_uart.o
  .text.HAL_UART_Receive
                 0x0000000000000000      0x124 ./Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_uart.o
  .text.HAL_UART_Transmit_IT
@@ -1792,6 +1794,8 @@ Discarded input sections
                 0x0000000000000000       0x3c ./Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_uart.o
  .text.UART_DMAError
                 0x0000000000000000       0x94 ./Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_uart.o
+ .text.UART_WaitOnFlagUntilTimeout
+                0x0000000000000000       0xdc ./Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_uart.o
  .text.UART_Start_Receive_DMA
                 0x0000000000000000      0x134 ./Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_uart.o
  .text.UART_EndTxTransfer
@@ -1878,6 +1882,8 @@ Discarded input sections
                 0x0000000000000000       0x24 ./User/TM1637/TM1637.o
  .text.TM1637_Init
                 0x0000000000000000        0xe ./User/TM1637/TM1637.o
+ .text.TM1637_DisplayDecimal
+                0x0000000000000000       0xdc ./User/TM1637/TM1637.o
  .debug_macro   0x0000000000000000      0xa9c ./User/TM1637/TM1637.o
  .debug_macro   0x0000000000000000      0x109 ./User/TM1637/TM1637.o
  .debug_macro   0x0000000000000000       0x2e ./User/TM1637/TM1637.o
@@ -2046,13 +2052,23 @@ Discarded input sections
  .bss           0x0000000000000000        0x0 ./User/main.o
  .rodata.NMBS_BROADCAST_ADDRESS
                 0x0000000000000000        0x1 ./User/main.o
+ .bss.nmbs      0x0000000000000000      0x154 ./User/main.o
+ .bss.platform_conf
+                0x0000000000000000       0x10 ./User/main.o
+ .bss.callbacks
+                0x0000000000000000       0x2c ./User/main.o
+ .bss.rear_index
+                0x0000000000000000        0x2 ./User/main.o
  .bss.process_buffer
                 0x0000000000000000       0x40 ./User/main.o
  .bss.process_index
                 0x0000000000000000        0x2 ./User/main.o
- .bss.buff_tx   0x0000000000000000       0x20 ./User/main.o
+ .text.modbus_sever_init
+                0x0000000000000000       0xa4 ./User/main.o
  .text.elevator_process_once
                 0x0000000000000000       0x58 ./User/main.o
+ .text.linux_msg_prosess
+                0x0000000000000000       0xac ./User/main.o
  .debug_macro   0x0000000000000000      0xa9c ./User/main.o
  .debug_macro   0x0000000000000000      0x109 ./User/main.o
  .debug_macro   0x0000000000000000       0x2e ./User/main.o
@@ -2230,6 +2246,36 @@ Discarded input sections
  .bss           0x0000000000000000        0x0 ./User/modbus_rtu_server/modbus_server.o
  .rodata.NMBS_BROADCAST_ADDRESS
                 0x0000000000000000        0x1 ./User/modbus_rtu_server/modbus_server.o
+ .bss.server_coils
+                0x0000000000000000       0xfa ./User/modbus_rtu_server/modbus_server.o
+ .data.server_holding_registers
+                0x0000000000000000       0x14 ./User/modbus_rtu_server/modbus_server.o
+ .data.server_input_registers
+                0x0000000000000000       0x14 ./User/modbus_rtu_server/modbus_server.o
+ .text.read_serial
+                0x0000000000000000       0xe4 ./User/modbus_rtu_server/modbus_server.o
+ .text.write_serial
+                0x0000000000000000       0x2c ./User/modbus_rtu_server/modbus_server.o
+ .text.onError  0x0000000000000000        0xc ./User/modbus_rtu_server/modbus_server.o
+ .text.handle_read_coils
+                0x0000000000000000       0xe8 ./User/modbus_rtu_server/modbus_server.o
+ .text.handle_write_multiple_coils
+                0x0000000000000000       0xe4 ./User/modbus_rtu_server/modbus_server.o
+ .text.handler_read_holding_registers
+                0x0000000000000000       0x60 ./User/modbus_rtu_server/modbus_server.o
+ .text.handle_write_multiple_registers
+                0x0000000000000000       0x60 ./User/modbus_rtu_server/modbus_server.o
+ .text.handle_write_single_registers
+                0x0000000000000000       0x38 ./User/modbus_rtu_server/modbus_server.o
+ .text.handler_read_input_registers
+                0x0000000000000000       0x60 ./User/modbus_rtu_server/modbus_server.o
+ .debug_info    0x0000000000000000      0xa9e ./User/modbus_rtu_server/modbus_server.o
+ .debug_abbrev  0x0000000000000000      0x24f ./User/modbus_rtu_server/modbus_server.o
+ .debug_aranges
+                0x0000000000000000       0x60 ./User/modbus_rtu_server/modbus_server.o
+ .debug_rnglists
+                0x0000000000000000       0x46 ./User/modbus_rtu_server/modbus_server.o
+ .debug_macro   0x0000000000000000      0x2a9 ./User/modbus_rtu_server/modbus_server.o
  .debug_macro   0x0000000000000000      0xa9c ./User/modbus_rtu_server/modbus_server.o
  .debug_macro   0x0000000000000000      0x109 ./User/modbus_rtu_server/modbus_server.o
  .debug_macro   0x0000000000000000       0x2e ./User/modbus_rtu_server/modbus_server.o
@@ -2283,6 +2329,12 @@ Discarded input sections
  .debug_macro   0x0000000000000000       0x20 ./User/modbus_rtu_server/modbus_server.o
  .debug_macro   0x0000000000000000       0x1c ./User/modbus_rtu_server/modbus_server.o
  .debug_macro   0x0000000000000000       0x1c ./User/modbus_rtu_server/modbus_server.o
+ .debug_line    0x0000000000000000      0xadd ./User/modbus_rtu_server/modbus_server.o
+ .debug_str     0x0000000000000000    0x827fd ./User/modbus_rtu_server/modbus_server.o
+ .comment       0x0000000000000000       0x44 ./User/modbus_rtu_server/modbus_server.o
+ .debug_frame   0x0000000000000000      0x16c ./User/modbus_rtu_server/modbus_server.o
+ .ARM.attributes
+                0x0000000000000000       0x2d ./User/modbus_rtu_server/modbus_server.o
  .group         0x0000000000000000        0xc ./User/modbus_rtu_server/nanomodbus.o
  .group         0x0000000000000000        0xc ./User/modbus_rtu_server/nanomodbus.o
  .group         0x0000000000000000        0xc ./User/modbus_rtu_server/nanomodbus.o
@@ -2335,6 +2387,12 @@ Discarded input sections
                 0x0000000000000000       0x3e ./User/modbus_rtu_server/nanomodbus.o
  .text.msg_state_req
                 0x0000000000000000       0x7e ./User/modbus_rtu_server/nanomodbus.o
+ .text.nmbs_create
+                0x0000000000000000       0x88 ./User/modbus_rtu_server/nanomodbus.o
+ .text.nmbs_set_read_timeout
+                0x0000000000000000       0x1c ./User/modbus_rtu_server/nanomodbus.o
+ .text.nmbs_set_byte_timeout
+                0x0000000000000000       0x1c ./User/modbus_rtu_server/nanomodbus.o
  .text.nmbs_set_destination_rtu_address
                 0x0000000000000000       0x1e ./User/modbus_rtu_server/nanomodbus.o
  .text.nmbs_set_platform_arg
@@ -2405,6 +2463,8 @@ Discarded input sections
                 0x0000000000000000      0x374 ./User/modbus_rtu_server/nanomodbus.o
  .text.handle_req_fc
                 0x0000000000000000      0x10c ./User/modbus_rtu_server/nanomodbus.o
+ .text.nmbs_server_create
+                0x0000000000000000       0x6a ./User/modbus_rtu_server/nanomodbus.o
  .text.nmbs_server_poll
                 0x0000000000000000       0xb0 ./User/modbus_rtu_server/nanomodbus.o
  .text.nmbs_client_create
@@ -2442,6 +2502,13 @@ Discarded input sections
  .rodata        0x0000000000000000      0x15a ./User/modbus_rtu_server/nanomodbus.o
  .text.nmbs_strerror
                 0x0000000000000000       0xbc ./User/modbus_rtu_server/nanomodbus.o
+ .debug_info    0x0000000000000000     0x20c7 ./User/modbus_rtu_server/nanomodbus.o
+ .debug_abbrev  0x0000000000000000      0x361 ./User/modbus_rtu_server/nanomodbus.o
+ .debug_aranges
+                0x0000000000000000      0x250 ./User/modbus_rtu_server/nanomodbus.o
+ .debug_rnglists
+                0x0000000000000000      0x1d7 ./User/modbus_rtu_server/nanomodbus.o
+ .debug_macro   0x0000000000000000      0x154 ./User/modbus_rtu_server/nanomodbus.o
  .debug_macro   0x0000000000000000      0xa9c ./User/modbus_rtu_server/nanomodbus.o
  .debug_macro   0x0000000000000000       0x22 ./User/modbus_rtu_server/nanomodbus.o
  .debug_macro   0x0000000000000000       0x22 ./User/modbus_rtu_server/nanomodbus.o
@@ -2468,6 +2535,12 @@ Discarded input sections
  .debug_macro   0x0000000000000000       0x35 ./User/modbus_rtu_server/nanomodbus.o
  .debug_macro   0x0000000000000000       0x20 ./User/modbus_rtu_server/nanomodbus.o
  .debug_macro   0x0000000000000000       0x1c ./User/modbus_rtu_server/nanomodbus.o
+ .debug_line    0x0000000000000000     0x1b9c ./User/modbus_rtu_server/nanomodbus.o
+ .debug_str     0x0000000000000000     0x7f58 ./User/modbus_rtu_server/nanomodbus.o
+ .comment       0x0000000000000000       0x44 ./User/modbus_rtu_server/nanomodbus.o
+ .debug_frame   0x0000000000000000      0xac0 ./User/modbus_rtu_server/nanomodbus.o
+ .ARM.attributes
+                0x0000000000000000       0x2d ./User/modbus_rtu_server/nanomodbus.o
  .group         0x0000000000000000        0xc ./User/step_motor/step_motor.o
  .group         0x0000000000000000        0xc ./User/step_motor/step_motor.o
  .group         0x0000000000000000        0xc ./User/step_motor/step_motor.o
@@ -2853,7 +2926,7 @@ LOAD /opt/st/stm32cubeide_1.14.0/plugins/com.st.stm32cube.ide.mcu.externaltools.
                 0x0000000008000000                g_pfnVectors
                 0x000000000800013c                . = ALIGN (0x4)
 
-.text           0x000000000800013c     0x409c
+.text           0x000000000800013c     0x3b80
                 0x000000000800013c                . = ALIGN (0x4)
  *(.text)
  .text          0x000000000800013c       0x40 /opt/st/stm32cubeide_1.14.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.linux64_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7-m/nofp/crtbegin.o
@@ -3038,282 +3111,235 @@ LOAD /opt/st/stm32cubeide_1.14.0/plugins/com.st.stm32cube.ide.mcu.externaltools.
  .text.HAL_UART_Init
                 0x00000000080019a0       0xa0 ./Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_uart.o
                 0x00000000080019a0                HAL_UART_Init
- .text.HAL_UART_Transmit
-                0x0000000008001a40      0x106 ./Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_uart.o
-                0x0000000008001a40                HAL_UART_Transmit
  .text.HAL_UART_Receive_IT
-                0x0000000008001b46       0x4a ./Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_uart.o
-                0x0000000008001b46                HAL_UART_Receive_IT
+                0x0000000008001a40       0x4a ./Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_uart.o
+                0x0000000008001a40                HAL_UART_Receive_IT
+ *fill*         0x0000000008001a8a        0x2 
  .text.HAL_UART_IRQHandler
-                0x0000000008001b90      0x524 ./Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_uart.o
-                0x0000000008001b90                HAL_UART_IRQHandler
+                0x0000000008001a8c      0x524 ./Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_uart.o
+                0x0000000008001a8c                HAL_UART_IRQHandler
  .text.HAL_UART_TxCpltCallback
-                0x00000000080020b4       0x12 ./Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_uart.o
-                0x00000000080020b4                HAL_UART_TxCpltCallback
+                0x0000000008001fb0       0x12 ./Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_uart.o
+                0x0000000008001fb0                HAL_UART_TxCpltCallback
  .text.HAL_UART_RxCpltCallback
-                0x00000000080020c6       0x12 ./Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_uart.o
-                0x00000000080020c6                HAL_UART_RxCpltCallback
+                0x0000000008001fc2       0x12 ./Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_uart.o
+                0x0000000008001fc2                HAL_UART_RxCpltCallback
  .text.HAL_UART_ErrorCallback
-                0x00000000080020d8       0x12 ./Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_uart.o
-                0x00000000080020d8                HAL_UART_ErrorCallback
+                0x0000000008001fd4       0x12 ./Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_uart.o
+                0x0000000008001fd4                HAL_UART_ErrorCallback
  .text.HAL_UARTEx_RxEventCallback
-                0x00000000080020ea       0x16 ./Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_uart.o
-                0x00000000080020ea                HAL_UARTEx_RxEventCallback
- .text.UART_WaitOnFlagUntilTimeout
-                0x0000000008002100       0xdc ./Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_uart.o
+                0x0000000008001fe6       0x16 ./Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_uart.o
+                0x0000000008001fe6                HAL_UARTEx_RxEventCallback
  .text.UART_Start_Receive_IT
-                0x00000000080021dc       0x72 ./Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_uart.o
-                0x00000000080021dc                UART_Start_Receive_IT
+                0x0000000008001ffc       0x72 ./Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_uart.o
+                0x0000000008001ffc                UART_Start_Receive_IT
  .text.UART_EndRxTransfer
-                0x000000000800224e       0xc4 ./Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_uart.o
+                0x000000000800206e       0xc4 ./Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_uart.o
  .text.UART_DMAAbortOnError
-                0x0000000008002312       0x28 ./Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_uart.o
+                0x0000000008002132       0x28 ./Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_uart.o
  .text.UART_Transmit_IT
-                0x000000000800233a       0x9e ./Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_uart.o
+                0x000000000800215a       0x9e ./Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_uart.o
  .text.UART_EndTransmit_IT
-                0x00000000080023d8       0x30 ./Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_uart.o
+                0x00000000080021f8       0x30 ./Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_uart.o
  .text.UART_Receive_IT
-                0x0000000008002408      0x17c ./Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_uart.o
+                0x0000000008002228      0x17c ./Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_uart.o
  .text.UART_SetConfig
-                0x0000000008002584      0x1c8 ./Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_uart.o
+                0x00000000080023a4      0x1c8 ./Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_uart.o
  .text.TM1637_ClkHigh
-                0x000000000800274c       0x18 ./User/TM1637/TM1637.o
-                0x000000000800274c                TM1637_ClkHigh
+                0x000000000800256c       0x18 ./User/TM1637/TM1637.o
+                0x000000000800256c                TM1637_ClkHigh
  .text.TM1637_ClkLow
-                0x0000000008002764       0x18 ./User/TM1637/TM1637.o
-                0x0000000008002764                TM1637_ClkLow
+                0x0000000008002584       0x18 ./User/TM1637/TM1637.o
+                0x0000000008002584                TM1637_ClkLow
  .text.TM1637_DataHigh
-                0x000000000800277c       0x18 ./User/TM1637/TM1637.o
-                0x000000000800277c                TM1637_DataHigh
+                0x000000000800259c       0x18 ./User/TM1637/TM1637.o
+                0x000000000800259c                TM1637_DataHigh
  .text.TM1637_DataLow
-                0x0000000008002794       0x18 ./User/TM1637/TM1637.o
-                0x0000000008002794                TM1637_DataLow
+                0x00000000080025b4       0x18 ./User/TM1637/TM1637.o
+                0x00000000080025b4                TM1637_DataLow
  .text.TM1637_Display_4_char
-                0x00000000080027ac       0xa8 ./User/TM1637/TM1637.o
-                0x00000000080027ac                TM1637_Display_4_char
- .text.TM1637_DisplayDecimal
-                0x0000000008002854       0xdc ./User/TM1637/TM1637.o
-                0x0000000008002854                TM1637_DisplayDecimal
+                0x00000000080025cc       0xa8 ./User/TM1637/TM1637.o
+                0x00000000080025cc                TM1637_Display_4_char
  .text.TM1637_SetBrightness
-                0x0000000008002930       0x2a ./User/TM1637/TM1637.o
-                0x0000000008002930                TM1637_SetBrightness
+                0x0000000008002674       0x2a ./User/TM1637/TM1637.o
+                0x0000000008002674                TM1637_SetBrightness
  .text.TM1637_Start
-                0x000000000800295a       0x1a ./User/TM1637/TM1637.o
-                0x000000000800295a                TM1637_Start
+                0x000000000800269e       0x1a ./User/TM1637/TM1637.o
+                0x000000000800269e                TM1637_Start
  .text.TM1637_Stop
-                0x0000000008002974       0x2a ./User/TM1637/TM1637.o
-                0x0000000008002974                TM1637_Stop
+                0x00000000080026b8       0x2a ./User/TM1637/TM1637.o
+                0x00000000080026b8                TM1637_Stop
  .text.TM1637_ReadResult
-                0x000000000800299e       0x20 ./User/TM1637/TM1637.o
-                0x000000000800299e                TM1637_ReadResult
+                0x00000000080026e2       0x20 ./User/TM1637/TM1637.o
+                0x00000000080026e2                TM1637_ReadResult
  .text.TM1637_WriteByte
-                0x00000000080029be       0x54 ./User/TM1637/TM1637.o
-                0x00000000080029be                TM1637_WriteByte
+                0x0000000008002702       0x54 ./User/TM1637/TM1637.o
+                0x0000000008002702                TM1637_WriteByte
  .text.TM1637_DelayUsec
-                0x0000000008002a12       0x38 ./User/TM1637/TM1637.o
-                0x0000000008002a12                TM1637_DelayUsec
- *fill*         0x0000000008002a4a        0x2 
+                0x0000000008002756       0x36 ./User/TM1637/TM1637.o
+                0x0000000008002756                TM1637_DelayUsec
  .text.GPIO_sensor_init
-                0x0000000008002a4c       0xe4 ./User/board/board.o
-                0x0000000008002a4c                GPIO_sensor_init
+                0x000000000800278c       0xe4 ./User/board/board.o
+                0x000000000800278c                GPIO_sensor_init
  .text.get_current_level
-                0x0000000008002b30      0x16c ./User/board/board.o
-                0x0000000008002b30                get_current_level
+                0x0000000008002870      0x16c ./User/board/board.o
+                0x0000000008002870                get_current_level
  .text.board_init
-                0x0000000008002c9c       0x40 ./User/board/board.o
-                0x0000000008002c9c                board_init
+                0x00000000080029dc       0x40 ./User/board/board.o
+                0x00000000080029dc                board_init
  .text.SystemClock_Config
-                0x0000000008002cdc       0x9c ./User/board/board.o
-                0x0000000008002cdc                SystemClock_Config
+                0x0000000008002a1c       0x9c ./User/board/board.o
+                0x0000000008002a1c                SystemClock_Config
  .text.MX_UART4_Init
-                0x0000000008002d78       0x54 ./User/board/board.o
+                0x0000000008002ab8       0x54 ./User/board/board.o
  .text.MX_USART2_UART_Init
-                0x0000000008002dcc       0x54 ./User/board/board.o
+                0x0000000008002b0c       0x54 ./User/board/board.o
  .text.MX_GPIO_Init
-                0x0000000008002e20       0x84 ./User/board/board.o
+                0x0000000008002b60       0x84 ./User/board/board.o
  .text.Error_Handler
-                0x0000000008002ea4        0xa ./User/board/board.o
-                0x0000000008002ea4                Error_Handler
- *fill*         0x0000000008002eae        0x2 
- .text.elevator_process_force
-                0x0000000008002eb0       0x60 ./User/main.o
-                0x0000000008002eb0                elevator_process_force
- .text.linux_msg_prosess
-                0x0000000008002f10       0xac ./User/main.o
-                0x0000000008002f10                linux_msg_prosess
- .text.show_dis_dir
-                0x0000000008002fbc       0x40 ./User/main.o
-                0x0000000008002fbc                show_dis_dir
- .text.main     0x0000000008002ffc      0x278 ./User/main.o
-                0x0000000008002ffc                main
+                0x0000000008002be4        0xa ./User/board/board.o
+                0x0000000008002be4                Error_Handler
+ *fill*         0x0000000008002bee        0x2 
+ .text.main     0x0000000008002bf0      0x18c ./User/main.o
+                0x0000000008002bf0                main
  .text.SysTick_Handler
-                0x0000000008003274      0x194 ./User/main.o
-                0x0000000008003274                SysTick_Handler
+                0x0000000008002d7c      0x2f0 ./User/main.o
+                0x0000000008002d7c                SysTick_Handler
  .text.USART2_IRQHandler
-                0x0000000008003408       0x58 ./User/main.o
-                0x0000000008003408                USART2_IRQHandler
+                0x000000000800306c       0x58 ./User/main.o
+                0x000000000800306c                USART2_IRQHandler
  .text.UART4_IRQHandler
-                0x0000000008003460       0x80 ./User/main.o
-                0x0000000008003460                UART4_IRQHandler
+                0x00000000080030c4       0x80 ./User/main.o
+                0x00000000080030c4                UART4_IRQHandler
+ .text.blink_led_delay
+                0x0000000008003144      0x22c ./User/main.o
+                0x0000000008003144                blink_led_delay
+ .text.elevator_process_force
+                0x0000000008003370       0x60 ./User/main.o
+                0x0000000008003370                elevator_process_force
+ .text.show_display
+                0x00000000080033d0      0x160 ./User/main.o
+                0x00000000080033d0                show_display
  .text.matrix_init
-                0x00000000080034e0      0x104 ./User/matric_button/lkv_matrix_button.o
-                0x00000000080034e0                matrix_init
- .text.get_row  0x00000000080035e4       0x98 ./User/matric_button/lkv_matrix_button.o
-                0x00000000080035e4                get_row
+                0x0000000008003530      0x104 ./User/matric_button/lkv_matrix_button.o
+                0x0000000008003530                matrix_init
+ .text.get_row  0x0000000008003634       0x98 ./User/matric_button/lkv_matrix_button.o
+                0x0000000008003634                get_row
  .text.set_colum
-                0x000000000800367c      0x110 ./User/matric_button/lkv_matrix_button.o
-                0x000000000800367c                set_colum
+                0x00000000080036cc      0x110 ./User/matric_button/lkv_matrix_button.o
+                0x00000000080036cc                set_colum
  .text.get_char_user
-                0x000000000800378c      0x104 ./User/matric_button/lkv_matrix_button.o
-                0x000000000800378c                get_char_user
- .text.read_serial
-                0x0000000008003890       0xe4 ./User/modbus_rtu_server/modbus_server.o
-                0x0000000008003890                read_serial
- .text.write_serial
-                0x0000000008003974       0x2c ./User/modbus_rtu_server/modbus_server.o
-                0x0000000008003974                write_serial
- .text.onError  0x00000000080039a0        0xc ./User/modbus_rtu_server/modbus_server.o
-                0x00000000080039a0                onError
- .text.handle_read_coils
-                0x00000000080039ac       0xe8 ./User/modbus_rtu_server/modbus_server.o
-                0x00000000080039ac                handle_read_coils
- .text.handle_write_multiple_coils
-                0x0000000008003a94       0xe4 ./User/modbus_rtu_server/modbus_server.o
-                0x0000000008003a94                handle_write_multiple_coils
- .text.handler_read_holding_registers
-                0x0000000008003b78       0x60 ./User/modbus_rtu_server/modbus_server.o
-                0x0000000008003b78                handler_read_holding_registers
- .text.handle_write_multiple_registers
-                0x0000000008003bd8       0x60 ./User/modbus_rtu_server/modbus_server.o
-                0x0000000008003bd8                handle_write_multiple_registers
- .text.handle_write_single_registers
-                0x0000000008003c38       0x38 ./User/modbus_rtu_server/modbus_server.o
-                0x0000000008003c38                handle_write_single_registers
- .text.handler_read_input_registers
-                0x0000000008003c70       0x60 ./User/modbus_rtu_server/modbus_server.o
-                0x0000000008003c70                handler_read_input_registers
- .text.nmbs_create
-                0x0000000008003cd0       0x88 ./User/modbus_rtu_server/nanomodbus.o
-                0x0000000008003cd0                nmbs_create
- .text.nmbs_set_read_timeout
-                0x0000000008003d58       0x1c ./User/modbus_rtu_server/nanomodbus.o
-                0x0000000008003d58                nmbs_set_read_timeout
- .text.nmbs_set_byte_timeout
-                0x0000000008003d74       0x1c ./User/modbus_rtu_server/nanomodbus.o
-                0x0000000008003d74                nmbs_set_byte_timeout
- .text.nmbs_server_create
-                0x0000000008003d90       0x6a ./User/modbus_rtu_server/nanomodbus.o
-                0x0000000008003d90                nmbs_server_create
- *fill*         0x0000000008003dfa        0x2 
+                0x00000000080037dc      0x104 ./User/matric_button/lkv_matrix_button.o
+                0x00000000080037dc                get_char_user
  .text.lkv_stepmotor_coil_setval
-                0x0000000008003dfc       0x60 ./User/step_motor/step_motor.o
-                0x0000000008003dfc                lkv_stepmotor_coil_setval
+                0x00000000080038e0       0x60 ./User/step_motor/step_motor.o
+                0x00000000080038e0                lkv_stepmotor_coil_setval
  .text.lkv_stepmotor_run_up
-                0x0000000008003e5c       0xfc ./User/step_motor/step_motor.o
-                0x0000000008003e5c                lkv_stepmotor_run_up
+                0x0000000008003940       0xfc ./User/step_motor/step_motor.o
+                0x0000000008003940                lkv_stepmotor_run_up
  .text.lkv_stepmotor_run_down
-                0x0000000008003f58       0xfc ./User/step_motor/step_motor.o
-                0x0000000008003f58                lkv_stepmotor_run_down
+                0x0000000008003a3c       0xfc ./User/step_motor/step_motor.o
+                0x0000000008003a3c                lkv_stepmotor_run_down
  .text.lkv_stepmotor_gpio_init
-                0x0000000008004054       0xa8 ./User/step_motor/step_motor.o
-                0x0000000008004054                lkv_stepmotor_gpio_init
+                0x0000000008003b38       0xa8 ./User/step_motor/step_motor.o
+                0x0000000008003b38                lkv_stepmotor_gpio_init
  .text.lkv_stepmotor_process
-                0x00000000080040fc       0x6c ./User/step_motor/step_motor.o
-                0x00000000080040fc                lkv_stepmotor_process
- .text.memset   0x0000000008004168       0x10 /opt/st/stm32cubeide_1.14.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.linux64_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(libc_a-memset.o)
-                0x0000000008004168                memset
+                0x0000000008003be0       0x6c ./User/step_motor/step_motor.o
+                0x0000000008003be0                lkv_stepmotor_process
+ .text.memset   0x0000000008003c4c       0x10 /opt/st/stm32cubeide_1.14.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.linux64_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(libc_a-memset.o)
+                0x0000000008003c4c                memset
  .text.__libc_init_array
-                0x0000000008004178       0x48 /opt/st/stm32cubeide_1.14.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.linux64_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(libc_a-init.o)
-                0x0000000008004178                __libc_init_array
+                0x0000000008003c5c       0x48 /opt/st/stm32cubeide_1.14.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.linux64_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(libc_a-init.o)
+                0x0000000008003c5c                __libc_init_array
  *(.glue_7)
- .glue_7        0x00000000080041c0        0x0 linker stubs
+ .glue_7        0x0000000008003ca4        0x0 linker stubs
  *(.glue_7t)
- .glue_7t       0x00000000080041c0        0x0 linker stubs
+ .glue_7t       0x0000000008003ca4        0x0 linker stubs
  *(.eh_frame)
- .eh_frame      0x00000000080041c0        0x0 /opt/st/stm32cubeide_1.14.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.linux64_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7-m/nofp/crtbegin.o
+ .eh_frame      0x0000000008003ca4        0x0 /opt/st/stm32cubeide_1.14.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.linux64_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7-m/nofp/crtbegin.o
  *(.init)
- .init          0x00000000080041c0        0x4 /opt/st/stm32cubeide_1.14.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.linux64_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7-m/nofp/crti.o
-                0x00000000080041c0                _init
- .init          0x00000000080041c4        0x8 /opt/st/stm32cubeide_1.14.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.linux64_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7-m/nofp/crtn.o
+ .init          0x0000000008003ca4        0x4 /opt/st/stm32cubeide_1.14.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.linux64_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7-m/nofp/crti.o
+                0x0000000008003ca4                _init
+ .init          0x0000000008003ca8        0x8 /opt/st/stm32cubeide_1.14.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.linux64_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7-m/nofp/crtn.o
  *(.fini)
- .fini          0x00000000080041cc        0x4 /opt/st/stm32cubeide_1.14.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.linux64_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7-m/nofp/crti.o
-                0x00000000080041cc                _fini
- .fini          0x00000000080041d0        0x8 /opt/st/stm32cubeide_1.14.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.linux64_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7-m/nofp/crtn.o
-                0x00000000080041d8                . = ALIGN (0x4)
-                0x00000000080041d8                _etext = .
+ .fini          0x0000000008003cb0        0x4 /opt/st/stm32cubeide_1.14.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.linux64_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7-m/nofp/crti.o
+                0x0000000008003cb0                _fini
+ .fini          0x0000000008003cb4        0x8 /opt/st/stm32cubeide_1.14.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.linux64_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7-m/nofp/crtn.o
+                0x0000000008003cbc                . = ALIGN (0x4)
+                0x0000000008003cbc                _etext = .
 
-.vfp11_veneer   0x00000000080041d8        0x0
- .vfp11_veneer  0x00000000080041d8        0x0 linker stubs
+.vfp11_veneer   0x0000000008003cbc        0x0
+ .vfp11_veneer  0x0000000008003cbc        0x0 linker stubs
 
-.v4_bx          0x00000000080041d8        0x0
- .v4_bx         0x00000000080041d8        0x0 linker stubs
+.v4_bx          0x0000000008003cbc        0x0
+ .v4_bx         0x0000000008003cbc        0x0 linker stubs
 
-.iplt           0x00000000080041d8        0x0
- .iplt          0x00000000080041d8        0x0 /opt/st/stm32cubeide_1.14.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.linux64_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7-m/nofp/crtbegin.o
+.iplt           0x0000000008003cbc        0x0
+ .iplt          0x0000000008003cbc        0x0 /opt/st/stm32cubeide_1.14.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.linux64_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7-m/nofp/crtbegin.o
 
-.rodata         0x00000000080041d8       0x3c
-                0x00000000080041d8                . = ALIGN (0x4)
+.rodata         0x0000000008003cbc       0x44
+                0x0000000008003cbc                . = ALIGN (0x4)
  *(.rodata)
  *(.rodata*)
  .rodata.PLLMulTable
-                0x00000000080041d8        0x9 ./Core/Src/system_stm32l1xx.o
-                0x00000000080041d8                PLLMulTable
- *fill*         0x00000000080041e1        0x3 
+                0x0000000008003cbc        0x9 ./Core/Src/system_stm32l1xx.o
+                0x0000000008003cbc                PLLMulTable
+ *fill*         0x0000000008003cc5        0x3 
  .rodata.AHBPrescTable
-                0x00000000080041e4       0x10 ./Core/Src/system_stm32l1xx.o
-                0x00000000080041e4                AHBPrescTable
+                0x0000000008003cc8       0x10 ./Core/Src/system_stm32l1xx.o
+                0x0000000008003cc8                AHBPrescTable
  .rodata.APBPrescTable
-                0x00000000080041f4        0x8 ./Core/Src/system_stm32l1xx.o
-                0x00000000080041f4                APBPrescTable
+                0x0000000008003cd8        0x8 ./Core/Src/system_stm32l1xx.o
+                0x0000000008003cd8                APBPrescTable
  .rodata.segmentMap
-                0x00000000080041fc       0x15 ./User/TM1637/TM1637.o
-                0x00000000080041fc                segmentMap
-                0x0000000008004214                . = ALIGN (0x4)
- *fill*         0x0000000008004211        0x3 
+                0x0000000008003ce0       0x1f ./User/TM1637/TM1637.o
+                0x0000000008003ce0                segmentMap
+                0x0000000008003d00                . = ALIGN (0x4)
+ *fill*         0x0000000008003cff        0x1 
 
-.ARM.extab      0x0000000008004214        0x0
-                0x0000000008004214                . = ALIGN (0x4)
+.ARM.extab      0x0000000008003d00        0x0
+                0x0000000008003d00                . = ALIGN (0x4)
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x0000000008004214                . = ALIGN (0x4)
+                0x0000000008003d00                . = ALIGN (0x4)
 
-.ARM            0x0000000008004214        0x8
-                0x0000000008004214                . = ALIGN (0x4)
-                0x0000000008004214                __exidx_start = .
+.ARM            0x0000000008003d00        0x8
+                0x0000000008003d00                . = ALIGN (0x4)
+                0x0000000008003d00                __exidx_start = .
  *(.ARM.exidx*)
- .ARM.exidx     0x0000000008004214        0x8 /opt/st/stm32cubeide_1.14.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.linux64_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7-m/nofp/libgcc.a(_udivmoddi4.o)
-                0x000000000800421c                __exidx_end = .
-                0x000000000800421c                . = ALIGN (0x4)
+ .ARM.exidx     0x0000000008003d00        0x8 /opt/st/stm32cubeide_1.14.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.linux64_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7-m/nofp/libgcc.a(_udivmoddi4.o)
+                0x0000000008003d08                __exidx_end = .
+                0x0000000008003d08                . = ALIGN (0x4)
 
-.rel.dyn        0x000000000800421c        0x0
- .rel.iplt      0x000000000800421c        0x0 /opt/st/stm32cubeide_1.14.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.linux64_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7-m/nofp/crtbegin.o
+.rel.dyn        0x0000000008003d08        0x0
+ .rel.iplt      0x0000000008003d08        0x0 /opt/st/stm32cubeide_1.14.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.linux64_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7-m/nofp/crtbegin.o
 
-.preinit_array  0x000000000800421c        0x0
-                0x000000000800421c                . = ALIGN (0x4)
-                0x000000000800421c                PROVIDE (__preinit_array_start = .)
+.preinit_array  0x0000000008003d08        0x0
+                0x0000000008003d08                . = ALIGN (0x4)
+                0x0000000008003d08                PROVIDE (__preinit_array_start = .)
  *(.preinit_array*)
-                0x000000000800421c                PROVIDE (__preinit_array_end = .)
-                0x000000000800421c                . = ALIGN (0x4)
+                0x0000000008003d08                PROVIDE (__preinit_array_end = .)
+                0x0000000008003d08                . = ALIGN (0x4)
 
-.init_array     0x000000000800421c        0x4
-                0x000000000800421c                . = ALIGN (0x4)
-                0x000000000800421c                PROVIDE (__init_array_start = .)
+.init_array     0x0000000008003d08        0x4
+                0x0000000008003d08                . = ALIGN (0x4)
+                0x0000000008003d08                PROVIDE (__init_array_start = .)
  *(SORT_BY_NAME(.init_array.*))
  *(.init_array*)
- .init_array    0x000000000800421c        0x4 /opt/st/stm32cubeide_1.14.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.linux64_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7-m/nofp/crtbegin.o
-                0x0000000008004220                PROVIDE (__init_array_end = .)
-                0x0000000008004220                . = ALIGN (0x4)
+ .init_array    0x0000000008003d08        0x4 /opt/st/stm32cubeide_1.14.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.linux64_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7-m/nofp/crtbegin.o
+                0x0000000008003d0c                PROVIDE (__init_array_end = .)
+                0x0000000008003d0c                . = ALIGN (0x4)
 
-.fini_array     0x0000000008004220        0x4
-                0x0000000008004220                . = ALIGN (0x4)
+.fini_array     0x0000000008003d0c        0x4
+                0x0000000008003d0c                . = ALIGN (0x4)
                 [!provide]                        PROVIDE (__fini_array_start = .)
  *(SORT_BY_NAME(.fini_array.*))
  *(.fini_array*)
- .fini_array    0x0000000008004220        0x4 /opt/st/stm32cubeide_1.14.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.linux64_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7-m/nofp/crtbegin.o
+ .fini_array    0x0000000008003d0c        0x4 /opt/st/stm32cubeide_1.14.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.linux64_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7-m/nofp/crtbegin.o
                 [!provide]                        PROVIDE (__fini_array_end = .)
-                0x0000000008004224                . = ALIGN (0x4)
-                0x0000000008004224                _sidata = LOADADDR (.data)
+                0x0000000008003d10                . = ALIGN (0x4)
+                0x0000000008003d10                _sidata = LOADADDR (.data)
 
-.data           0x0000000020000000       0x34 load address 0x0000000008004224
+.data           0x0000000020000000        0xc load address 0x0000000008003d10
                 0x0000000020000000                . = ALIGN (0x4)
                 0x0000000020000000                _sdata = .
  *(.data)
@@ -3327,100 +3353,85 @@ LOAD /opt/st/stm32cubeide_1.14.0/plugins/com.st.stm32cube.ide.mcu.externaltools.
  .data.uwTickFreq
                 0x0000000020000008        0x4 ./Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal.o
                 0x0000000020000008                uwTickFreq
- .data.server_holding_registers
-                0x000000002000000c       0x14 ./User/modbus_rtu_server/modbus_server.o
-                0x000000002000000c                server_holding_registers
- .data.server_input_registers
-                0x0000000020000020       0x14 ./User/modbus_rtu_server/modbus_server.o
-                0x0000000020000020                server_input_registers
  *(.RamFunc)
  *(.RamFunc*)
-                0x0000000020000034                . = ALIGN (0x4)
-                0x0000000020000034                _edata = .
+                0x000000002000000c                . = ALIGN (0x4)
+                0x000000002000000c                _edata = .
 
-.igot.plt       0x0000000020000034        0x0 load address 0x0000000008004258
- .igot.plt      0x0000000020000034        0x0 /opt/st/stm32cubeide_1.14.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.linux64_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7-m/nofp/crtbegin.o
-                0x0000000020000034                . = ALIGN (0x4)
+.igot.plt       0x000000002000000c        0x0 load address 0x0000000008003d1c
+ .igot.plt      0x000000002000000c        0x0 /opt/st/stm32cubeide_1.14.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.linux64_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7-m/nofp/crtbegin.o
+                0x000000002000000c                . = ALIGN (0x4)
 
-.bss            0x0000000020000034      0x73c load address 0x0000000008004258
-                0x0000000020000034                _sbss = .
-                0x0000000020000034                __bss_start__ = _sbss
+.bss            0x000000002000000c      0x4ec load address 0x0000000008003d1c
+                0x000000002000000c                _sbss = .
+                0x000000002000000c                __bss_start__ = _sbss
  *(.bss)
- .bss           0x0000000020000034       0x1c /opt/st/stm32cubeide_1.14.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.linux64_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7-m/nofp/crtbegin.o
+ .bss           0x000000002000000c       0x1c /opt/st/stm32cubeide_1.14.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.linux64_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7-m/nofp/crtbegin.o
  *(.bss*)
- .bss.uwTick    0x0000000020000050        0x4 ./Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal.o
-                0x0000000020000050                uwTick
- .bss.huart4    0x0000000020000054       0x48 ./User/board/board.o
-                0x0000000020000054                huart4
- .bss.huart2    0x000000002000009c       0x48 ./User/board/board.o
-                0x000000002000009c                huart2
- .bss.ss_arr    0x00000000200000e4        0x6 ./User/board/board.o
-                0x00000000200000e4                ss_arr
+ .bss.uwTick    0x0000000020000028        0x4 ./Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal.o
+                0x0000000020000028                uwTick
+ .bss.huart4    0x000000002000002c       0x48 ./User/board/board.o
+                0x000000002000002c                huart4
+ .bss.huart2    0x0000000020000074       0x48 ./User/board/board.o
+                0x0000000020000074                huart2
+ .bss.ss_arr    0x00000000200000bc        0x6 ./User/board/board.o
+                0x00000000200000bc                ss_arr
  .bss.user_char
-                0x00000000200000ea        0x1 ./User/main.o
-                0x00000000200000ea                user_char
- *fill*         0x00000000200000eb        0x1 
- .bss.nmbs      0x00000000200000ec      0x154 ./User/main.o
-                0x00000000200000ec                nmbs
+                0x00000000200000c2        0x1 ./User/main.o
+                0x00000000200000c2                user_char
  .bss.status_cabin
-                0x0000000020000240        0x1 ./User/main.o
-                0x0000000020000240                status_cabin
+                0x00000000200000c3        0x1 ./User/main.o
+                0x00000000200000c3                status_cabin
  .bss.mqtt_index
-                0x0000000020000241        0x1 ./User/main.o
-                0x0000000020000241                mqtt_index
+                0x00000000200000c4        0x1 ./User/main.o
+                0x00000000200000c4                mqtt_index
  .bss.is_new_linux_msg
-                0x0000000020000242        0x1 ./User/main.o
-                0x0000000020000242                is_new_linux_msg
+                0x00000000200000c5        0x1 ./User/main.o
+                0x00000000200000c5                is_new_linux_msg
  .bss.current_level
-                0x0000000020000243        0x1 ./User/main.o
-                0x0000000020000243                current_level
+                0x00000000200000c6        0x1 ./User/main.o
+                0x00000000200000c6                current_level
  .bss.target_level_next_time
-                0x0000000020000244        0x1 ./User/main.o
-                0x0000000020000244                target_level_next_time
+                0x00000000200000c7        0x1 ./User/main.o
+                0x00000000200000c7                target_level_next_time
  .bss.target_level
-                0x0000000020000245        0x1 ./User/main.o
-                0x0000000020000245                target_level
- *fill*         0x0000000020000246        0x2 
+                0x00000000200000c8        0x1 ./User/main.o
+                0x00000000200000c8                target_level
+ *fill*         0x00000000200000c9        0x3 
  .bss.buff_mqtt_slave
-                0x0000000020000248       0x20 ./User/main.o
-                0x0000000020000248                buff_mqtt_slave
+                0x00000000200000cc       0x20 ./User/main.o
+                0x00000000200000cc                buff_mqtt_slave
  .bss.g_sys_time
-                0x0000000020000268        0x4 ./User/main.o
-                0x0000000020000268                g_sys_time
- .bss.buff_rx   0x000000002000026c        0x1 ./User/main.o
-                0x000000002000026c                buff_rx
+                0x00000000200000ec        0x4 ./User/main.o
+                0x00000000200000ec                g_sys_time
+ .bss.buff_rx   0x00000000200000f0        0x1 ./User/main.o
+                0x00000000200000f0                buff_rx
  .bss.buff_rx_mqtt
-                0x000000002000026d        0x1 ./User/main.o
-                0x000000002000026d                buff_rx_mqtt
- *fill*         0x000000002000026e        0x2 
+                0x00000000200000f1        0x1 ./User/main.o
+                0x00000000200000f1                buff_rx_mqtt
+ *fill*         0x00000000200000f2        0x2 
  .bss.ring_buffer
-                0x0000000020000270      0x400 ./User/main.o
-                0x0000000020000270                ring_buffer
+                0x00000000200000f4      0x400 ./User/main.o
+                0x00000000200000f4                ring_buffer
  .bss.front_index
-                0x0000000020000670        0x2 ./User/main.o
-                0x0000000020000670                front_index
- .bss.rear_index
-                0x0000000020000672        0x2 ./User/main.o
-                0x0000000020000672                rear_index
- .bss.server_coils
-                0x0000000020000674       0xfa ./User/modbus_rtu_server/modbus_server.o
-                0x0000000020000674                server_coils
+                0x00000000200004f4        0x2 ./User/main.o
+                0x00000000200004f4                front_index
  *(COMMON)
-                0x0000000020000770                . = ALIGN (0x4)
- *fill*         0x000000002000076e        0x2 
-                0x0000000020000770                _ebss = .
-                0x0000000020000770                __bss_end__ = _ebss
+                0x00000000200004f8                . = ALIGN (0x4)
+ *fill*         0x00000000200004f6        0x2 
+                0x00000000200004f8                _ebss = .
+                0x00000000200004f8                __bss_end__ = _ebss
 
 ._user_heap_stack
-                0x0000000020000770      0x600 load address 0x0000000008004258
-                0x0000000020000770                . = ALIGN (0x8)
+                0x00000000200004f8      0x600 load address 0x0000000008003d1c
+                0x00000000200004f8                . = ALIGN (0x8)
                 [!provide]                        PROVIDE (end = .)
-                0x0000000020000770                PROVIDE (_end = .)
-                0x0000000020000970                . = (. + _Min_Heap_Size)
- *fill*         0x0000000020000770      0x200 
-                0x0000000020000d70                . = (. + _Min_Stack_Size)
- *fill*         0x0000000020000970      0x400 
-                0x0000000020000d70                . = ALIGN (0x8)
+                0x00000000200004f8                PROVIDE (_end = .)
+                0x00000000200006f8                . = (. + _Min_Heap_Size)
+ *fill*         0x00000000200004f8      0x200 
+                0x0000000020000af8                . = (. + _Min_Stack_Size)
+ *fill*         0x00000000200006f8      0x400 
+                0x0000000020000af8                . = ALIGN (0x8)
 
 /DISCARD/
  libc.a(*)
@@ -3463,23 +3474,19 @@ LOAD /opt/st/stm32cubeide_1.14.0/plugins/com.st.stm32cube.ide.mcu.externaltools.
  .ARM.attributes
                 0x0000000000000287       0x2d ./User/matric_button/lkv_matrix_button.o
  .ARM.attributes
-                0x00000000000002b4       0x2d ./User/modbus_rtu_server/modbus_server.o
+                0x00000000000002b4       0x2d ./User/step_motor/step_motor.o
  .ARM.attributes
-                0x00000000000002e1       0x2d ./User/modbus_rtu_server/nanomodbus.o
+                0x00000000000002e1       0x2d /opt/st/stm32cubeide_1.14.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.linux64_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(libc_a-memset.o)
  .ARM.attributes
-                0x000000000000030e       0x2d ./User/step_motor/step_motor.o
+                0x000000000000030e       0x2d /opt/st/stm32cubeide_1.14.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.linux64_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(libc_a-init.o)
  .ARM.attributes
-                0x000000000000033b       0x2d /opt/st/stm32cubeide_1.14.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.linux64_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(libc_a-memset.o)
+                0x000000000000033b       0x1d /opt/st/stm32cubeide_1.14.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.linux64_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7-m/nofp/libgcc.a(_aeabi_uldivmod.o)
  .ARM.attributes
-                0x0000000000000368       0x2d /opt/st/stm32cubeide_1.14.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.linux64_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(libc_a-init.o)
+                0x0000000000000358       0x2d /opt/st/stm32cubeide_1.14.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.linux64_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7-m/nofp/libgcc.a(_udivmoddi4.o)
  .ARM.attributes
-                0x0000000000000395       0x1d /opt/st/stm32cubeide_1.14.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.linux64_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7-m/nofp/libgcc.a(_aeabi_uldivmod.o)
+                0x0000000000000385       0x1d /opt/st/stm32cubeide_1.14.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.linux64_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7-m/nofp/libgcc.a(_dvmd_tls.o)
  .ARM.attributes
-                0x00000000000003b2       0x2d /opt/st/stm32cubeide_1.14.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.linux64_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7-m/nofp/libgcc.a(_udivmoddi4.o)
- .ARM.attributes
-                0x00000000000003df       0x1d /opt/st/stm32cubeide_1.14.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.linux64_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7-m/nofp/libgcc.a(_dvmd_tls.o)
- .ARM.attributes
-                0x00000000000003fc       0x1d /opt/st/stm32cubeide_1.14.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.linux64_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7-m/nofp/crtn.o
+                0x00000000000003a2       0x1d /opt/st/stm32cubeide_1.14.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.linux64_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7-m/nofp/crtn.o
 OUTPUT(bms_l152.elf elf32-littlearm)
 LOAD linker stubs
 LOAD /opt/st/stm32cubeide_1.14.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.linux64_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a
@@ -3502,11 +3509,9 @@ LOAD /opt/st/stm32cubeide_1.14.0/plugins/com.st.stm32cube.ide.mcu.externaltools.
  .comment       0x0000000000000043       0x44 ./User/board/board.o
  .comment       0x0000000000000043       0x44 ./User/main.o
  .comment       0x0000000000000043       0x44 ./User/matric_button/lkv_matrix_button.o
- .comment       0x0000000000000043       0x44 ./User/modbus_rtu_server/modbus_server.o
- .comment       0x0000000000000043       0x44 ./User/modbus_rtu_server/nanomodbus.o
  .comment       0x0000000000000043       0x44 ./User/step_motor/step_motor.o
 
-.debug_info     0x0000000000000000     0xbc67
+.debug_info     0x0000000000000000     0x916c
  .debug_info    0x0000000000000000      0xa13 ./Core/Src/stm32l1xx_hal_msp.o
  .debug_info    0x0000000000000a13       0xf8 ./Core/Src/stm32l1xx_it.o
  .debug_info    0x0000000000000b0b      0x27c ./Core/Src/system_stm32l1xx.o
@@ -3519,13 +3524,11 @@ LOAD /opt/st/stm32cubeide_1.14.0/plugins/com.st.stm32cube.ide.mcu.externaltools.
  .debug_info    0x0000000000003753     0x2faa ./Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_uart.o
  .debug_info    0x00000000000066fd      0x415 ./User/TM1637/TM1637.o
  .debug_info    0x0000000000006b12      0xc2e ./User/board/board.o
- .debug_info    0x0000000000007740      0xfbd ./User/main.o
- .debug_info    0x00000000000086fd      0x478 ./User/matric_button/lkv_matrix_button.o
- .debug_info    0x0000000000008b75      0xa9e ./User/modbus_rtu_server/modbus_server.o
- .debug_info    0x0000000000009613     0x20c7 ./User/modbus_rtu_server/nanomodbus.o
- .debug_info    0x000000000000b6da      0x58d ./User/step_motor/step_motor.o
+ .debug_info    0x0000000000007740     0x1027 ./User/main.o
+ .debug_info    0x0000000000008767      0x478 ./User/matric_button/lkv_matrix_button.o
+ .debug_info    0x0000000000008bdf      0x58d ./User/step_motor/step_motor.o
 
-.debug_abbrev   0x0000000000000000     0x22c2
+.debug_abbrev   0x0000000000000000     0x1d39
  .debug_abbrev  0x0000000000000000      0x1b2 ./Core/Src/stm32l1xx_hal_msp.o
  .debug_abbrev  0x00000000000001b2       0x47 ./Core/Src/stm32l1xx_it.o
  .debug_abbrev  0x00000000000001f9      0x11c ./Core/Src/system_stm32l1xx.o
@@ -3538,13 +3541,11 @@ LOAD /opt/st/stm32cubeide_1.14.0/plugins/com.st.stm32cube.ide.mcu.externaltools.
  .debug_abbrev  0x0000000000000f50      0x2f7 ./Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_uart.o
  .debug_abbrev  0x0000000000001247      0x1a3 ./User/TM1637/TM1637.o
  .debug_abbrev  0x00000000000013ea      0x282 ./User/board/board.o
- .debug_abbrev  0x000000000000166c      0x331 ./User/main.o
- .debug_abbrev  0x000000000000199d      0x1e2 ./User/matric_button/lkv_matrix_button.o
- .debug_abbrev  0x0000000000001b7f      0x24f ./User/modbus_rtu_server/modbus_server.o
- .debug_abbrev  0x0000000000001dce      0x361 ./User/modbus_rtu_server/nanomodbus.o
- .debug_abbrev  0x000000000000212f      0x193 ./User/step_motor/step_motor.o
+ .debug_abbrev  0x000000000000166c      0x358 ./User/main.o
+ .debug_abbrev  0x00000000000019c4      0x1e2 ./User/matric_button/lkv_matrix_button.o
+ .debug_abbrev  0x0000000000001ba6      0x193 ./User/step_motor/step_motor.o
 
-.debug_aranges  0x0000000000000000      0xab0
+.debug_aranges  0x0000000000000000      0x810
  .debug_aranges
                 0x0000000000000000       0x30 ./Core/Src/stm32l1xx_hal_msp.o
  .debug_aranges
@@ -3570,18 +3571,14 @@ LOAD /opt/st/stm32cubeide_1.14.0/plugins/com.st.stm32cube.ide.mcu.externaltools.
  .debug_aranges
                 0x00000000000006c8       0x60 ./User/board/board.o
  .debug_aranges
-                0x0000000000000728       0x58 ./User/main.o
+                0x0000000000000728       0x68 ./User/main.o
  .debug_aranges
-                0x0000000000000780       0x40 ./User/matric_button/lkv_matrix_button.o
+                0x0000000000000790       0x40 ./User/matric_button/lkv_matrix_button.o
  .debug_aranges
-                0x00000000000007c0       0x60 ./User/modbus_rtu_server/modbus_server.o
- .debug_aranges
-                0x0000000000000820      0x250 ./User/modbus_rtu_server/nanomodbus.o
- .debug_aranges
-                0x0000000000000a70       0x40 ./User/step_motor/step_motor.o
+                0x00000000000007d0       0x40 ./User/step_motor/step_motor.o
 
 .debug_rnglists
-                0x0000000000000000      0x833
+                0x0000000000000000      0x625
  .debug_rnglists
                 0x0000000000000000       0x20 ./Core/Src/stm32l1xx_hal_msp.o
  .debug_rnglists
@@ -3607,17 +3604,13 @@ LOAD /opt/st/stm32cubeide_1.14.0/plugins/com.st.stm32cube.ide.mcu.externaltools.
  .debug_rnglists
                 0x0000000000000530       0x47 ./User/board/board.o
  .debug_rnglists
-                0x0000000000000577       0x41 ./User/main.o
+                0x0000000000000577       0x50 ./User/main.o
  .debug_rnglists
-                0x00000000000005b8       0x30 ./User/matric_button/lkv_matrix_button.o
+                0x00000000000005c7       0x30 ./User/matric_button/lkv_matrix_button.o
  .debug_rnglists
-                0x00000000000005e8       0x46 ./User/modbus_rtu_server/modbus_server.o
- .debug_rnglists
-                0x000000000000062e      0x1d7 ./User/modbus_rtu_server/nanomodbus.o
- .debug_rnglists
-                0x0000000000000805       0x2e ./User/step_motor/step_motor.o
+                0x00000000000005f7       0x2e ./User/step_motor/step_motor.o
 
-.debug_macro    0x0000000000000000    0x1553b
+.debug_macro    0x0000000000000000    0x15198
  .debug_macro   0x0000000000000000      0x1b4 ./Core/Src/stm32l1xx_hal_msp.o
  .debug_macro   0x00000000000001b4      0xa9c ./Core/Src/stm32l1xx_hal_msp.o
  .debug_macro   0x0000000000000c50      0x109 ./Core/Src/stm32l1xx_hal_msp.o
@@ -3664,21 +3657,19 @@ LOAD /opt/st/stm32cubeide_1.14.0/plugins/com.st.stm32cube.ide.mcu.externaltools.
  .debug_macro   0x00000000000145c2      0x1be ./User/TM1637/TM1637.o
  .debug_macro   0x0000000000014780      0x235 ./User/board/board.o
  .debug_macro   0x00000000000149b5       0x1c ./User/board/board.o
- .debug_macro   0x00000000000149d1      0x2c5 ./User/main.o
- .debug_macro   0x0000000000014c96       0x22 ./User/main.o
- .debug_macro   0x0000000000014cb8       0x61 ./User/main.o
- .debug_macro   0x0000000000014d19       0x10 ./User/main.o
- .debug_macro   0x0000000000014d29       0x20 ./User/main.o
- .debug_macro   0x0000000000014d49       0x1c ./User/main.o
- .debug_macro   0x0000000000014d65       0x1c ./User/main.o
- .debug_macro   0x0000000000014d81       0x22 ./User/main.o
- .debug_macro   0x0000000000014da3      0x1a5 ./User/matric_button/lkv_matrix_button.o
- .debug_macro   0x0000000000014f48      0x2a9 ./User/modbus_rtu_server/modbus_server.o
- .debug_macro   0x00000000000151f1      0x154 ./User/modbus_rtu_server/nanomodbus.o
- .debug_macro   0x0000000000015345      0x1da ./User/step_motor/step_motor.o
- .debug_macro   0x000000000001551f       0x1c ./User/step_motor/step_motor.o
+ .debug_macro   0x00000000000149d1      0x31f ./User/main.o
+ .debug_macro   0x0000000000014cf0       0x22 ./User/main.o
+ .debug_macro   0x0000000000014d12       0x61 ./User/main.o
+ .debug_macro   0x0000000000014d73       0x10 ./User/main.o
+ .debug_macro   0x0000000000014d83       0x20 ./User/main.o
+ .debug_macro   0x0000000000014da3       0x1c ./User/main.o
+ .debug_macro   0x0000000000014dbf       0x1c ./User/main.o
+ .debug_macro   0x0000000000014ddb       0x22 ./User/main.o
+ .debug_macro   0x0000000000014dfd      0x1a5 ./User/matric_button/lkv_matrix_button.o
+ .debug_macro   0x0000000000014fa2      0x1da ./User/step_motor/step_motor.o
+ .debug_macro   0x000000000001517c       0x1c ./User/step_motor/step_motor.o
 
-.debug_line     0x0000000000000000     0xcc64
+.debug_line     0x0000000000000000     0xa73c
  .debug_line    0x0000000000000000      0x70b ./Core/Src/stm32l1xx_hal_msp.o
  .debug_line    0x000000000000070b      0x72f ./Core/Src/stm32l1xx_it.o
  .debug_line    0x0000000000000e3a      0x6e9 ./Core/Src/system_stm32l1xx.o
@@ -3691,13 +3682,11 @@ LOAD /opt/st/stm32cubeide_1.14.0/plugins/com.st.stm32cube.ide.mcu.externaltools.
  .debug_line    0x0000000000004dad     0x283b ./Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_uart.o
  .debug_line    0x00000000000075e8      0x8e9 ./User/TM1637/TM1637.o
  .debug_line    0x0000000000007ed1      0x8fa ./User/board/board.o
- .debug_line    0x00000000000087cb      0xc50 ./User/main.o
- .debug_line    0x000000000000941b      0x94e ./User/matric_button/lkv_matrix_button.o
- .debug_line    0x0000000000009d69      0xadd ./User/modbus_rtu_server/modbus_server.o
- .debug_line    0x000000000000a846     0x1b9c ./User/modbus_rtu_server/nanomodbus.o
- .debug_line    0x000000000000c3e2      0x882 ./User/step_motor/step_motor.o
+ .debug_line    0x00000000000087cb      0xda1 ./User/main.o
+ .debug_line    0x000000000000956c      0x94e ./User/matric_button/lkv_matrix_button.o
+ .debug_line    0x0000000000009eba      0x882 ./User/step_motor/step_motor.o
 
-.debug_str      0x0000000000000000    0x85149
+.debug_str      0x0000000000000000    0x84a96
  .debug_str     0x0000000000000000    0x7f322 ./Core/Src/stm32l1xx_hal_msp.o
                                       0x7f5fc (size before relaxing)
  .debug_str     0x000000000007f322       0xad ./Core/Src/stm32l1xx_it.o
@@ -3721,18 +3710,14 @@ LOAD /opt/st/stm32cubeide_1.14.0/plugins/com.st.stm32cube.ide.mcu.externaltools.
                                       0x7eef8 (size before relaxing)
  .debug_str     0x0000000000080af9      0x38f ./User/board/board.o
                                       0x7f7a7 (size before relaxing)
- .debug_str     0x0000000000080e88     0x38df ./User/main.o
-                                      0x82cd2 (size before relaxing)
- .debug_str     0x0000000000084767       0x52 ./User/matric_button/lkv_matrix_button.o
+ .debug_str     0x0000000000080e88     0x3a5d ./User/main.o
+                                      0x82dc6 (size before relaxing)
+ .debug_str     0x00000000000848e5       0x52 ./User/matric_button/lkv_matrix_button.o
                                       0x7ee70 (size before relaxing)
- .debug_str     0x00000000000847b9       0x92 ./User/modbus_rtu_server/modbus_server.o
-                                      0x827fd (size before relaxing)
- .debug_str     0x000000000008484b      0x79f ./User/modbus_rtu_server/nanomodbus.o
-                                       0x7f58 (size before relaxing)
- .debug_str     0x0000000000084fea      0x15f ./User/step_motor/step_motor.o
+ .debug_str     0x0000000000084937      0x15f ./User/step_motor/step_motor.o
                                       0x7efbb (size before relaxing)
 
-.debug_frame    0x0000000000000000     0x2ab0
+.debug_frame    0x0000000000000000     0x1ed0
  .debug_frame   0x0000000000000000       0x80 ./Core/Src/stm32l1xx_hal_msp.o
  .debug_frame   0x0000000000000080       0xe8 ./Core/Src/stm32l1xx_it.o
  .debug_frame   0x0000000000000168       0x58 ./Core/Src/system_stm32l1xx.o
@@ -3744,15 +3729,13 @@ LOAD /opt/st/stm32cubeide_1.14.0/plugins/com.st.stm32cube.ide.mcu.externaltools.
  .debug_frame   0x0000000000000f08      0x944 ./Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_uart.o
  .debug_frame   0x000000000000184c      0x1cc ./User/TM1637/TM1637.o
  .debug_frame   0x0000000000001a18      0x128 ./User/board/board.o
- .debug_frame   0x0000000000001b40      0x114 ./User/main.o
- .debug_frame   0x0000000000001c54       0xbc ./User/matric_button/lkv_matrix_button.o
- .debug_frame   0x0000000000001d10      0x16c ./User/modbus_rtu_server/modbus_server.o
- .debug_frame   0x0000000000001e7c      0xac0 ./User/modbus_rtu_server/nanomodbus.o
- .debug_frame   0x000000000000293c       0xc8 ./User/step_motor/step_motor.o
- .debug_frame   0x0000000000002a04       0x20 /opt/st/stm32cubeide_1.14.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.linux64_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(libc_a-memset.o)
- .debug_frame   0x0000000000002a24       0x2c /opt/st/stm32cubeide_1.14.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.linux64_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(libc_a-init.o)
- .debug_frame   0x0000000000002a50       0x2c /opt/st/stm32cubeide_1.14.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.linux64_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7-m/nofp/libgcc.a(_aeabi_uldivmod.o)
- .debug_frame   0x0000000000002a7c       0x34 /opt/st/stm32cubeide_1.14.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.linux64_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7-m/nofp/libgcc.a(_udivmoddi4.o)
+ .debug_frame   0x0000000000001b40      0x160 ./User/main.o
+ .debug_frame   0x0000000000001ca0       0xbc ./User/matric_button/lkv_matrix_button.o
+ .debug_frame   0x0000000000001d5c       0xc8 ./User/step_motor/step_motor.o
+ .debug_frame   0x0000000000001e24       0x20 /opt/st/stm32cubeide_1.14.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.linux64_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(libc_a-memset.o)
+ .debug_frame   0x0000000000001e44       0x2c /opt/st/stm32cubeide_1.14.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.linux64_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(libc_a-init.o)
+ .debug_frame   0x0000000000001e70       0x2c /opt/st/stm32cubeide_1.14.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.linux64_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7-m/nofp/libgcc.a(_aeabi_uldivmod.o)
+ .debug_frame   0x0000000000001e9c       0x34 /opt/st/stm32cubeide_1.14.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.linux64_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7-m/nofp/libgcc.a(_udivmoddi4.o)
 
 .debug_line_str
                 0x0000000000000000       0x5d

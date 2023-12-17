@@ -22,7 +22,7 @@ and to permit persons to whom the Software is furnished to do so, subject to the
 const char segmentMap[] = {
     0x3f, 0x06, 0x5b, 0x4f, 0x66, 0x6d, 0x7d, 0x07, 0x7f, 0x6f, // 0->9
 	0x77, 0x7c, 0x39, 0x5E, 0x79, 0x71, 0x5C, 0x3e, 0x73, 0x08, // A-F (d = 13, o = 16, u = 17, p = 18 _ = 19
-    0x00
+    0x00, 0b0111000, 0b0111110, 1 , 1<<3, 1<<1, 1<<4, 1<<2, 1<<5, 1<<4, 1<<1
 };
 
 void TM1637_ClkHigh(void)
@@ -185,7 +185,7 @@ void TM1637_WriteByte(unsigned char b)
 void TM1637_DelayUsec(unsigned int i)
 {
     for (; i>0; i--) {
-        for (int j = 0; j < 500; ++j) {
+        for (int j = 0; j < 100; ++j) {
 					__NOP();
         }
     }

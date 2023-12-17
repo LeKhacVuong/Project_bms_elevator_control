@@ -24,6 +24,8 @@
 #define BLINK_START 2
 #define BLINK_DONE  1
 
+#define WAIT_USER_ODER_TIMEOT 7000
+
 nmbs_t nmbs;
 nmbs_platform_conf platform_conf;
 nmbs_callbacks callbacks = {0};
@@ -34,6 +36,8 @@ STATUS_T status_cabin;
 
 uint8_t mqtt_index = 0;
 uint8_t is_new_linux_msg = 0;
+uint32_t wait_timeot = 0;
+
 
 uint8_t current_level;
 uint8_t target_level_next_time;
@@ -98,10 +102,19 @@ int main(void)
 			elevator_process_force(STEP_MOTOR_SPEED_NOR);
 			if(current_level == target_level){
 				status_cabin = WAIT_USER_ODER_CALL;
+				wait_timeot = g_sys_time + WAIT_USER_ODER_TIMEOT;
 				  show_display(LED_WAIT, current_level/10);
 			}
 			break;
 		case WAIT_USER_ODER_CALL:
+			  if(wait_timeot < g_sys_time){
+					status_cabin = WAIT_USER_FIST_CALL;
+					  show_display(LED_START, current_level/10);
+					  if(target_level_next_time != 0){
+						  target_level = target_level_next_time;
+						  target_level_next_time = 0;
+					  }
+			  }
 			break;
 		case RUN_TO_USER_ODER:
 			elevator_process_force(STEP_MOTOR_SPEED_NOR);
@@ -145,8 +158,9 @@ void SysTick_Handler(void)
 					  show_display(LED_DWN, target_level/10);
 				  }else{
 					  status_cabin = RUN_TO_TAKE_USER;
-					  show_display(LED_WAIT, target_level/10);\
+					  show_display(LED_WAIT, target_level/10);
 					  status_cabin = WAIT_USER_ODER_CALL;
+					  wait_timeot = g_sys_time + WAIT_USER_ODER_TIMEOT;
 				  }
 			  }
 			  break;
@@ -164,6 +178,7 @@ void SysTick_Handler(void)
 			  }
 			  break;
 		  case WAIT_USER_ODER_CALL:
+
 			  if((user_char >= '1') && (user_char <= '4')){
 				  while(get_char_user() != 0);
 				  target_level = (user_char - '0') * 10;
@@ -239,48 +254,48 @@ void blink_led_delay(uint8_t type){
 
     switch (type) {
 		case BLINK_START:
-			for(int i = 0; i < 3; i++){
+			for(int i = 0; i < 6; i++){
 				  show_display(LED_START1, current_level/10);
-				  HAL_Delay(1);
+				  HAL_Delay(70);
 				  show_display(LED_START2, current_level/10);
-				  HAL_Delay(1);
+				  HAL_Delay(70);
 				  show_display(LED_START3, current_level/10);
-				  HAL_Delay(1);
+				  HAL_Delay(70);
 				  show_display(LED_START4, current_level/10);
-				  HAL_Delay(1);
+				  HAL_Delay(70);
 			}
 			TM1637_Display_4_char(0, 0, 0, 0, 1);
-			HAL_Delay(100);
+			HAL_Delay(200);
 			TM1637_Display_4_char(20, 20, 20, 20, 0);
-			HAL_Delay(100);
+			HAL_Delay(200);
 			TM1637_Display_4_char(0, 0, 0, 0, 1);
-			HAL_Delay(100);
+			HAL_Delay(200);
 			TM1637_Display_4_char(20, 20, 20, 20, 0);
-			HAL_Delay(100);
+			HAL_Delay(200);
 			TM1637_Display_4_char(0, 0, 0, 0, 1);
-			HAL_Delay(100);
+			HAL_Delay(200);
 			TM1637_Display_4_char(20, 20, 20, 20, 0);
-			HAL_Delay(100);
+			HAL_Delay(200);
 			TM1637_Display_4_char(0, 0, 0, 0, 1);
-			HAL_Delay(100);
+			HAL_Delay(200);
 			TM1637_Display_4_char(20, 20, 20, 20, 0);
-			HAL_Delay(100);
+			HAL_Delay(200);
 			TM1637_Display_4_char(0, 0, 0, 0, 1);
-			HAL_Delay(100);
+			HAL_Delay(200);
 			TM1637_Display_4_char(20, 20, 20, 20, 0);
-			HAL_Delay(1000);
+			HAL_Delay(700);
 			show_display(LED_START, current_level/10);
 			break;
 		case BLINK_DONE:
-			for(int i = 0; i < 7; i++){
+			for(int i = 0; i < 15; i++){
 				  show_display(LED_DONE1, current_level/10);
-				  HAL_Delay(5);
+				  HAL_Delay(70);
 				  show_display(LED_DONE2, current_level/10);
-				  HAL_Delay(5);
+				  HAL_Delay(70);
 				  show_display(LED_DONE3, current_level/10);
-				  HAL_Delay(5);
+				  HAL_Delay(70);
 				  show_display(LED_DONE4, current_level/10);
-				  HAL_Delay(5);
+				  HAL_Delay(70);
 			}
 			break;
 		default:

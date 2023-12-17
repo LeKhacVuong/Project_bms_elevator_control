@@ -1,8 +1,8 @@
 /*
- * my_matrix_button.h
+ * natrix_button.h
  *
- *  Created on: Oct 24, 2023
- *      Author: vypa0
+ * author: le khac vuong
+ *
  */
 
 #ifndef MATRIC_BUTTON_LKV_MATRIX_BUTTON_H_

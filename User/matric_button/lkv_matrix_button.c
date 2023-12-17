@@ -1,9 +1,10 @@
 /*
- * my_matrix_button.c
+ * natrix_button.c
  *
- *  Created on: Oct 24, 2023
- *      Author: vypa0
+ * author: le khac vuong
+ *
  */
+
 
 #include "../../User/matric_button/lkv_matrix_button.h"
 

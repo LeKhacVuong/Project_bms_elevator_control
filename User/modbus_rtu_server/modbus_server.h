@@ -1,8 +1,8 @@
 /*
  * modbus_server.h
  *
- *  Created on: Nov 8, 2023
- *      Author: vypa0
+ * author: le khac vuong
+ *
  */
 
 #ifndef MODBUS_RTU_SERVER_MODBUS_SERVER_H_

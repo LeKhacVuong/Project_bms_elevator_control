@@ -8575,8 +8575,8 @@ void show_display(uint8_t _dir, uint8_t _level ){
  800352c:	cccccccd 	.word	0xcccccccd
 
 08003530 <matrix_init>:
- *      Author: vypa0
  */
+
 
 #include "../../User/matric_button/lkv_matrix_button.h"
 

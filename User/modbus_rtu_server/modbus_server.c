@@ -1,8 +1,8 @@
 /*
  * modbus_server.c
  *
- *  Created on: Nov 8, 2023
- *      Author: vypa0
+ * author: le khac vuong
+ *
  */
 
 #include "../../User/modbus_rtu_server/modbus_server.h"

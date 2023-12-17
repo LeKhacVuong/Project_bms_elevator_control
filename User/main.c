@@ -103,13 +103,13 @@ int main(void)
 			if(current_level == target_level){
 				status_cabin = WAIT_USER_ODER_CALL;
 				wait_timeot = g_sys_time + WAIT_USER_ODER_TIMEOT;
-				  show_display(LED_WAIT, current_level/10);
+				  show_display(LED_WAIT, target_level/10);
 			}
 			break;
 		case WAIT_USER_ODER_CALL:
 			  if(wait_timeot < g_sys_time){
 					status_cabin = WAIT_USER_FIST_CALL;
-					  show_display(LED_START, current_level/10);
+					  show_display(LED_START, target_level/10);
 					  if(target_level_next_time != 0){
 						  target_level = target_level_next_time;
 						  target_level_next_time = 0;
@@ -129,7 +129,7 @@ int main(void)
 				  target_level_next_time = 0;
 			  }
 			status_cabin = WAIT_USER_FIST_CALL;
-			  show_display(LED_START, current_level/10);
+			  show_display(LED_START, target_level/10);
 			break;
 		default:
 			break;
@@ -255,13 +255,13 @@ void blink_led_delay(uint8_t type){
     switch (type) {
 		case BLINK_START:
 			for(int i = 0; i < 6; i++){
-				  show_display(LED_START1, current_level/10);
+				  show_display(LED_START1, target_level/10);
 				  HAL_Delay(70);
-				  show_display(LED_START2, current_level/10);
+				  show_display(LED_START2, target_level/10);
 				  HAL_Delay(70);
-				  show_display(LED_START3, current_level/10);
+				  show_display(LED_START3, target_level/10);
 				  HAL_Delay(70);
-				  show_display(LED_START4, current_level/10);
+				  show_display(LED_START4, target_level/10);
 				  HAL_Delay(70);
 			}
 			TM1637_Display_4_char(0, 0, 0, 0, 1);
@@ -284,17 +284,17 @@ void blink_led_delay(uint8_t type){
 			HAL_Delay(200);
 			TM1637_Display_4_char(20, 20, 20, 20, 0);
 			HAL_Delay(700);
-			show_display(LED_START, current_level/10);
+			show_display(LED_START, target_level/10);
 			break;
 		case BLINK_DONE:
 			for(int i = 0; i < 15; i++){
-				  show_display(LED_DONE1, current_level/10);
+				  show_display(LED_DONE1, target_level/10);
 				  HAL_Delay(70);
-				  show_display(LED_DONE2, current_level/10);
+				  show_display(LED_DONE2, target_level/10);
 				  HAL_Delay(70);
-				  show_display(LED_DONE3, current_level/10);
+				  show_display(LED_DONE3, target_level/10);
 				  HAL_Delay(70);
-				  show_display(LED_DONE4, current_level/10);
+				  show_display(LED_DONE4, target_level/10);
 				  HAL_Delay(70);
 			}
 			break;

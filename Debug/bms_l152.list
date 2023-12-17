@@ -7387,8 +7387,8 @@ int main(void)
  8002cf8:	3318      	adds	r3, #24
  8002cfa:	4a36      	ldr	r2, [pc, #216]	; (8002dd4 <main+0x1e4>)
  8002cfc:	6013      	str	r3, [r2, #0]
-				  show_display(LED_WAIT, current_level/10);
- 8002cfe:	4b30      	ldr	r3, [pc, #192]	; (8002dc0 <main+0x1d0>)
+				  show_display(LED_WAIT, target_level/10);
+ 8002cfe:	4b32      	ldr	r3, [pc, #200]	; (8002dc8 <main+0x1d8>)
  8002d00:	781b      	ldrb	r3, [r3, #0]
  8002d02:	4a30      	ldr	r2, [pc, #192]	; (8002dc4 <main+0x1d4>)
  8002d04:	fba2 2303 	umull	r2, r3, r2, r3
@@ -7412,8 +7412,8 @@ int main(void)
  8002d22:	4b2a      	ldr	r3, [pc, #168]	; (8002dcc <main+0x1dc>)
  8002d24:	2200      	movs	r2, #0
  8002d26:	701a      	strb	r2, [r3, #0]
-					  show_display(LED_START, current_level/10);
- 8002d28:	4b25      	ldr	r3, [pc, #148]	; (8002dc0 <main+0x1d0>)
+					  show_display(LED_START, target_level/10);
+ 8002d28:	4b27      	ldr	r3, [pc, #156]	; (8002dc8 <main+0x1d8>)
  8002d2a:	781b      	ldrb	r3, [r3, #0]
  8002d2c:	4a25      	ldr	r2, [pc, #148]	; (8002dc4 <main+0x1d4>)
  8002d2e:	fba2 2303 	umull	r2, r3, r2, r3
@@ -7481,8 +7481,8 @@ int main(void)
  8002d8e:	4b0f      	ldr	r3, [pc, #60]	; (8002dcc <main+0x1dc>)
  8002d90:	2200      	movs	r2, #0
  8002d92:	701a      	strb	r2, [r3, #0]
-			  show_display(LED_START, current_level/10);
- 8002d94:	4b0a      	ldr	r3, [pc, #40]	; (8002dc0 <main+0x1d0>)
+			  show_display(LED_START, target_level/10);
+ 8002d94:	4b0c      	ldr	r3, [pc, #48]	; (8002dc8 <main+0x1d8>)
  8002d96:	781b      	ldrb	r3, [r3, #0]
  8002d98:	4a0a      	ldr	r2, [pc, #40]	; (8002dc4 <main+0x1d4>)
  8002d9a:	fba2 2303 	umull	r2, r3, r2, r3
@@ -8108,7 +8108,7 @@ void blink_led_delay(uint8_t type){
  80031d6:	2300      	movs	r3, #0
  80031d8:	60fb      	str	r3, [r7, #12]
  80031da:	e03a      	b.n	8003252 <blink_led_delay+0x9a>
-				  show_display(LED_START1, current_level/10);
+				  show_display(LED_START1, target_level/10);
  80031dc:	4b7f      	ldr	r3, [pc, #508]	; (80033dc <blink_led_delay+0x224>)
  80031de:	781b      	ldrb	r3, [r3, #0]
  80031e0:	4a7f      	ldr	r2, [pc, #508]	; (80033e0 <blink_led_delay+0x228>)
@@ -8121,7 +8121,7 @@ void blink_led_delay(uint8_t type){
 				  HAL_Delay(70);
  80031f2:	2046      	movs	r0, #70	; 0x46
  80031f4:	f7fd fab2 	bl	800075c <HAL_Delay>
-				  show_display(LED_START2, current_level/10);
+				  show_display(LED_START2, target_level/10);
  80031f8:	4b78      	ldr	r3, [pc, #480]	; (80033dc <blink_led_delay+0x224>)
  80031fa:	781b      	ldrb	r3, [r3, #0]
  80031fc:	4a78      	ldr	r2, [pc, #480]	; (80033e0 <blink_led_delay+0x228>)
@@ -8134,7 +8134,7 @@ void blink_led_delay(uint8_t type){
 				  HAL_Delay(70);
  800320e:	2046      	movs	r0, #70	; 0x46
  8003210:	f7fd faa4 	bl	800075c <HAL_Delay>
-				  show_display(LED_START3, current_level/10);
+				  show_display(LED_START3, target_level/10);
  8003214:	4b71      	ldr	r3, [pc, #452]	; (80033dc <blink_led_delay+0x224>)
  8003216:	781b      	ldrb	r3, [r3, #0]
  8003218:	4a71      	ldr	r2, [pc, #452]	; (80033e0 <blink_led_delay+0x228>)
@@ -8147,7 +8147,7 @@ void blink_led_delay(uint8_t type){
 				  HAL_Delay(70);
  800322a:	2046      	movs	r0, #70	; 0x46
  800322c:	f7fd fa96 	bl	800075c <HAL_Delay>
-				  show_display(LED_START4, current_level/10);
+				  show_display(LED_START4, target_level/10);
  8003230:	4b6a      	ldr	r3, [pc, #424]	; (80033dc <blink_led_delay+0x224>)
  8003232:	781b      	ldrb	r3, [r3, #0]
  8003234:	4a6a      	ldr	r2, [pc, #424]	; (80033e0 <blink_led_delay+0x228>)
@@ -8278,7 +8278,7 @@ void blink_led_delay(uint8_t type){
 			HAL_Delay(700);
  800332e:	f44f 702f 	mov.w	r0, #700	; 0x2bc
  8003332:	f7fd fa13 	bl	800075c <HAL_Delay>
-			show_display(LED_START, current_level/10);
+			show_display(LED_START, target_level/10);
  8003336:	4b29      	ldr	r3, [pc, #164]	; (80033dc <blink_led_delay+0x224>)
  8003338:	781b      	ldrb	r3, [r3, #0]
  800333a:	4a29      	ldr	r2, [pc, #164]	; (80033e0 <blink_led_delay+0x228>)
@@ -8295,7 +8295,7 @@ void blink_led_delay(uint8_t type){
  800334e:	2300      	movs	r3, #0
  8003350:	60bb      	str	r3, [r7, #8]
  8003352:	e03a      	b.n	80033ca <blink_led_delay+0x212>
-				  show_display(LED_DONE1, current_level/10);
+				  show_display(LED_DONE1, target_level/10);
  8003354:	4b21      	ldr	r3, [pc, #132]	; (80033dc <blink_led_delay+0x224>)
  8003356:	781b      	ldrb	r3, [r3, #0]
  8003358:	4a21      	ldr	r2, [pc, #132]	; (80033e0 <blink_led_delay+0x228>)
@@ -8308,7 +8308,7 @@ void blink_led_delay(uint8_t type){
 				  HAL_Delay(70);
  800336a:	2046      	movs	r0, #70	; 0x46
  800336c:	f7fd f9f6 	bl	800075c <HAL_Delay>
-				  show_display(LED_DONE2, current_level/10);
+				  show_display(LED_DONE2, target_level/10);
  8003370:	4b1a      	ldr	r3, [pc, #104]	; (80033dc <blink_led_delay+0x224>)
  8003372:	781b      	ldrb	r3, [r3, #0]
  8003374:	4a1a      	ldr	r2, [pc, #104]	; (80033e0 <blink_led_delay+0x228>)
@@ -8321,7 +8321,7 @@ void blink_led_delay(uint8_t type){
 				  HAL_Delay(70);
  8003386:	2046      	movs	r0, #70	; 0x46
  8003388:	f7fd f9e8 	bl	800075c <HAL_Delay>
-				  show_display(LED_DONE3, current_level/10);
+				  show_display(LED_DONE3, target_level/10);
  800338c:	4b13      	ldr	r3, [pc, #76]	; (80033dc <blink_led_delay+0x224>)
  800338e:	781b      	ldrb	r3, [r3, #0]
  8003390:	4a13      	ldr	r2, [pc, #76]	; (80033e0 <blink_led_delay+0x228>)
@@ -8334,7 +8334,7 @@ void blink_led_delay(uint8_t type){
 				  HAL_Delay(70);
  80033a2:	2046      	movs	r0, #70	; 0x46
  80033a4:	f7fd f9da 	bl	800075c <HAL_Delay>
-				  show_display(LED_DONE4, current_level/10);
+				  show_display(LED_DONE4, target_level/10);
  80033a8:	4b0c      	ldr	r3, [pc, #48]	; (80033dc <blink_led_delay+0x224>)
  80033aa:	781b      	ldrb	r3, [r3, #0]
  80033ac:	4a0c      	ldr	r2, [pc, #48]	; (80033e0 <blink_led_delay+0x228>)
@@ -8368,7 +8368,7 @@ void blink_led_delay(uint8_t type){
  80033d6:	3710      	adds	r7, #16
  80033d8:	46bd      	mov	sp, r7
  80033da:	bd80      	pop	{r7, pc}
- 80033dc:	200000cc 	.word	0x200000cc
+ 80033dc:	200000ce 	.word	0x200000ce
  80033e0:	cccccccd 	.word	0xcccccccd
 
 080033e4 <elevator_process_force>:

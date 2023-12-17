@@ -26,6 +26,9 @@
 
 #define WAIT_USER_ODER_TIMEOT 7000
 
+#define LINUX_CMD_CURRENT_LEVEL 'C'
+
+
 nmbs_t nmbs;
 nmbs_platform_conf platform_conf;
 nmbs_callbacks callbacks = {0};
@@ -60,6 +63,8 @@ void elevator_process_once(uint32_t _speed);
 void linux_msg_prosess(void);
 void modbus_sever_init(void);
 void blink_led_delay(uint8_t type);
+void send_msg_to_linux(uint8_t _cmd, uint8_t _value);
+
 
 
 
@@ -82,15 +87,13 @@ int main(void)
       elevator_process_force(STEP_MOTOR_SPEED_NOR);
 
 	    blink_led_delay(BLINK_START);
-		  status_cabin = WAIT_USER_FIST_CALL;
+		status_cabin = WAIT_USER_FIST_CALL;
+
 
   while (1)
   {
 	  switch (status_cabin) {
 		case WAIT_USER_FIST_CALL:
-			if(target_level != current_level){
-				status_cabin = RUN_TO_TAKE_USER;
-			}
 			break;
 		case RUN_TO_TAKE_USER:
 			  if(target_level > current_level){
@@ -127,6 +130,7 @@ int main(void)
 			  if(target_level_next_time != 0){
 				  target_level = target_level_next_time;
 				  target_level_next_time = 0;
+					status_cabin = RUN_TO_TAKE_USER;
 			  }
 			status_cabin = WAIT_USER_FIST_CALL;
 			  show_display(LED_START, target_level/10);
@@ -141,6 +145,7 @@ void SysTick_Handler(void)
 {
 	g_sys_time = g_sys_time + 10;
   HAL_IncTick();
+  HAL_SYSTICK_IRQHandler();
   current_level = get_current_level();
   		  user_char = get_char_user();
 
@@ -218,6 +223,11 @@ void SysTick_Handler(void)
 		  default:
 			  break;
 		  }
+
+  		  if((g_sys_time % 1000) == 0){
+  			send_msg_to_linux(LINUX_CMD_CURRENT_LEVEL, current_level);
+  		  }
+
 }
 
 void USART2_IRQHandler(void)
@@ -247,6 +257,16 @@ void UART4_IRQHandler(void)
 			mqtt_index = 0;
 		}
 	}
+}
+
+void send_msg_to_linux(uint8_t _cmd, uint8_t _value){
+	uint8_t msg_buff[16];
+	msg_buff[0] = '*';
+	msg_buff[1] = _cmd;
+	msg_buff[2] = _value;
+	msg_buff[3] = ';';
+	msg_buff[4] = '\n';
+	HAL_UART_Transmit(&huart4, msg_buff, 5, 1);
 }
 
 void blink_led_delay(uint8_t type){

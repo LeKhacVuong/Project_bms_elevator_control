@@ -28,6 +28,11 @@
 
 #define LINUX_CMD_CURRENT_LEVEL 'C'
 
+#define LINUX_CMD_CHANGE_LEVEL  'L'
+
+#define LINUX_CMD_FIRE_LEVEL    'F'
+
+
 
 nmbs_t nmbs;
 nmbs_platform_conf platform_conf;
@@ -41,6 +46,7 @@ uint8_t mqtt_index = 0;
 uint8_t is_new_linux_msg = 0;
 uint32_t wait_timeot = 0;
 
+uint8_t is_fire = 0;
 
 uint8_t current_level;
 uint8_t target_level_next_time;
@@ -74,7 +80,7 @@ int main(void)
   matrix_init();
   GPIO_sensor_init();
   lkv_stepmotor_gpio_init();
-//  modbus_sever_init();
+  modbus_sever_init();
 
 	current_level = get_current_level();
 
@@ -93,9 +99,11 @@ int main(void)
   while (1)
   {
 	  switch (status_cabin) {
-		case WAIT_USER_FIST_CALL:
+	  case EMERGENCY_FIRE:
+		  	break;
+	  case WAIT_USER_FIST_CALL:
 			break;
-		case RUN_TO_TAKE_USER:
+	  case RUN_TO_TAKE_USER:
 			  if(target_level > current_level){
 				  show_display(LED_UP, target_level/10);
 			  }
@@ -103,13 +111,13 @@ int main(void)
 				  show_display(LED_DWN, target_level/10);
 			  }
 			elevator_process_force(STEP_MOTOR_SPEED_NOR);
-			if(current_level == target_level){
+			if((current_level == target_level) && (!is_fire)){
 				status_cabin = WAIT_USER_ODER_CALL;
 				wait_timeot = g_sys_time + WAIT_USER_ODER_TIMEOT;
 				  show_display(LED_WAIT, target_level/10);
 			}
 			break;
-		case WAIT_USER_ODER_CALL:
+	  case WAIT_USER_ODER_CALL:
 			  if(wait_timeot < g_sys_time){
 					status_cabin = WAIT_USER_FIST_CALL;
 					  show_display(LED_START, target_level/10);
@@ -119,23 +127,24 @@ int main(void)
 					  }
 			  }
 			break;
-		case RUN_TO_USER_ODER:
+	  case RUN_TO_USER_ODER:
 			elevator_process_force(STEP_MOTOR_SPEED_NOR);
-			if(current_level == target_level){
+			if((current_level == target_level) && (!is_fire)){
 				status_cabin = DONE_USER_ODER;
 			}
 			break;
-		case DONE_USER_ODER:
+	  case DONE_USER_ODER:
 			blink_led_delay(BLINK_DONE);
 			  if(target_level_next_time != 0){
 				  target_level = target_level_next_time;
 				  target_level_next_time = 0;
 					status_cabin = RUN_TO_TAKE_USER;
+			  }else{
+					status_cabin = WAIT_USER_FIST_CALL;
+					  show_display(LED_START, target_level/10);
 			  }
-			status_cabin = WAIT_USER_FIST_CALL;
-			  show_display(LED_START, target_level/10);
 			break;
-		default:
+	  default:
 			break;
 	}
   }
@@ -146,10 +155,14 @@ void SysTick_Handler(void)
 	g_sys_time = g_sys_time + 10;
   HAL_IncTick();
   HAL_SYSTICK_IRQHandler();
-  current_level = get_current_level();
+  linux_msg_prosess();
+  	  current_level = get_current_level();
   		  user_char = get_char_user();
 
+
   		  switch(status_cabin){
+  		  case EMERGENCY_FIRE:
+  			  	break;
 		  case WAIT_USER_FIST_CALL:
 			  if((user_char >= '1') && (user_char <= '4')){
 				  while(get_char_user() != 0);
@@ -224,7 +237,7 @@ void SysTick_Handler(void)
 			  break;
 		  }
 
-  		  if((g_sys_time % 1000) == 0){
+  		  if((g_sys_time % 500) == 0){
   			send_msg_to_linux(LINUX_CMD_CURRENT_LEVEL, current_level);
   		  }
 
@@ -347,7 +360,10 @@ void modbus_sever_init(void){
 }
 
 void elevator_process_force(uint32_t _speed){
-	  while(target_level != current_level){
+	  while((target_level != current_level)){
+		  if(is_fire){
+			  return;
+		  }
 		  if(target_level > current_level){
 			  lkv_stepmotor_process(STEP_DIR_DOWN, _speed, 1);
 		  }
@@ -376,17 +392,21 @@ void elevator_process_once(uint32_t _speed){
 
 void linux_msg_prosess(void){
 	  if(is_new_linux_msg){
-		  if(buff_mqtt_slave[0] == 'T'){
-			  if((buff_mqtt_slave[1] > '0') && (buff_mqtt_slave[1] < '9')){
-				  uint32_t real_time = buff_mqtt_slave[1]*1000 + buff_mqtt_slave[2]*100 + buff_mqtt_slave[4]*10 + buff_mqtt_slave[5];
-				  TM1637_DisplayDecimal(real_time, 1);
+		  if(buff_mqtt_slave[0] == LINUX_CMD_CHANGE_LEVEL){
+			  if((buff_mqtt_slave[1] >= 1) && (buff_mqtt_slave[1] <= 4)){
+				  target_level = buff_mqtt_slave[1] * 10;
+				  status_cabin = RUN_TO_USER_ODER;
 			  }
 		  }
-		  if(buff_mqtt_slave[0] == 'C'){
-			  target_level = buff_mqtt_slave[1];
-		  }
-		  if(buff_mqtt_slave[0] == 'S'){
-			  status_cabin = buff_mqtt_slave[1];
+		  if(buff_mqtt_slave[0] == LINUX_CMD_FIRE_LEVEL){
+			  is_fire = buff_mqtt_slave[1];
+			  if(is_fire){
+				  status_cabin = EMERGENCY_FIRE;
+			  }else{
+				  if(status_cabin == EMERGENCY_FIRE){
+					  status_cabin = WAIT_USER_FIST_CALL;
+				  }
+			  }
 		  }
 		  is_new_linux_msg = 0;
 		  memset(buff_mqtt_slave,0,32);

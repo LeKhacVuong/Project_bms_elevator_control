@@ -108,7 +108,6 @@ int main(void)
 
       if(!is_fire){
     		current_level = get_current_level();
-
     	   if((current_level % 10) == 0){
     		   target_level = current_level;
     	   }else{
@@ -128,6 +127,18 @@ int main(void)
   {
 	  switch (status_cabin) {
 	  case EMERGENCY_FIRE:
+  		current_level = get_current_level();
+
+  	   if((current_level % 10) == 0){
+  		   target_level = current_level;
+  	   }else{
+  		   target_level = current_level - 5;
+  	   }
+  	    is_fire = 0;
+  	    HAL_Delay(500);
+		elevator_process_force(STEP_MOTOR_SPEED_NOR);
+		is_fire = 1;
+		while(is_fire){};
 		  	break;
 	  case WAIT_USER_FIST_CALL:
 			break;
@@ -162,11 +173,13 @@ int main(void)
 			}
 			break;
 	  case DONE_USER_ODER:
-			blink_led_delay(BLINK_DONE);
 			if(is_fire){
 				show_display(LED_FIRE, 0);
+				status_cabin = EMERGENCY_FIRE;
 				break;
 			}
+			blink_led_delay(BLINK_DONE);
+
 			  if(target_level_next_time != 0){
 				  target_level = target_level_next_time;
 				  target_level_next_time = 0;
@@ -322,6 +335,10 @@ void send_msg_to_linux(uint8_t _cmd, uint8_t _value){
 void blink_led_delay(uint8_t type){
     TM1637_SetBrightness(3);
 
+    if(is_fire){
+    	return;
+    }
+
     switch (type) {
 		case BLINK_START:
 			for(int i = 0; i < 6; i++){
@@ -460,6 +477,7 @@ void linux_msg_prosess(void){
 			  if(is_fire){
 				  status_cabin = EMERGENCY_FIRE;
 				  show_display(LED_FIRE, 0);
+
 			  }else{
 				  if(status_cabin == EMERGENCY_FIRE){
 			    		current_level = get_current_level();
@@ -489,10 +507,23 @@ void linux_msg_prosess(void){
 }
 
 void show_display(uint8_t _dir, uint8_t _level ){
+
+
+	if(_dir == LED_FIRE){
+		TM1637_Display_4_char(14, 31, 1, 15, 0);
+	}
+
+    if(is_fire){
+    	return;
+    }
+
 	uint8_t special_char = 19;
 	if(!target_level_next_time){
 		special_char = 20;
 	}
+
+
+
 
 	switch (_dir) {
 		case LED_DWN:
